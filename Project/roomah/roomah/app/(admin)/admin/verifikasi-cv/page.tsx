@@ -1,0 +1,1 @@
+export default function VerifikasiCV(){return(<div>Verifikasi CV</div>);}

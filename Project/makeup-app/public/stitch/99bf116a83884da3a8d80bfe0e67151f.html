@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Submit Review</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#d5c1c8",
+                        "primary-fixed-dim": "#ffafd3",
+                        "secondary-container": "#fe8172",
+                        "on-tertiary-fixed": "#042100",
+                        "surface-bright": "#fff8f8",
+                        "secondary-fixed": "#ffdad5",
+                        "inverse-on-surface": "#fbeef0",
+                        "primary": "#4d1634",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-surface-variant": "#514348",
+                        "error": "#BA1A1A",
+                        "surface": "#FFFFFF",
+                        "secondary": "#a23d32",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#252323",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#362f31",
+                        "tertiary-fixed": "#c0f0aa",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "surface-container-highest": "#ecdfe2",
+                        "surface-tint": "#8b4969",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#731a13",
+                        "tertiary": "#0b3302",
+                        "surface-variant": "#ecdfe2",
+                        "primary-fixed": "#ffd8e7",
+                        "on-primary-fixed": "#3a0524",
+                        "outline": "#E8E2DF",
+                        "tertiary-container": "#234a16",
+                        "surface-container-low": "#fdf0f3",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-primary-container": "#e496b9",
+                        "surface-container": "#f8ebee",
+                        "inverse-primary": "#ffafd3",
+                        "surface-container-high": "#f2e5e8",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#252323",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-tertiary-container": "#8dba79",
+                        "surface-dim": "#e3d7da",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "on-secondary-fixed": "#410001",
+                        "primary-container": "#682c4b",
+                        "background": "#FCFAF8",
+                        "success": "#2E7D32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "24px",
+                        "unit": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"],
+                        "section-heading-mobile": ["Geist"],
+                        "card-title": ["Geist"],
+                        "display": ["Geist"],
+                        "page-title": ["Geist"],
+                        "body-md": ["Inter"],
+                        "section-heading": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .star-rating .material-symbols-outlined {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .star-rating .material-symbols-outlined.active {
+            font-variation-settings: 'FILL' 1;
+            color: #E66F61; /* Warm Coral override for stars */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container text-primary dark:text-primary-fixed font-page-title text-page-title docked full-width top-0 border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center w-full px-margin-mobile py-unit max-w-7xl mx-auto md:px-margin-desktop sticky z-10">
+<div class="flex items-center gap-2">
+<button aria-label="Kembali" class="p-2 -ml-2 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-display text-display text-primary dark:text-primary-fixed">RiasKita</h1>
+</div>
+<div class="text-on-surface-variant font-label-md text-label-md">
+<span>ID | EN</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-2xl mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<div class="mb-6">
+<h2 class="font-section-heading-mobile md:font-section-heading text-section-heading-mobile md:text-section-heading text-on-background mb-2">Beri Ulasan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Bagaimana pengalaman Anda dengan MUA ini? Ulasan Anda membantu orang lain membuat keputusan yang tepat.</p>
+</div>
+<form class="space-y-8 bg-surface border border-outline rounded-xl p-6 shadow-sm">
+<!-- MUA Info (Context) -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+<img alt="MUA Profile" class="w-16 h-16 rounded-full object-cover border border-outline" data-alt="A close-up portrait of a professional Indonesian Makeup Artist smiling warmly in a brightly lit studio. The lighting is soft and flattering, highlighting a clean, modern aesthetic with subtle plum accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN4zXBqoEzm9_8zaqndm76WBIFRyiHLMDpvumMLyuZ1fUFTk0g881B0EZgtld5aCRo8g4hYqWRKPG63W9XvZXcCciXX__ZVI_--YJEjRS3r-SO05w_IatjSE5czrfd53zQRBzYPaky9XIkVscy1O7W2D3T8uIRpdT0_p7Cvlsj7Fwx-p3UDiLh21Isn8857RaOgDpx1aHxWBJlBJdEEBbiICmNy8IrFozdirvgl_O4WGyy_HKpEhpY6Q">
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Sari Ayu Makeup</h3>
+<p class="font-caption text-caption text-on-surface-variant">Layanan: Wedding Makeup Package</p>
+<p class="font-caption text-caption text-on-surface-variant">Tanggal: 12 Oktober 2023</p>
+</div>
+</div>
+<!-- Star Ratings -->
+<div class="space-y-6">
+<!-- Overall -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Layanan Keseluruhan</label>
+<div class="flex gap-1 star-rating text-outline-variant text-3xl" data-category="overall">
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<!-- Punctuality -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Ketepatan Waktu</label>
+<div class="flex gap-1 star-rating text-outline-variant text-3xl" data-category="punctuality">
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+</div>
+</div>
+<!-- Skill -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Keahlian &amp; Hasil</label>
+<div class="flex gap-1 star-rating text-outline-variant text-3xl" data-category="skill">
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined active">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+</div>
+<!-- Written Review -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="review-text">Tulis Ulasan Anda</label>
+<textarea class="w-full rounded-lg border-outline bg-surface text-on-surface focus:ring-primary focus:border-primary placeholder:text-on-surface-variant/50 font-body-md text-body-md p-3" id="review-text" placeholder="Ceritakan pengalaman Anda secara detail..." rows="4"></textarea>
+<p class="font-caption text-caption text-on-surface-variant mt-1 text-right">Minimal 50 karakter</p>
+</div>
+<!-- Image Upload -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Unggah Foto Hasil (Opsional)</label>
+<div class="mt-2 flex justify-center rounded-lg border border-dashed border-outline-variant px-6 py-10 bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-primary-fixed-dim group-hover:text-primary transition-colors mb-2">add_a_photo</span>
+<div class="mt-4 flex text-sm leading-6 text-on-surface-variant justify-center">
+<label class="relative cursor-pointer rounded-md bg-transparent font-label-md text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 hover:text-primary-container" for="file-upload">
+<span>Pilih file</span>
+<input accept="image/*" class="sr-only" id="file-upload" multiple="" name="file-upload" type="file">
+</label>
+<p class="pl-1">atau tarik &amp; lepas ke sini</p>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mt-1">PNG, JPG, GIF hingga 10MB</p>
+</div>
+</div>
+<!-- Preview area (hidden by default) -->
+<div class="hidden mt-4 flex gap-4 overflow-x-auto pb-2" id="image-preview-container">
+<!-- Dynamic previews would go here -->
+</div>
+</div>
+<!-- Actions -->
+<div class="pt-4 border-t border-outline flex gap-4 justify-end">
+<button class="px-6 py-2 rounded-lg font-label-md text-label-md border border-outline text-on-surface hover:bg-surface-container-low transition-colors" type="button">Batal</button>
+<button class="px-6 py-2 rounded-lg font-label-md text-label-md bg-primary text-on-primary hover:bg-primary-container transition-colors" type="submit">Kirim Ulasan</button>
+</div>
+</form>
+</main>
+<script>
+        // Simple star rating interaction
+        document.querySelectorAll('.star-rating').forEach(container => {
+            const stars = container.querySelectorAll('span');
+            stars.forEach((star, index) => {
+                star.addEventListener('click', () => {
+                    // Remove active from all
+                    stars.forEach(s => s.classList.remove('active'));
+                    // Add active to clicked and previous
+                    for (let i = 0; i <= index; i++) {
+                        stars[i].classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>

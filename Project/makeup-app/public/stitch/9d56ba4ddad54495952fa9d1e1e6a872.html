@@ -1,0 +1,338 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Manajemen Konten - Admin Dashboard</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#252323",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-variant": "#F5F2F0",
+                        "on-primary-fixed": "#3a0524",
+                        "secondary-container": "#fe8172",
+                        "surface-container-low": "#fdf0f3",
+                        "outline": "#E8E2DF",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#514348",
+                        "secondary": "#a23d32",
+                        "primary-fixed-dim": "#ffafd3",
+                        "surface-dim": "#e3d7da",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-tint": "#8b4969",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#BA1A1A",
+                        "tertiary": "#0b3302",
+                        "on-tertiary-fixed": "#042100",
+                        "inverse-surface": "#362f31",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8dba79",
+                        "tertiary-container": "#234a16",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "inverse-primary": "#ffafd3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#201a1c",
+                        "on-primary-container": "#e496b9",
+                        "surface-bright": "#fff8f8",
+                        "primary-fixed": "#ffd8e7",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d5c1c8",
+                        "on-secondary-container": "#731a13",
+                        "inverse-on-surface": "#fbeef0",
+                        "surface-container-high": "#f2e5e8",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#4d1634",
+                        "surface": "#FFFFFF",
+                        "background": "#FCFAF8",
+                        "primary-container": "#682c4b",
+                        "success": "#2E7D32",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container": "#f8ebee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "margin-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display": ["Geist"],
+                        "section-heading-mobile": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "page-title": ["Geist"],
+                        "caption": ["Inter"],
+                        "card-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md flex min-h-screen">
+<!-- Navigation Drawer (SideNav) -->
+<aside class="bg-surface h-screen w-64 fixed left-0 top-0 border-r border-outline flex flex-col p-margin-desktop gap-4 z-50">
+<!-- Profile Header -->
+<div class="flex items-center gap-3 mb-6">
+<img class="w-10 h-10 rounded-full object-cover border border-outline" data-alt="A professional headshot of a corporate system administrator, smiling subtly in a brightly lit modern office environment with light neutral tones and subtle plum accents. High quality, clear focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJkafOI1cyuY-IWwDx1Z0q7I1h3liHi35FLP2MUVd5qBXOCeMg7nfi3w3AV0hGAWM3NF7uD9zEHjVhUi4qoSwWwZ7rxpljQ7cZ28HK7f3tIAeCtuH7n3MG2FRX1MIUoq-wZ0uOJLWc-cfoBWrkEL2h8MdFR9uTkF7Cj9ExcS5ZpUvo99-vkrsIJfgQ_xwLQ2on07RBi7j4pMl364tpr0_vlrrTAOzA3wQvYQOzGCHQMAaou6xGq1PoDA">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">System Admin</span>
+<span class="font-caption text-caption text-on-surface-variant">Global Administrator</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">face_5</span>
+<span class="font-label-md text-label-md">MUAs</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">Users</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-label-md">Payments</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="font-label-md text-label-md">Disputes</span>
+</a>
+<!-- Active Tab -->
+<a class="flex items-center gap-3 p-3 rounded-lg bg-primary-container text-on-primary-container font-bold transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-label-md text-label-md">Content</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline">
+<span class="font-caption text-caption text-on-surface-variant">v1.2.0</span>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface w-full top-0 sticky border-b border-outline flex justify-between items-center px-margin-desktop py-4 z-40">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full active:opacity-80">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display text-display text-primary tracking-tight">Admin Dashboard</h1>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-2 rounded-lg font-label-md text-label-md flex items-center gap-2 active:opacity-80 border border-outline">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+                Notifications
+            </button>
+</header>
+<!-- Canvas -->
+<div class="p-margin-desktop flex-1 flex flex-col gap-margin-desktop max-w-[1440px] mx-auto w-full">
+<!-- Page Header & Global Actions -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<h2 class="font-page-title text-page-title text-on-background">Manajemen Konten</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage static content, banners, and language translations.</p>
+</div>
+<!-- Language Toggle -->
+<div class="flex items-center bg-surface-variant p-1 rounded-lg border border-outline">
+<button class="px-4 py-1.5 rounded bg-surface shadow-sm border border-outline font-label-md text-label-md text-primary-container">ID</button>
+<button class="px-4 py-1.5 rounded text-on-surface-variant font-label-md text-label-md hover:text-on-background transition-colors">EN</button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-margin-desktop">
+<!-- Featured Banners (Span 8 cols) -->
+<section class="md:col-span-8 bg-surface border border-outline rounded-xl p-6 flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<h3 class="font-section-heading text-section-heading text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">view_carousel</span>
+                            Home Banners
+                        </h3>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">add</span> Add New
+                        </button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 snap-x">
+<!-- Banner Item 1 -->
+<div class="min-w-[300px] border border-outline rounded-lg overflow-hidden snap-start flex flex-col group relative">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover" data-alt="A wide promotional banner image showcasing premium Indonesian bridal makeup. A beautiful bride looking elegant with soft, flawless makeup, wearing a traditional kebaya with intricate detailing. The background is a soft, blurred studio setting with warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoL4wVj9TAAhpSXHIiocBla4Fes0K87R2OhzEv4PtakxF9HOZ424kGlh-d3WHcvCLQtWmshJ-XmuZ-nnYLL_8BfSLXc2VQyrIQgb25XRAHQj2PsW5xSqe4IbqeVN4aHE-Khn1qoficZjYr_qVwoQ_L7SBO_lFf0shekmK_1OoXyPwoYZsyfaW4qojDHfycjHayl6N5ZKs4Zv9e_n-cmNib0EYtUpvQgHpJbA2OZX0Ma9Jb9nP-kuTyxw">
+<div class="absolute top-2 right-2 bg-success text-on-primary px-2 py-0.5 rounded font-caption text-caption">Active</div>
+</div>
+<div class="p-4 flex-1 flex flex-col bg-surface">
+<h4 class="font-card-title text-card-title text-on-background mb-1">Bridal Promo Q3</h4>
+<p class="font-caption text-caption text-on-surface-variant truncate">Link: /promos/bridal-q3</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 border border-outline py-1.5 rounded text-center font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors">Edit</button>
+</div>
+</div>
+</div>
+<!-- Banner Item 2 (Draft) -->
+<div class="min-w-[300px] border border-outline rounded-lg overflow-hidden snap-start flex flex-col opacity-80 group">
+<div class="h-40 relative bg-surface-container-highest flex items-center justify-center border-b border-outline">
+<span class="material-symbols-outlined text-on-surface-variant text-4xl">image</span>
+<div class="absolute top-2 right-2 bg-surface-variant text-on-surface-variant px-2 py-0.5 rounded font-caption text-caption border border-outline">Draft</div>
+</div>
+<div class="p-4 flex-1 flex flex-col bg-surface">
+<h4 class="font-card-title text-card-title text-on-background mb-1">Graduation Package</h4>
+<p class="font-caption text-caption text-on-surface-variant truncate">Link: /packages/graduation</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 border border-outline py-1.5 rounded text-center font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors">Edit</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Stats & Status (Span 4 cols) -->
+<section class="md:col-span-4 flex flex-col gap-margin-desktop">
+<div class="bg-primary text-on-primary rounded-xl p-6 flex flex-col justify-between shadow-sm h-full relative overflow-hidden">
+<!-- Decorative bg -->
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<h3 class="font-section-heading text-section-heading mb-2">Translation Status</h3>
+<p class="font-body-md text-body-md opacity-80">Ensure all critical content is available in both languages.</p>
+</div>
+<div class="mt-6 flex flex-col gap-3">
+<div class="flex justify-between items-center border-b border-primary-fixed-dim/30 pb-2">
+<span class="font-label-md text-label-md">Indonesian (ID)</span>
+<span class="bg-success text-on-primary px-2 py-0.5 rounded-full font-caption text-caption">100% Complete</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md">English (EN)</span>
+<span class="bg-secondary text-on-primary px-2 py-0.5 rounded-full font-caption text-caption">85% Complete</span>
+</div>
+<button class="mt-4 bg-on-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-surface-variant transition-colors w-full text-center">
+                                Review Missing (12)
+                            </button>
+</div>
+</div>
+</section>
+<!-- FAQs and Policies Grid -->
+<section class="md:col-span-6 bg-surface border border-outline rounded-xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-section-heading text-section-heading text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">quiz</span>
+                            FAQs (General)
+                        </h3>
+<span class="text-caption font-caption text-on-surface-variant">Last updated: 2 days ago</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="border border-outline rounded-lg p-3 flex justify-between items-start hover:border-primary-container transition-colors cursor-pointer group">
+<div>
+<h4 class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">How do I book a makeup artist?</h4>
+<p class="font-caption text-caption text-on-surface-variant mt-1 line-clamp-1">To book an artist, simply navigate to their profile and click...</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">edit</span>
+</div>
+<div class="border border-outline rounded-lg p-3 flex justify-between items-start hover:border-primary-container transition-colors cursor-pointer group">
+<div>
+<h4 class="font-label-md text-label-md text-on-background group-hover:text-primary transition-colors">What is the cancellation policy?</h4>
+<p class="font-caption text-caption text-on-surface-variant mt-1 line-clamp-1">Cancellations made within 24 hours of the appointment...</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">edit</span>
+</div>
+<button class="w-full py-3 border border-dashed border-outline rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors mt-2">
+                            + Add FAQ Item
+                        </button>
+</div>
+</section>
+<!-- Legal / Policies -->
+<section class="md:col-span-6 bg-surface border border-outline rounded-xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-section-heading text-section-heading text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">policy</span>
+                            Legal &amp; Policies
+                        </h3>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between p-4 bg-surface-variant rounded-lg border border-outline">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">description</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-background">Terms of Service</h4>
+<span class="font-caption text-caption text-on-surface-variant">Version 2.4 • Active</span>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline">Edit Content</button>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-variant rounded-lg border border-outline">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">shield</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-background">Privacy Policy</h4>
+<span class="font-caption text-caption text-error">Requires EN Translation</span>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline">Edit Content</button>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-variant rounded-lg border border-outline">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">payments</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-background">Refund Policy</h4>
+<span class="font-caption text-caption text-on-surface-variant">Version 1.0 • Active</span>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline">Edit Content</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-variant w-full py-4 border-t border-outline flex justify-between items-center px-margin-desktop mt-auto z-40">
+<span class="font-label-md text-label-md text-on-surface">© 2024 MUA Marketplace Admin Panel</span>
+<nav class="flex gap-4">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Support</a>
+</nav>
+</footer>
+</main>
+</body></html>

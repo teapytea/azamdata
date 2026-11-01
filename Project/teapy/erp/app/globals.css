@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fdf8f6;
+  --color-low: #f7f3f0;
+  --color-mid: #f1edeb;
+  --color-high: #ece7e5;
+  --color-ink: #1c1b1a;
+  --color-soft: #524343;
+  --color-outline: #857373;
+  --color-hair: #d7c1c1;
+  --color-line: #ece7e5;
+  --color-maroon: #48161b;
+  --color-maroon-dark: #2d0308;
+  --color-rose: #c37a7d;
+  --color-sand: #f0dcd2;
+  --color-ash: #6a5b54;
+  --color-moss: #2f4d3b;
+  --color-moss-soft: #c9ebd2;
+  --color-forest: #0f2d1d;
+  --color-danger: #ba1a1a;
+  --color-danger-soft: #ffdad6;
+  --color-paper: #fffbf4;
+  --color-cream: #f7f1e7;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-brand: var(--font-quicksand), var(--font-jakarta), sans-serif;
+}
+
+html, body { margin: 0; background: var(--color-surface); color: var(--color-ink); }
+body { font-family: var(--font-sans); font-size: 13px; line-height: 20px; overscroll-behavior: none; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid var(--color-maroon); outline-offset: 1px; }
+
+@layer components {
+  .mono { font-family: var(--font-mono); font-size: 11px; line-height: 16px; letter-spacing: .02em; }
+  .micro { font-size: 10px; line-height: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--color-soft); }
+  .h-display { font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -.03em; }
+  .h-card { font-size: 15px; line-height: 22px; font-weight: 600; letter-spacing: -.01em; }
+  .muted { color: var(--color-soft); }
+
+  .card { background: #fff; border-radius: .75rem; box-shadow: 0 1px 2px rgba(31,30,29,.05); min-width: 0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .375rem; min-height: 34px; padding: .375rem .75rem; border-radius: .25rem; font-size: 12px; font-weight: 500; white-space: nowrap; background: #fff; color: var(--color-ink); box-shadow: 0 1px 2px rgba(31,30,29,.08); cursor: pointer; transition: background .15s, color .15s, transform .1s; }
+  .btn:hover { background: var(--color-mid); }
+  .btn:active { transform: scale(.99); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  .btn-primary { background: var(--color-maroon); color: #fff; font-weight: 600; }
+  .btn-primary:hover { background: var(--color-maroon-dark); }
+  .btn-danger { background: var(--color-danger-soft); color: #93000a; }
+  .btn-danger:hover { background: #ffc9c3; }
+  .btn-flat { background: var(--color-mid); box-shadow: none; }
+  .btn-flat:hover { background: var(--color-high); color: var(--color-maroon); }
+  .btn-sm { min-height: 28px; padding: .25rem .5rem; font-size: 11px; }
+  .link { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--color-maroon); display: inline-flex; align-items: center; gap: .25rem; cursor: pointer; white-space: nowrap; }
+  .link:hover { text-decoration: underline; }
+
+  .input { width: 100%; height: 36px; padding: 0 .625rem; background: #fff; border: 1px solid var(--color-high); border-radius: .25rem; font-size: 13px; color: var(--color-ink); }
+  textarea.input { height: auto; padding: .5rem .625rem; }
+  .input-compact { height: 28px; }
+  .input:focus { outline: none; border-color: var(--color-maroon); box-shadow: 0 0 0 1px var(--color-maroon); }
+  .input:disabled { background: var(--color-low); }
+  .search { background: var(--color-low); border-color: transparent; padding-left: 2rem; }
+  input[type="checkbox"], input[type="radio"] { accent-color: var(--color-maroon); width: 14px; height: 14px; }
+
+  .tbl { width: 100%; border-collapse: collapse; }
+  .tbl th { background: var(--color-low); font-family: var(--font-mono); font-size: 10px; line-height: 14px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--color-soft); text-align: left; padding: .625rem 1rem; white-space: nowrap; }
+  .tbl td { padding: .75rem 1rem; border-top: 1px solid var(--color-line); vertical-align: middle; font-size: 13px; }
+  .tbl tbody tr:hover { background: #fcfaf8; }
+  .num { text-align: right !important; font-family: var(--font-mono); font-size: 12px; white-space: nowrap; }
+
+  .badge { display: inline-flex; align-items: center; gap: .25rem; min-height: 20px; padding: .0625rem .375rem; border-radius: .25rem; font-size: 10px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; background: var(--color-mid); color: var(--color-ash); }
+  .badge-moss { background: var(--color-moss-soft); color: var(--color-moss); }
+  .badge-red { background: var(--color-danger-soft); color: #93000a; }
+  .badge-sand { background: var(--color-sand); color: #51443d; }
+  .badge-maroon { background: var(--color-maroon); color: #fff; }
+
+  .tab { padding: .3125rem .75rem; border-radius: .25rem; font-size: 12px; font-weight: 500; color: var(--color-soft); cursor: pointer; white-space: nowrap; }
+  .tab:hover { color: var(--color-maroon); }
+  .tab-on { background: var(--color-maroon); color: #fff; }
+  .tab-on:hover { color: #fff; }
+  .bar { height: 4px; border-radius: 999px; background: var(--color-mid); overflow: hidden; }
+  .bar > span { display: block; height: 100%; border-radius: 999px; background: var(--color-maroon); }
+}
+
+/* Layar sentuh: target tekan minimal sekitar 44 px dan teks input yang mudah dibaca. */
+@media (pointer: coarse) {
+  .btn { min-height: 44px; padding-inline: .875rem; font-size: 13px; }
+  .btn-sm { min-height: 42px; font-size: 12px; }
+  .input { height: 46px; font-size: 15px; }
+  textarea.input { height: auto; }
+  .input-compact { height: 42px; }
+  .tab { padding: .625rem .875rem; font-size: 13px; }
+  .tap { display: inline-flex; align-items: center; justify-content: center; min-width: 42px; min-height: 42px; }
+  .chip-touch { min-height: 40px; padding-inline: .75rem; }
+  input[type="checkbox"] { width: 20px; height: 20px; }
+  .desktop-only { display: none !important; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  html, body { background: #fff; }
+  .print-only { display: block !important; }
+}
+.print-only { display: none; }

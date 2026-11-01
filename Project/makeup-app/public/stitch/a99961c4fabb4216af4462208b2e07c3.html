@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Earnings &amp; Payouts - RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#F5F2F0",
+                      "surface-bright": "#fff8f8",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container-low": "#fdf0f3",
+                      "surface-dim": "#e3d7da",
+                      "success": "#2E7D32",
+                      "on-background": "#201a1c",
+                      "inverse-surface": "#362f31",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#ecdfe2",
+                      "on-surface": "#252323",
+                      "error": "#BA1A1A",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#234a16",
+                      "on-tertiary-container": "#8dba79",
+                      "surface-tint": "#8b4969",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "tertiary-fixed": "#c0f0aa",
+                      "surface-container-high": "#f2e5e8",
+                      "secondary-container": "#fe8172",
+                      "on-surface-variant": "#514348",
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "secondary": "#a23d32",
+                      "on-primary-container": "#e496b9",
+                      "inverse-primary": "#ffafd3",
+                      "on-primary-fixed": "#3a0524",
+                      "inverse-on-surface": "#fbeef0",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffafd3",
+                      "background": "#FCFAF8",
+                      "on-secondary-container": "#731a13",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-tertiary-fixed": "#042100",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "primary-fixed": "#ffd8e7",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "surface": "#FFFFFF",
+                      "primary": "#4d1634",
+                      "tertiary": "#0b3302",
+                      "outline-variant": "#d5c1c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "24px",
+                      "unit": "8px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen pb-24 md:pb-0 font-body-md text-body-md">
+<!-- Top App Bar -->
+<header class="bg-surface w-full top-0 sticky border-b border-outline z-40">
+<div class="flex justify-between items-center px-margin-mobile py-unit w-full md:px-margin-desktop h-16">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80 md:hidden">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+</div>
+<!-- Empty div for flex centering on mobile -->
+<div class="md:hidden flex-1"></div>
+<h1 class="font-page-title text-page-title text-primary text-center flex-grow md:text-left md:flex-grow-0 hidden md:block">Earnings &amp; Payouts</h1>
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80">
+<img alt="MUA Profile Picture" class="w-8 h-8 rounded-full object-cover border border-outline" data-alt="A professional headshot of an Indonesian makeup artist. The woman has a neat updo, natural makeup, and is smiling warmly. The background is a soft, blurred studio setting. High quality, well-lit, corporate yet approachable portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiB6p7r-eeG5wnRi1s0a0Dj22MFRC_qtUGWLYFz6KcNsYv1XemmBfDtXbmM_qZ9Z4ylYEk6Q-Sciy0ajG-U-AEavDDydAjpH23irIgJbLTzbyKzA3kOmAdlfmNDBtYdvE9gxx6l6tOchZPO7eLDzEaUfeivRCzKWrDTxHyk5UG3SWLy4piewWdZyI1vYmCd_KeMDwScQSXXU8VCWBKF1EbliJbUHc0KKabPcj8KlAw9Yq5h30TOhUucg">
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop py-6 space-y-6">
+<!-- Mobile Page Title -->
+<h1 class="font-section-heading-mobile text-section-heading-mobile text-primary md:hidden mb-4">Earnings &amp; Payouts</h1>
+<!-- Balance Card -->
+<section class="bg-primary-container text-on-primary-container rounded-xl p-6 shadow-sm relative overflow-hidden flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+<!-- Decorative element -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary rounded-full opacity-20 blur-2xl"></div>
+<div class="relative z-10">
+<p class="font-body-md text-body-md opacity-80 mb-1">Saldo Saat Ini</p>
+<h2 class="font-display text-display font-bold">Rp 4.500.000</h2>
+<p class="font-caption text-caption opacity-80 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="info">info</span>
+                    Siap ditarik kapan saja
+                </p>
+</div>
+<div class="relative z-10 flex gap-3">
+<button class="flex-1 md:flex-none bg-surface text-primary font-label-md text-label-md py-3 px-6 rounded-lg hover:bg-surface-variant transition-colors border border-outline flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+                    Tarik Dana
+                </button>
+</div>
+</section>
+<!-- Stats Overview -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface rounded-xl p-4 border border-outline shadow-sm">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="trending_up">trending_up</span>
+<span class="font-caption text-caption">Total Pendapatan (Bulan Ini)</span>
+</div>
+<p class="font-card-title text-card-title text-primary">Rp 8.200.000</p>
+</div>
+<div class="bg-surface rounded-xl p-4 border border-outline shadow-sm">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="pending_actions">pending_actions</span>
+<span class="font-caption text-caption">Dalam Proses</span>
+</div>
+<p class="font-card-title text-card-title text-primary">Rp 1.500.000</p>
+</div>
+</section>
+<!-- Transaction History -->
+<section class="bg-surface rounded-xl border border-outline shadow-sm mt-8">
+<div class="p-4 border-b border-outline flex justify-between items-center">
+<h3 class="font-section-heading-mobile text-section-heading-mobile text-on-surface">Riwayat Transaksi</h3>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline">
+                    Filter
+                    <span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+<div class="divide-y divide-outline">
+<!-- Transaction Item 1 -->
+<div class="p-4 flex items-start gap-4 hover:bg-surface-variant transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-label-md text-label-md text-on-surface">Penyelesaian Booking #BK-1029</h4>
+<span class="font-label-md text-label-md text-success">+ Rp 1.200.000</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Wedding Makeup - Sarah</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">12 Okt 2023, 14:30</p>
+</div>
+</div>
+<!-- Transaction Item 2 -->
+<div class="p-4 flex items-start gap-4 hover:bg-surface-variant transition-colors">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="local_atm">local_atm</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-label-md text-label-md text-on-surface">Penarikan Dana ke BCA</h4>
+<span class="font-label-md text-label-md text-on-surface">- Rp 2.000.000</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Berhasil</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">10 Okt 2023, 09:15</p>
+</div>
+</div>
+<!-- Transaction Item 3 -->
+<div class="p-4 flex items-start gap-4 hover:bg-surface-variant transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-label-md text-label-md text-on-surface">Penyelesaian Booking #BK-1015</h4>
+<span class="font-label-md text-label-md text-success">+ Rp 850.000</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Graduation Makeup - Nisa</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">08 Okt 2023, 16:00</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-outline text-center">
+<button class="text-primary font-label-md text-label-md hover:underline">Lihat Semua Transaksi</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile Only) -->
+<nav class="bg-surface fixed bottom-0 w-full z-50 md:hidden border-t border-outline">
+<div class="flex justify-around items-center h-16 w-full px-margin-mobile">
+<!-- Item 1 -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150 w-16" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-[10px] text-center w-full truncate block leading-none">Dashboard</span>
+</a>
+<!-- Item 2 -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150 w-16" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-[10px] text-center w-full truncate block leading-none">Schedule</span>
+</a>
+<!-- Item 3 -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150 w-16" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-md text-[10px] text-center w-full truncate block leading-none">Orders</span>
+</a>
+<!-- Item 4 (Active - Profile/Account context) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 active:scale-95 transition-transform duration-150 w-16 h-14" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-[10px] text-center w-full truncate block leading-none">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

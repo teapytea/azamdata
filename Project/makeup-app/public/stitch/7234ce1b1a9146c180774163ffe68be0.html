@@ -1,0 +1,429 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Promosi &amp; Voucher - Admin RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "outline-variant": "#d5c1c8",
+                      "on-tertiary-container": "#8dba79",
+                      "surface": "#FFFFFF",
+                      "primary-fixed": "#ffd8e7",
+                      "surface-container-high": "#f2e5e8",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#362f31",
+                      "on-background": "#201a1c",
+                      "success": "#2E7D32",
+                      "on-secondary-fixed": "#410001",
+                      "on-surface": "#201a1c",
+                      "on-tertiary-fixed": "#042100",
+                      "tertiary-fixed": "#c0f0aa",
+                      "on-error": "#ffffff",
+                      "background": "#FCFAF8",
+                      "error": "#BA1A1A",
+                      "tertiary": "#0b3302",
+                      "surface-bright": "#fff8f8",
+                      "on-primary-fixed": "#3a0524",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "primary-fixed-dim": "#ffafd3",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "on-surface-variant": "#514348",
+                      "on-primary-container": "#e496b9",
+                      "secondary": "#a23d32",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "inverse-primary": "#ffafd3",
+                      "surface-variant": "#ecdfe2",
+                      "surface-tint": "#8b4969",
+                      "secondary-container": "#fe8172",
+                      "surface-container-highest": "#ecdfe2",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-dim": "#e3d7da",
+                      "on-secondary-container": "#731a13",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#fdf0f3",
+                      "tertiary-container": "#234a16",
+                      "primary": "#4d1634",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#fbeef0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "unit": "8px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "card-title": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- SideNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface text-primary dark:text-primary-fixed-dim font-body-md text-body-md h-screen w-64 fixed left-0 top-0 border-r border-outline dark:border-outline-variant flat no shadows flex flex-col h-full p-4 z-50">
+<div class="mb-8 px-4 py-2">
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim">RiasKita</h1>
+<div class="flex items-center gap-3 mt-6">
+<img alt="Admin Profile Picture" class="w-12 h-12 rounded-full object-cover border border-outline" data-alt="A professional headshot of an administrator in a modern office setting, soft natural lighting, clear and approachable expression, wearing a tailored dark plum blazer over a crisp white shirt, high resolution, corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtwSAMgruj7ppOBSnjCUeLGhVfI5T5smLiXgZH1yhEWNff8ck_A7CU9JU1M6Acn3PDWT9xg1SwDNCtOAdqFYYHSE3NO1oGm9LTXzNF8pTH83sFTYogrzKu1Z11aXzNQx_et3PVX_50gEl8ZHiLirjRIqCZVKaOG9iMTjd4H6ZuPOdwV5ph17MLKa3GpiuWEmEubpYuxn4xA5q5nA3er3aAA7-ytiRGsYBflhOTYRY301lepC7nsB5PMA">
+<div>
+<div class="font-label-md text-label-md font-bold">RiasKita Admin</div>
+<div class="font-caption text-caption text-on-surface-variant">Platform Manager</div>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">face</span>
+<span>MUAs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Users</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span>Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-lg active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">article</span>
+<span>Content</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</div>
+<div class="mt-auto pt-4">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-lg font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                Export Report
+            </button>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-primary dark:text-primary-fixed-dim font-label-md text-label-md docked full-width top-0 sticky border-b border-outline dark:border-outline-variant flat no shadows transition-all duration-200 ease-in-out flex justify-between items-center h-16 px-6 ml-64 w-[calc(100%-16rem)] z-40">
+<div class="flex items-center flex-1">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-body-md font-body-md text-on-surface transition-all" placeholder="Search promotions, vouchers..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-8 w-px bg-outline mx-2"></div>
+<img alt="Admin User Avatar" class="w-8 h-8 rounded-full border border-outline object-cover cursor-pointer hover:ring-2 hover:ring-primary-container transition-all" data-alt="A small circular avatar of an admin user, professional corporate modern style, deep plum background, minimalist graphic representation, crisp and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTk_xweD46pOyq7GFW4QwK5rY4ADYkZ4IkEFvJYRDsdQr0XSTdJ9QQbRPYSEAXj3qkfE63-l-zFL8WFkTO2xkLExTt_-SRAt2PM__S_GlUXtnMP790UG34RJBCLl60uHgnpkquHq3JUHoqdfaNvsF5p1Xw3gK8EiT8AG_eRblzhSQoDABl_02mLbs27xIk29D0Gy69d-BdTethFH7LKugXgUfiCTa2NsfE4e_vsAxtE8foNc-tw9TaVw">
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-margin-desktop min-h-[calc(100vh-4rem)]">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-display text-display text-on-background mb-2">Promosi &amp; Voucher</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Manage active campaigns and track redemption metrics.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-on-primary-fixed-variant hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined">add</span>
+                Create New Promo
+            </button>
+</div>
+<!-- Dashboard Widgets (Bento Grid Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<!-- Widget 1: Active Vouchers -->
+<div class="bg-surface border border-outline rounded-xl p-6 relative overflow-hidden group hover:border-primary-container transition-colors">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-primary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between mb-4 relative z-10">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Campaigns</h3>
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_offer</span>
+</div>
+</div>
+<div class="relative z-10">
+<div class="font-display text-display text-on-background">12</div>
+<div class="flex items-center gap-1 mt-2 text-success font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+2 this week</span>
+</div>
+</div>
+</div>
+<!-- Widget 2: Redemption Stats -->
+<div class="bg-surface border border-outline rounded-xl p-6 relative overflow-hidden group hover:border-primary-container transition-colors">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-secondary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between mb-4 relative z-10">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Redemptions</h3>
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+</div>
+</div>
+<div class="relative z-10">
+<div class="font-display text-display text-on-background">8,405</div>
+<div class="flex items-center gap-1 mt-2 text-success font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+15% vs last month</span>
+</div>
+</div>
+</div>
+<!-- Widget 3: Discount Value -->
+<div class="bg-surface border border-outline rounded-xl p-6 relative overflow-hidden group hover:border-primary-container transition-colors">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-tertiary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between mb-4 relative z-10">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Discount Value</h3>
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+</div>
+<div class="relative z-10">
+<div class="font-display text-display text-on-background">Rp 42.5M</div>
+<div class="flex items-center gap-1 mt-2 text-on-surface-variant font-caption text-caption">
+<span>Cumulative this year</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Campaigns Table -->
+<div class="bg-surface border border-outline rounded-xl overflow-hidden">
+<div class="p-6 border-b border-outline flex justify-between items-center bg-surface-container-lowest">
+<h3 class="font-section-heading text-section-heading text-on-background">Active Campaigns</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 border border-outline rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+                    </button>
+<button class="px-3 py-1.5 border border-outline rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">sort</span> Sort
+                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest border-b border-outline">
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Campaign Name</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Code</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Discount</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Usage</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Status</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline">
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4">
+<div class="font-label-md text-label-md text-on-background">Wedding Season Special</div>
+<div class="font-caption text-caption text-on-surface-variant mt-0.5">Valid until Oct 31, 2023</div>
+</td>
+<td class="p-4">
+<span class="bg-surface-variant text-on-surface-variant px-2.5 py-1 rounded-md font-mono text-sm border border-outline-variant">WEDDING20</span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">20% (Max Rp 500k)</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 75%"></div>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">750 / 1000</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed">Active</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 opacity-0 group-hover:opacity-100 focus:opacity-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4">
+<div class="font-label-md text-label-md text-on-background">New User Welcome</div>
+<div class="font-caption text-caption text-on-surface-variant mt-0.5">No expiry date</div>
+</td>
+<td class="p-4">
+<span class="bg-surface-variant text-on-surface-variant px-2.5 py-1 rounded-md font-mono text-sm border border-outline-variant">WELCOME50</span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">Rp 50k Flat</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 32%"></div>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">3205 / ∞</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed">Active</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 opacity-0 group-hover:opacity-100 focus:opacity-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4">
+<div class="font-label-md text-label-md text-on-background">Graduation Flash Sale</div>
+<div class="font-caption text-caption text-on-surface-variant mt-0.5">Valid until Aug 15, 2023</div>
+</td>
+<td class="p-4">
+<span class="bg-surface-variant text-on-surface-variant px-2.5 py-1 rounded-md font-mono text-sm border border-outline-variant">GRADFLASH</span>
+</td>
+<td class="p-4 font-body-md text-body-md text-on-surface">15% (Max Rp 200k)</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<div class="w-24 h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 98%"></div>
+</div>
+<span class="font-caption text-caption text-error">490 / 500</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-secondary-fixed text-on-secondary-fixed">Ending Soon</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 opacity-0 group-hover:opacity-100 focus:opacity-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-outline flex items-center justify-between bg-surface-container-lowest">
+<span class="font-caption text-caption text-on-surface-variant">Showing 1 to 3 of 12 campaigns</span>
+<div class="flex gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-md border border-outline text-on-surface-variant hover:bg-surface-container-low disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md border border-primary-container bg-primary-container text-on-primary-container font-label-md text-label-md">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md border border-outline text-on-surface-variant hover:bg-surface-container-low font-label-md text-label-md">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md border border-outline text-on-surface-variant hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

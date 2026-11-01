@@ -1,0 +1,21 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env*
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
+todos.json
+
+# typescript
+*.tsbuildinfo
+
+# npm auth
+.npmrc
+
+# faiz-ui control panel config (contains secrets)
+create-faiz-ui/app/config.json

@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MUA Service Areas &amp; Travel Fees</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#F5F2F0",
+                      "surface-bright": "#fff8f8",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container-low": "#fdf0f3",
+                      "surface-dim": "#e3d7da",
+                      "success": "#2E7D32",
+                      "on-background": "#201a1c",
+                      "inverse-surface": "#362f31",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#ecdfe2",
+                      "on-surface": "#252323",
+                      "error": "#BA1A1A",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#234a16",
+                      "on-tertiary-container": "#8dba79",
+                      "surface-tint": "#8b4969",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "tertiary-fixed": "#c0f0aa",
+                      "surface-container-high": "#f2e5e8",
+                      "secondary-container": "#fe8172",
+                      "on-surface-variant": "#514348",
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "secondary": "#a23d32",
+                      "on-primary-container": "#e496b9",
+                      "inverse-primary": "#ffafd3",
+                      "on-primary-fixed": "#3a0524",
+                      "inverse-on-surface": "#fbeef0",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffafd3",
+                      "background": "#FCFAF8",
+                      "on-secondary-container": "#731a13",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-tertiary-fixed": "#042100",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "primary-fixed": "#ffd8e7",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "surface": "#FFFFFF",
+                      "primary": "#4d1634",
+                      "tertiary": "#0b3302",
+                      "outline-variant": "#d5c1c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "24px",
+                      "unit": "8px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col md:flex-row">
+<!-- Navigation Drawer (Desktop) -->
+<aside class="hidden md:flex flex-col h-screen w-80 rounded-r-xl bg-surface dark:bg-on-background bg-surface-container-low dark:bg-surface-container-highest shadow-md py-6 sticky top-0 z-40">
+<div class="px-6 mb-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
+<img alt="MUA Profile Image" class="w-full h-full object-cover" data-alt="A professional headshot of a makeup artist with neutral makeup in a well-lit studio. Corporate modern aesthetic, soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3uhuCnv0vdnCPIaiyVEh9BZ7FlCzM91muTyQqHKqNDKaDSN9ogRxcsVgJOWiBWsRBGZo4mU6e8vvOzVP7bT0Bp2Rpzrch-DdBbFRv8_GZYmBMI_vVPJZkjGLI4Cluyjv6B9XL2Eqj_WWg5ldMqIshQwV-KzjZae7gPPrtnyj4c7zVpRAiYxKU7HzczSiQLxw1dXTdNFtUWEM4nhXq4t9kpMx6ehp2GV8rnjYC52zVXmnoBfuY30nMPg">
+</div>
+<div>
+<h2 class="font-card-title text-card-title text-primary dark:text-primary-fixed-dim">Riana Makeup</h2>
+<p class="font-caption text-caption text-on-surface-variant">Professional MUA</p>
+<p class="font-caption text-caption text-on-surface-variant flex items-center gap-1 mt-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Jakarta, ID</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2 px-2">
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="font-label-md text-label-md">Switch to Client</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-label-md text-label-md">Verification Status</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container font-bold p-4 flex items-center gap-4 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Service Settings</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col min-h-screen">
+<!-- TopAppBar (Mobile & Desktop) -->
+<header class="bg-surface dark:bg-on-background w-full top-0 sticky border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center px-margin-mobile py-unit w-full z-30">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary dark:text-primary-fixed-dim cursor-pointer active:opacity-80 p-2 hover:bg-surface-variant transition-colors rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-section-heading-mobile text-section-heading-mobile md:font-page-title md:text-page-title text-primary dark:text-primary-fixed-dim">Service Areas &amp; Travel Fees</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden md:hidden border border-outline">
+<img alt="MUA Profile Picture" class="w-full h-full object-cover" data-alt="A small circular avatar placeholder for a makeup artist profile picture, professional lighting, neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6BJ7CFgy7USwFiBl5FstvXzqkA7dMy3PCAeGDihaMFo8Qg4aUdGtL3-NetAVQ3vZppAyvmEUz7XstLrJBhxucRhptb71VNIOo-1HUXTzy13jX2PKU46Ie-u9DYH96oXu0542EXh3SCorPhrwPJxIFwtRfIT249iY0H7jP9AypwzIIZ6U3DXGBPAJ7m1nD1ITUJNl4oC1inAdB00pMq8YVDIDkh4ANsyf-rKZoPpfHx4yg5j55rVzDJA">
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop overflow-y-auto pb-24 md:pb-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter md:gap-6">
+<!-- Map View Area -->
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="bg-surface border border-outline rounded-xl overflow-hidden flex flex-col h-[400px] lg:h-[600px] shadow-sm relative">
+<div class="absolute inset-0 z-0 bg-surface-variant flex items-center justify-center">
+<!-- Using a placeholder map image as requested -->
+<img alt="Service Area Map" class="w-full h-full object-cover opacity-80" data-alt="A clean, modern map interface showing the city of Jakarta. The map is in a light mode style with subtle grays and whites. A prominent semi-transparent deep plum circle indicates a service radius originating from the city center. A professional aesthetic suitable for a logistics or service area setup screen." data-location="Jakarta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjtfdv21TP8Vnbhx7OaCU92ajsb20AR-9Ce6DEJ7zgsMHUySp3QssI67IGPxjITQo9lCkXvq6Glilma-2QYYpRbZKF5j2dwN3tmDKUB52sDnb6MRZ6UjFV4DHLZonAXUdX23p4OUoQzdxrGQDl8UcIbk2DluRV7bmSoQ689wWlecGv7rvJXH9gNJLyF4hovTiOsftvDeicFj-UhtdIwKR9F-r9QDi0O7uz8xN761gDmnfQ0-uz_t8HAQ">
+</div>
+<!-- Map Overlay Controls -->
+<div class="relative z-10 p-4 flex justify-between items-start pointer-events-none">
+<div class="bg-surface/90 backdrop-blur-sm border border-outline p-3 rounded-lg pointer-events-auto flex flex-col gap-1 shadow-sm">
+<span class="font-label-md text-label-md text-on-surface">Base Location</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Jakarta Selatan</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pointer-events-auto">
+<button class="w-10 h-10 bg-surface border border-outline rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-10 h-10 bg-surface border border-outline rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-10 h-10 bg-surface border border-outline rounded-full flex items-center justify-center text-primary mt-2 hover:bg-surface-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+<!-- Radius Indicator Overlay (Decorative) -->
+<div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+<div class="w-64 h-64 rounded-full border-2 border-primary bg-primary/10 flex items-center justify-center relative">
+<div class="w-3 h-3 bg-primary rounded-full absolute"></div>
+<div class="absolute -top-8 bg-surface border border-outline px-2 py-1 rounded shadow-sm text-xs font-semibold text-primary">
+                                     15 km Free Radius
+                                 </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Settings & Inputs Area -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface border border-outline rounded-xl p-6 shadow-sm flex flex-col gap-6">
+<div>
+<h2 class="font-card-title text-card-title text-on-surface mb-1">Operational Base</h2>
+<p class="font-caption text-caption text-on-surface-variant">Set your primary starting location for calculating travel distances.</p>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="base-city">Base City / Area</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-3 border border-outline rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-md text-body-md text-on-surface transition-colors" id="base-city" placeholder="Enter city or district" type="text" value="Jakarta Selatan, DKI Jakarta">
+</div>
+</div>
+</div>
+<div class="bg-surface border border-outline rounded-xl p-6 shadow-sm flex flex-col gap-6">
+<div>
+<h2 class="font-card-title text-card-title text-on-surface mb-1">Travel Policy</h2>
+<p class="font-caption text-caption text-on-surface-variant">Define free travel zones and excess distance fees.</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="free-radius">Free Travel Radius</label>
+<span class="font-caption text-caption text-primary font-medium">15 km</span>
+</div>
+<input class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary" id="free-radius" max="50" min="0" type="range" value="15">
+<div class="flex justify-between font-caption text-caption text-on-surface-variant">
+<span>0 km</span>
+<span>50 km</span>
+</div>
+</div>
+<div class="w-full h-px bg-outline my-2"></div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="fee-per-km">Fee per Exceeding Km</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-body-md text-body-md text-on-surface-variant">Rp</span>
+<input class="w-full pl-10 pr-16 py-3 border border-outline rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-md text-body-md text-on-surface transition-colors text-right" id="fee-per-km" type="text" value="5.000">
+<span class="absolute right-3 font-body-md text-body-md text-on-surface-variant">/ km</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Example: For a 20km trip, client pays for 5km (Rp 25.000).</p>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<input checked="" class="w-5 h-5 rounded border-outline text-primary focus:ring-primary" id="max-distance-limit" type="checkbox">
+<label class="font-body-md text-body-md text-on-surface cursor-pointer" for="max-distance-limit">Set absolute maximum travel distance</label>
+</div>
+<div class="flex flex-col gap-2 pl-8">
+<div class="relative flex items-center">
+<input class="w-full px-4 py-2 border border-outline rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-md text-body-md text-on-surface transition-colors" id="max-dist-val" type="number" value="40">
+<span class="absolute right-3 font-body-md text-body-md text-on-surface-variant">km</span>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-4 flex gap-4">
+<button class="flex-1 py-3 px-4 border border-outline rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors text-center">
+                            Cancel
+                        </button>
+<button class="flex-1 py-3 px-4 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors shadow-sm text-center">
+                            Save Policy
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-on-background fixed bottom-0 w-full z-50 border-t border-outline dark:border-outline-variant flat no shadows flex justify-around items-center h-16 w-full px-margin-mobile">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md text-[10px]">Schedule</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md text-[10px]">Orders</span>
+</a>
+<!-- Assuming Profile settings is closest context -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md text-[10px] font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

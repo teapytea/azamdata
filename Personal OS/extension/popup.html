@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal OS Scanner</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header><span class="brand-mark">P</span><span><strong>Personal OS</strong><small>Account Scanner</small></span><span id="pairState" class="state">Not paired</span></header>
+
+      <section id="pairPanel">
+        <label>One-time pairing code<input id="pairCode" autocomplete="one-time-code" maxlength="11" placeholder="ABCDE-23456" /></label>
+        <button id="pairButton" class="primary" type="button">Pair extension</button>
+        <p>Generate this code from Personal OS → Connections.</p>
+      </section>
+
+      <section id="scanPanel" hidden>
+        <div class="scan-context"><span id="pageType">Current page</span><small id="pageUrl">Open a supported page first.</small></div>
+        <button id="scanButton" class="primary" type="button">Scan current page</button>
+        <div class="quick-links">
+          <button id="openGoogle" type="button">Google apps</button>
+          <button id="openGmail" type="button">Gmail discovery</button>
+        </div>
+        <button id="forgetButton" class="text-button" type="button">Forget this pairing</button>
+      </section>
+
+      <p id="message" aria-live="polite" class="message"></p>
+      <footer>Only visible, relevant evidence is sent. Passwords, cookies, and full email bodies are never captured.</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Manajemen Kategori - Admin RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "outline-variant": "#d5c1c8",
+                      "on-tertiary-container": "#8dba79",
+                      "surface": "#FFFFFF",
+                      "primary-fixed": "#ffd8e7",
+                      "surface-container-high": "#f2e5e8",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#362f31",
+                      "on-background": "#201a1c",
+                      "success": "#2E7D32",
+                      "on-secondary-fixed": "#410001",
+                      "on-surface": "#201a1c",
+                      "on-tertiary-fixed": "#042100",
+                      "tertiary-fixed": "#c0f0aa",
+                      "on-error": "#ffffff",
+                      "background": "#FCFAF8",
+                      "error": "#BA1A1A",
+                      "tertiary": "#0b3302",
+                      "surface-bright": "#fff8f8",
+                      "on-primary-fixed": "#3a0524",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "primary-fixed-dim": "#ffafd3",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "on-surface-variant": "#514348",
+                      "on-primary-container": "#e496b9",
+                      "secondary": "#a23d32",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "inverse-primary": "#ffafd3",
+                      "surface-variant": "#ecdfe2",
+                      "surface-tint": "#8b4969",
+                      "secondary-container": "#fe8172",
+                      "surface-container-highest": "#ecdfe2",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-dim": "#e3d7da",
+                      "on-secondary-container": "#731a13",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#fdf0f3",
+                      "tertiary-container": "#234a16",
+                      "primary": "#4d1634",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#fbeef0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "unit": "8px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "card-title": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .drag-ghost {
+            opacity: 0.5;
+            background-color: theme('colors.surface-container-highest');
+        }
+        .drag-chosen {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface h-screen w-64 fixed left-0 top-0 border-r border-outline dark:border-outline-variant flex flex-col p-4 z-20">
+<div class="mb-8 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Admin Profile Picture" class="w-full h-full object-cover" data-alt="A professional headshot of a female platform manager, bright lighting, modern office background, subtle plum and warm coral brand colors incorporated in attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYaCJmOn1390M447E5WTQi8gzaKk6JioVvdQSOa-fwa9XbSIW9EOYXG54MbPZ1a_aPV03bseqcrljm-0pFJuaLFjU26ap407Zrx-0ZcWjjvM0ZgS-TmPt-rtP6N3OqGu2UxTTlk8tbcWS89nCnf40-fuln2zj8RG_muCT6l6nkgxMYKUE87Cy4Ex4znTZrpTcJZ_jYvZDhcx5hJQrz36tJE34n9D74CI3WOCy5xmWT3dLCetiej74rZA">
+</div>
+<div>
+<h2 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim line-clamp-1">RiasKita Admin</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Platform Manager</p>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">face</span>
+<span class="font-body-md text-body-md">MUAs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-body-md text-body-md">Users</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-body-md text-body-md">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-body-md text-body-md">Payments</span>
+</a>
+<!-- Content is Active since Categories falls under content management -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-lg active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">article</span>
+<span class="font-body-md text-body-md font-bold">Content</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</div>
+<div class="mt-auto pt-4">
+<button class="w-full bg-surface-container text-primary font-label-md text-label-md py-3 rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2 border border-outline">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                Export Report
+            </button>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md docked full-width top-0 sticky border-b border-outline dark:border-outline-variant flex justify-between items-center h-16 px-6 ml-64 w-[calc(100%-16rem)] z-10">
+<div class="flex items-center gap-4">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-full py-2 pl-10 pr-4 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Search categories..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-all duration-200 ease-in-out flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-all duration-200 ease-in-out flex items-center justify-center">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container cursor-pointer ml-2 border border-outline">
+<img alt="Admin User Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a female platform manager, bright lighting, modern office background, subtle plum and warm coral brand colors incorporated in attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClulqkJTDfHWuIkMNPQrdkFJWZ5MafsIzffM0eq4UeSa1f7RQamcl-dUXCiJu6yrLdhgmgEfLXD2B455jQfY-9bd0DCtJQ9WXjyOk_uf-eg-65wHEbNjJV-8029DWH6mQoazkbTqJBuWJpYXApLsrO7-gCQMBt3GLgkKACW--QUsgW5LvumFYy7EqmwJ6SBeA0-9lVi7BjUYH0Vlt0iCVF7ZpK7ay-vgQoiKmpjjp29vAvtPCAxy2xSA">
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-margin-desktop min-h-[calc(100vh-4rem)]">
+<div class="max-w-6xl mx-auto">
+<header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+<div>
+<h1 class="font-page-title text-page-title text-on-surface mb-2">Manajemen Kategori</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Atur struktur layanan utama dan gaya riasan yang tersedia di platform.</p>
+</div>
+<button class="bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-6 py-3 rounded-lg font-label-md text-label-md transition-colors flex items-center gap-2 whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined">add</span>
+                    Tambah Kategori
+                </button>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Main Categories Column -->
+<div class="lg:col-span-1 bg-surface border border-outline rounded-xl p-4 h-fit sticky top-24">
+<div class="flex items-center justify-between mb-4 pb-4 border-b border-outline">
+<h2 class="font-section-heading text-section-heading text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">category</span>
+                            Kategori Utama
+                        </h2>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mb-4">Seret untuk mengatur ulang urutan tampilan di beranda pengguna.</p>
+<div class="space-y-3 cursor-move" id="main-categories-list">
+<!-- Category Item 1 -->
+<div class="bg-surface-container-lowest border border-outline rounded-lg p-3 flex items-center justify-between hover:border-primary transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant cursor-grab active:cursor-grabbing">drag_indicator</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Pernikahan</h3>
+<p class="font-caption text-caption text-on-surface-variant">124 Layanan</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<!-- Category Item 2 -->
+<div class="bg-primary-fixed/30 border border-primary/40 rounded-lg p-3 flex items-center justify-between group relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 border-l-4 border-primary"></div>
+<div class="flex items-center gap-3 relative z-10">
+<span class="material-symbols-outlined text-primary cursor-grab active:cursor-grabbing">drag_indicator</span>
+<div>
+<h3 class="font-label-md text-label-md text-primary font-bold">Wisuda</h3>
+<p class="font-caption text-caption text-primary/80">85 Layanan</p>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container p-1 relative z-10">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<!-- Category Item 3 -->
+<div class="bg-surface-container-lowest border border-outline rounded-lg p-3 flex items-center justify-between hover:border-primary transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant cursor-grab active:cursor-grabbing">drag_indicator</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Pesta &amp; Acara</h3>
+<p class="font-caption text-caption text-on-surface-variant">56 Layanan</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<!-- Category Item 4 -->
+<div class="bg-surface-container-lowest border border-outline rounded-lg p-3 flex items-center justify-between hover:border-primary transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant cursor-grab active:cursor-grabbing">drag_indicator</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Photoshoot</h3>
+<p class="font-caption text-caption text-on-surface-variant">42 Layanan</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+</div>
+<button class="w-full mt-4 border border-dashed border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary hover:bg-surface-container-low py-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                        Kategori Baru
+                    </button>
+</div>
+<!-- Sub Categories / Styles Details -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Selected Category Header -->
+<div class="bg-surface border border-outline rounded-xl p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10"></div>
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded-md mb-2 inline-block">Kategori Aktif</span>
+<h2 class="font-display text-display text-on-surface">Wisuda</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-lg">Gaya riasan yang disesuaikan untuk acara kelulusan formal dan semi-formal. Fokus pada ketahanan lama dan tampilan natural di depan kamera.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-outline rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" title="Edit Kategori">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="p-2 border border-outline rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors" title="Hapus Kategori">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Makeup Styles Bento Grid -->
+<div class="bg-surface border border-outline rounded-xl p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-card-title text-card-title text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">brush</span>
+                                Gaya Riasan (Sub-Kategori)
+                            </h3>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">add</span> Tambah Gaya
+                            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="sub-categories-list">
+<!-- Style Card 1 -->
+<div class="bg-surface-container-lowest border border-outline rounded-xl p-4 flex flex-col hover:shadow-sm transition-shadow group">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant cursor-grab active:cursor-grabbing hover:text-primary">drag_indicator</span>
+<h4 class="font-label-md text-label-md text-on-surface">Flawless Natural</h4>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value="">
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex gap-2 mb-3">
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded text-[11px] font-medium">Soft Tone</span>
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded text-[11px] font-medium">Matte Finish</span>
+</div>
+<div class="mt-auto flex justify-between items-center pt-3 border-t border-outline">
+<span class="font-caption text-caption text-on-surface-variant">45 MUA Terdaftar</span>
+<button class="text-on-surface-variant hover:text-primary text-[13px] font-medium">Edit</button>
+</div>
+</div>
+<!-- Style Card 2 -->
+<div class="bg-surface-container-lowest border border-outline rounded-xl p-4 flex flex-col hover:shadow-sm transition-shadow group">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant cursor-grab active:cursor-grabbing hover:text-primary">drag_indicator</span>
+<h4 class="font-label-md text-label-md text-on-surface">Glamour Bold</h4>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value="">
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex gap-2 mb-3 flex-wrap">
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded text-[11px] font-medium">Smokey Eye</span>
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded text-[11px] font-medium">Contour</span>
+</div>
+<div class="mt-auto flex justify-between items-center pt-3 border-t border-outline">
+<span class="font-caption text-caption text-on-surface-variant">28 MUA Terdaftar</span>
+<button class="text-on-surface-variant hover:text-primary text-[13px] font-medium">Edit</button>
+</div>
+</div>
+<!-- Style Card 3 -->
+<div class="bg-surface-container-lowest border border-outline rounded-xl p-4 flex flex-col hover:shadow-sm transition-shadow group">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant cursor-grab active:cursor-grabbing hover:text-primary">drag_indicator</span>
+<h4 class="font-label-md text-label-md text-on-surface">Korean Look</h4>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value="">
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex gap-2 mb-3 flex-wrap">
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded text-[11px] font-medium">Dewy Finish</span>
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded text-[11px] font-medium">Peach Tones</span>
+</div>
+<div class="mt-auto flex justify-between items-center pt-3 border-t border-outline">
+<span class="font-caption text-caption text-on-surface-variant">34 MUA Terdaftar</span>
+<button class="text-on-surface-variant hover:text-primary text-[13px] font-medium">Edit</button>
+</div>
+</div>
+<!-- Add New Style Card Slot -->
+<button class="bg-surface border-2 border-dashed border-outline-variant rounded-xl p-4 flex flex-col items-center justify-center hover:bg-surface-container-low hover:border-primary hover:text-primary text-on-surface-variant transition-all min-h-[140px]">
+<span class="material-symbols-outlined text-[32px] mb-2">add_circle</span>
+<span class="font-label-md text-label-md">Tambah Gaya Riasan</span>
+</button>
+</div>
+</div>
+<!-- Form Preview (Glassmorphism inspired container for quick edits) -->
+<div class="bg-surface/60 backdrop-blur-md border border-outline rounded-xl p-6 relative overflow-hidden">
+<h3 class="font-card-title text-card-title text-on-surface mb-4">Pengaturan Metadata Kategori</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Slug URL</label>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg px-3 py-2 font-body-md text-body-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none" readonly="" type="text" value="wisuda">
+<p class="font-caption text-caption text-on-surface-variant mt-1">riaskita.com/kategori/wisuda</p>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Ikon Kategori</label>
+<div class="flex gap-3">
+<div class="w-10 h-10 border border-outline rounded-lg flex items-center justify-center bg-surface-container-lowest text-primary">
+<span class="material-symbols-outlined">school</span>
+</div>
+<button class="px-4 py-2 border border-outline rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors">
+                                         Ubah Ikon
+                                     </button>
+</div>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface mb-2">Tag Pencarian (SEO)</label>
+<div class="flex flex-wrap gap-2 p-2 border border-outline rounded-lg bg-surface-container-lowest">
+<span class="bg-surface-variant text-on-surface px-3 py-1 rounded-full text-[13px] flex items-center gap-1">makeup wisuda <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span></span>
+<span class="bg-surface-variant text-on-surface px-3 py-1 rounded-full text-[13px] flex items-center gap-1">mua wisuda <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span></span>
+<span class="bg-surface-variant text-on-surface px-3 py-1 rounded-full text-[13px] flex items-center gap-1">riasan kelulusan <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span></span>
+<input class="bg-transparent border-none focus:ring-0 text-[13px] p-1 flex-1 min-w-[120px] outline-none" placeholder="Tambah tag..." type="text">
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-3">
+<button class="px-6 py-2 border border-outline rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors">Batal</button>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">Simpan Perubahan</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple script to simulate drag interactivity visually -->
+<script>
+        // Simple visual feedback for draggable items to feel interactive
+        document.querySelectorAll('.cursor-grab').forEach(handle => {
+            handle.addEventListener('mousedown', () => {
+                handle.closest('div.border').classList.add('opacity-50', 'scale-[0.98]', 'border-primary');
+                document.body.style.cursor = 'grabbing';
+            });
+            handle.addEventListener('mouseup', () => {
+                handle.closest('div.border').classList.remove('opacity-50', 'scale-[0.98]', 'border-primary');
+                document.body.style.cursor = 'default';
+            });
+            handle.addEventListener('mouseleave', () => {
+                 handle.closest('div.border').classList.remove('opacity-50', 'scale-[0.98]', 'border-primary');
+                 document.body.style.cursor = 'default';
+            })
+        });
+    </script>
+</body></html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Manajemen Pengguna - RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#252323",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-variant": "#F5F2F0",
+                        "on-primary-fixed": "#3a0524",
+                        "secondary-container": "#fe8172",
+                        "surface-container-low": "#fdf0f3",
+                        "outline": "#E8E2DF",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#514348",
+                        "secondary": "#a23d32",
+                        "primary-fixed-dim": "#ffafd3",
+                        "surface-dim": "#e3d7da",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-tint": "#8b4969",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#BA1A1A",
+                        "tertiary": "#0b3302",
+                        "on-tertiary-fixed": "#042100",
+                        "inverse-surface": "#362f31",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8dba79",
+                        "tertiary-container": "#234a16",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "inverse-primary": "#ffafd3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#201a1c",
+                        "on-primary-container": "#e496b9",
+                        "surface-bright": "#fff8f8",
+                        "primary-fixed": "#ffd8e7",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d5c1c8",
+                        "on-secondary-container": "#731a13",
+                        "inverse-on-surface": "#fbeef0",
+                        "surface-container-high": "#f2e5e8",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#4d1634",
+                        "surface": "#FFFFFF",
+                        "background": "#FCFAF8",
+                        "primary-container": "#682c4b",
+                        "success": "#2E7D32",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container": "#f8ebee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "margin-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display": ["Geist"],
+                        "section-heading-mobile": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "page-title": ["Geist"],
+                        "caption": ["Inter"],
+                        "card-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-20 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface sticky top-0 z-40 border-b border-outline">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-7xl mx-auto">
+<div class="flex items-center gap-2 hover:bg-surface-container-low transition-colors cursor-pointer rounded-lg p-1">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-display text-display text-primary">RiasKita</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:bg-surface-container-low transition-colors px-2 py-1 rounded">
+                ID | EN
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<!-- Header & Controls -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<h1 class="font-page-title text-page-title text-on-background">Manajemen Pengguna</h1>
+<div class="flex flex-col sm:flex-row gap-4">
+<!-- Tabs Segmented Control -->
+<div class="flex bg-surface-variant p-1 rounded-lg border border-outline">
+<button class="flex-1 px-4 py-2 bg-surface border border-outline rounded-md shadow-sm font-label-md text-label-md text-primary transition-all">
+                        Pelanggan
+                    </button>
+<button class="flex-1 px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all">
+                        MUA
+                    </button>
+</div>
+<!-- Search -->
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface border border-outline rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder:text-on-surface-variant transition-colors" placeholder="Cari nama, email, ID..." type="text">
+</div>
+</div>
+</div>
+<!-- User Directory Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- User Card 1 (Active) -->
+<article class="bg-surface border border-outline rounded-lg p-4 flex flex-col gap-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<img class="w-12 h-12 rounded-full object-cover border border-outline" data-alt="A professional headshot of an Indonesian woman with subtle, elegant makeup, smiling gently. The lighting is soft and natural, emphasizing a modern, trustworthy, and approachable aesthetic suitable for a professional profile avatar on a corporate beauty platform. The background is a plain light neutral color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuJM9BtB0fK1yxeo6S056Gw1De6joDjCs_qWwzvzqWED00cSwHUOKKDnXvn-CAY9yhyZB15cM1tyQkDozbNWUP6dAudwzPPQixnwAUdOvi3OpVYgG45vyKgL_KxO-UkMsCVi63TFI9kP4cDJfAWdTclbicg2MDGttcXi82aWXS0xF7cQkQfjwtm8-pZBysMBwoVrdcdqS284E8J-Jbd83aIYYnGpOb1XhtMdqIMh_Ik7ftZhhuuhJNaQ">
+<div>
+<h2 class="font-card-title text-card-title text-on-surface">Siti Rahmawati</h2>
+<p class="font-caption text-caption text-on-surface-variant">ID: CUST-0982</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">mail</span>
+                        siti.rahma@email.com
+                    </div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span>
+                        Bergabung: 12 Okt 2023
+                    </div>
+</div>
+<div class="mt-auto pt-2 border-t border-surface-variant">
+<span class="inline-flex items-center px-2 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-md text-label-md text-[12px]">
+                        Active
+                    </span>
+</div>
+</article>
+<!-- User Card 2 (Suspended) -->
+<article class="bg-surface border border-outline rounded-lg p-4 flex flex-col gap-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<div class="w-12 h-12 rounded-full bg-surface-variant border border-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<h2 class="font-card-title text-card-title text-on-surface">Budi Santoso</h2>
+<p class="font-caption text-caption text-on-surface-variant">ID: CUST-1045</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">mail</span>
+                        budi.s@email.com
+                    </div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span>
+                        Bergabung: 05 Nov 2023
+                    </div>
+</div>
+<div class="mt-auto pt-2 border-t border-surface-variant">
+<span class="inline-flex items-center px-2 py-1 rounded bg-error-container text-on-error-container font-label-md text-label-md text-[12px]">
+                        Suspended
+                    </span>
+</div>
+</article>
+<!-- User Card 3 (Active) -->
+<article class="bg-surface border border-outline rounded-lg p-4 flex flex-col gap-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<img class="w-12 h-12 rounded-full object-cover border border-outline" data-alt="A high-quality portrait of a young Indonesian woman with a sophisticated, natural makeup look. She is wearing professional attire. The image is brightly lit with a clean, light aesthetic, perfectly suited for a modern corporate directory or professional service marketplace profile picture. The background is a soft, solid light tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-9VHMPpuQRo3fZOWzt7qEVr5-J5akAdxjLr7l50my7zrgBt5DAxLeer6SFFuocBRlSAhN6BltcN57xmwulfrSNk4xCcwtfeLAdHjArG3GL5CuAGxCM3sRwec4hI9ZiVZN2L-xw61Js8gQ6Hkg1TqewjBjMtshHbFc1JRe_GaA2ZC4ZyyvelDnPWFry_9S8X0nRu25xKTS9V4afbuOclnOGlLX8HWT2SeDFD8X7Pcy3eW79RQmZ-ZXbg">
+<div>
+<h2 class="font-card-title text-card-title text-on-surface">Ayu Lestari</h2>
+<p class="font-caption text-caption text-on-surface-variant">ID: CUST-1102</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">mail</span>
+                        ayu.l@email.com
+                    </div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span>
+                        Bergabung: 20 Jan 2024
+                    </div>
+</div>
+<div class="mt-auto pt-2 border-t border-surface-variant">
+<span class="inline-flex items-center px-2 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-md text-label-md text-[12px]">
+                        Active
+                    </span>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center bg-surface border-t border-outline px-2 py-3 z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md text-[12px]">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-md text-label-md text-[12px]">Cari</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">event_note</span>
+<span class="font-label-md text-label-md text-[12px]">Booking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-md text-label-md text-[12px]">Favorit</span>
+</a>
+<!-- Active Tab: Akun -->
+<a class="flex flex-col items-center justify-center text-primary bg-primary-fixed rounded-full px-4 py-1 scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md text-[12px]">Akun</span>
+</a>
+</nav>
+</body></html>

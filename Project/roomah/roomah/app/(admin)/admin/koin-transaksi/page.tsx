@@ -1,0 +1,1 @@
+export default function KoinTransaksi(){return(<div>Koin & Transaksi</div>);}

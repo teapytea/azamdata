@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Penyelesaian Sengketa - Admin Panel</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#252323",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-variant": "#F5F2F0",
+                        "on-primary-fixed": "#3a0524",
+                        "secondary-container": "#fe8172",
+                        "surface-container-low": "#fdf0f3",
+                        "outline": "#E8E2DF",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#514348",
+                        "secondary": "#a23d32",
+                        "primary-fixed-dim": "#ffafd3",
+                        "surface-dim": "#e3d7da",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-tint": "#8b4969",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#BA1A1A",
+                        "tertiary": "#0b3302",
+                        "on-tertiary-fixed": "#042100",
+                        "inverse-surface": "#362f31",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8dba79",
+                        "tertiary-container": "#234a16",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "inverse-primary": "#ffafd3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#201a1c",
+                        "on-primary-container": "#e496b9",
+                        "surface-bright": "#fff8f8",
+                        "primary-fixed": "#ffd8e7",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d5c1c8",
+                        "on-secondary-container": "#731a13",
+                        "inverse-on-surface": "#fbeef0",
+                        "surface-container-high": "#f2e5e8",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#4d1634",
+                        "surface": "#FFFFFF",
+                        "background": "#FCFAF8",
+                        "primary-container": "#682c4b",
+                        "success": "#2E7D32",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container": "#f8ebee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "margin-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "display": ["Geist", "sans-serif"],
+                        "section-heading-mobile": ["Geist", "sans-serif"],
+                        "section-heading": ["Geist", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "page-title": ["Geist", "sans-serif"],
+                        "caption": ["Inter", "sans-serif"],
+                        "card-title": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); }
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        /* Hide scrollbar for cleaner look in side nav */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex min-h-screen text-on-background font-body-md text-body-md antialiased">
+<!-- NAVIGATION DRAWER -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface border-r border-outline p-margin-desktop gap-4 z-50 overflow-y-auto no-scrollbar">
+<!-- Header -->
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of an Indonesian administrative worker in a modern office setting. The lighting is bright and high-key, creating a clean, trustworthy corporate aesthetic. The subject is smiling slightly, dressed in smart casual business attire, with a soft blurred background indicating a busy but organized tech company environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUyll6hPkUqc-AjAXhdxSkeMrDd16wUGDGonSQLYNqTYY0DjSIxVI2pYAIxG2pA-wVZLWH4lYyfe9qew4zuqW8Sy4VbZ34Izoc5dWAYHZte4gR9ISiE6t4Vl1_ceUbRDuxXlybZ8XmVXRFfrQYaQSTw5VBFxRfwChPIQ6JpSxaYLy665eXrRUoMwg3bUFJ8RcdeXiz19R3wSrpuIhS5RUuBKTY0MkRRo73qEYoS6UvRBFweula2sTglQ">
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">System Admin</span>
+<span class="font-caption text-caption text-on-surface-variant">Global Administrator</span>
+<span class="font-caption text-caption text-outline-variant text-[10px]">v1.2.0</span>
+</div>
+</div>
+<!-- Nav Links -->
+<nav class="flex flex-col gap-1">
+<!-- MUAs -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]">face_5</span>
+<span class="font-label-md text-label-md">MUAs</span>
+</a>
+<!-- Users -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="font-label-md text-label-md">Users</span>
+</a>
+<!-- Bookings -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<!-- Payments -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+<span class="font-label-md text-label-md">Payments</span>
+</a>
+<!-- Disputes (ACTIVE) -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary-container text-on-primary-container font-bold transition-all cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="font-label-md text-label-md">Disputes</span>
+</a>
+<!-- Content -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+<span class="font-label-md text-label-md">Content</span>
+</a>
+</nav>
+</aside>
+<!-- MAIN CONTENT WRAPPER -->
+<div class="flex-1 flex flex-col md:ml-64 w-full min-h-screen relative">
+<!-- TOP APP BAR -->
+<header class="w-full top-0 sticky z-40 bg-surface border-b border-outline flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<button class="md:hidden p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-page-title text-page-title text-primary tracking-tight">Admin Dashboard</h1>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-surface-container-high transition-colors cursor-pointer text-on-surface-variant">
+<span class="font-label-md text-label-md hidden sm:block">Notifications</span>
+<div class="relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border border-surface"></span>
+</div>
+</button>
+</header>
+<!-- MAIN CANVAS -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop flex flex-col gap-6">
+<!-- Page Header Section -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-display text-display text-on-surface">Penyelesaian Sengketa</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage and resolve reported issues between MUAs and customers.</p>
+</div>
+<!-- Action / Filters -->
+<div class="flex items-center gap-3">
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface border border-outline rounded-lg font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Search ID or Name..." type="text">
+</div>
+<button class="p-2 bg-surface border border-outline rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Stats/Summary Chips -->
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md border border-primary">Needs Attention (12)</button>
+<button class="px-4 py-1.5 rounded-full bg-surface text-on-surface-variant border border-outline font-label-md text-label-md hover:bg-surface-container-low transition-colors">Pending Evidence (5)</button>
+<button class="px-4 py-1.5 rounded-full bg-surface text-on-surface-variant border border-outline font-label-md text-label-md hover:bg-surface-container-low transition-colors">Resolved (143)</button>
+</div>
+<!-- Disputes Grid (Bento/Card Style) -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-gutter items-start">
+<!-- CARD 1: High Priority -->
+<div class="bg-surface border border-error-container rounded-xl p-5 flex flex-col gap-4 relative overflow-hidden shadow-sm">
+<!-- Decorator Line -->
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<!-- Header -->
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Dispute #DSP-8842</span>
+<span class="font-caption text-caption text-on-surface-variant">Reported 2 hours ago</span>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-error-container text-on-error-container font-label-md text-[11px] uppercase tracking-wide">Urgent Intervention</span>
+</div>
+<!-- Parties Involved -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-lg border border-outline-variant/30">
+<!-- Customer -->
+<div class="flex items-center gap-2 flex-1">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A portrait of an Indonesian woman, a customer, looking slightly concerned. Soft, natural lighting, high-quality digital photography style. The background is a plain, light warm gray to maintain a corporate, clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d-BslxjGpwF5TDR5CkB353_njJMlZVuUwesYZaaMXzeAOiDUM_GNxNEAfay8E4GI21dXoI140dlwraJLa2AoWpGkq7w4Nvo3GPF6Mcojn1hriwLUukfYCxU7rfhCpDxldz70QQTHnripsZYNCh8uhJ8dSMWm4cYR_4pEzEOv5_m0YJtOuirf5pfJWEkFrhnAnmbJOq3b28han44AyhTGsvooHr5URazMTwbjcSxEmY3xCROSobZU7w">
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] text-on-surface">Siti Nurhaliza</span>
+<span class="font-caption text-[11px] text-on-surface-variant">Customer</span>
+</div>
+</div>
+<!-- Divider vs -->
+<div class="flex flex-col items-center justify-center px-2">
+<span class="text-on-surface-variant/40 font-bold text-[10px]">VS</span>
+<div class="w-px h-6 bg-outline-variant/50"></div>
+</div>
+<!-- MUA -->
+<div class="flex items-center gap-2 flex-1 justify-end text-right">
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] text-on-surface">Budi Makeup</span>
+<span class="font-caption text-[11px] text-on-surface-variant">MUA (Pro)</span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A portrait of an Indonesian makeup artist, a man with a neat appearance, looking professional but serious. Studio lighting, clean corporate style. The background is a subtle, out-of-focus makeup studio setting, bright and organized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB33bFrT5Hcqvcum1tA6D9A6AyIKHxocXbopt7m1SzMvSd9lRAOLf04vscdCE2Rql4Q19rExBd4WuVA64AIrHfqkw6J3Q46twZOMNid_F7NIcA5FNQrYClxrOhkxg74dilTzuosGhJ2KO3aSiYXKxgXLLZN9tPf-zAmXAzDND3ZXcblu56cojd6MH8A_mxWy19QOzaykE1lnplft6TxLx61UcGzVut95AoDkOwB2CoXCdKw8RCnXJsCKg">
+</div>
+</div>
+</div>
+<!-- Description -->
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface">Issue: No Show</span>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">The MUA did not arrive for the scheduled wedding preparation session at 4 AM. I tried calling multiple times but received no response. Requesting full refund.</p>
+</div>
+<!-- Evidence & Action Footer -->
+<div class="flex items-center justify-between pt-3 border-t border-outline mt-1">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">attachment</span>
+<span>3 Photos Attached</span>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-5 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+                            Decide
+                        </button>
+</div>
+</div>
+<!-- CARD 2: Standard/Pending -->
+<div class="bg-surface border border-outline rounded-xl p-5 flex flex-col gap-4 hover:border-primary-container transition-colors shadow-sm">
+<!-- Header -->
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Dispute #DSP-8810</span>
+<span class="font-caption text-caption text-on-surface-variant">Reported yesterday</span>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-md text-[11px] uppercase tracking-wide">Awaiting Evidence</span>
+</div>
+<!-- Parties Involved -->
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-lg border border-outline-variant/30">
+<div class="flex items-center gap-2 flex-1">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold text-caption">AW</div>
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] text-on-surface">Ayu Wulandari</span>
+<span class="font-caption text-[11px] text-on-surface-variant">Customer</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center px-2">
+<span class="text-on-surface-variant/40 font-bold text-[10px]">VS</span>
+<div class="w-px h-6 bg-outline-variant/50"></div>
+</div>
+<div class="flex items-center gap-2 flex-1 justify-end text-right">
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] text-on-surface">Dewi Glam</span>
+<span class="font-caption text-[11px] text-on-surface-variant">MUA</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold text-caption">DG</div>
+</div>
+</div>
+<!-- Description -->
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface">Issue: Service Quality</span>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Makeup did not match the agreed upon trial look and started melting after only 2 hours. MUA claims it was due to venue temperature.</p>
+</div>
+<!-- Evidence & Action Footer -->
+<div class="flex items-center justify-between pt-3 border-t border-outline mt-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+<span>Pending MUA Reply</span>
+</div>
+<button class="bg-surface-variant text-on-surface font-label-md text-label-md px-5 py-2 rounded-lg border border-outline hover:bg-surface-container-high transition-colors">
+                            Review Details
+                        </button>
+</div>
+</div>
+<!-- CARD 3: Payment Issue -->
+<div class="bg-surface border border-outline rounded-xl p-5 flex flex-col gap-4 hover:border-primary-container transition-colors shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Dispute #DSP-8792</span>
+<span class="font-caption text-caption text-on-surface-variant">Reported 2 days ago</span>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] uppercase tracking-wide">Admin Review</span>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-lg border border-outline-variant/30">
+<div class="flex items-center gap-2 flex-1">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold text-caption">RF</div>
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] text-on-surface">Rizky Fauzi</span>
+<span class="font-caption text-[11px] text-on-surface-variant">Customer</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center px-2">
+<span class="text-on-surface-variant/40 font-bold text-[10px]">VS</span>
+<div class="w-px h-6 bg-outline-variant/50"></div>
+</div>
+<div class="flex items-center gap-2 flex-1 justify-end text-right">
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] text-on-surface">Lina Beauty</span>
+<span class="font-caption text-[11px] text-on-surface-variant">MUA</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold text-caption">LB</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface">Issue: Additional Fees</span>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">MUA demanded extra transport fee in cash on the day of the event, which was not stated in the original booking contract.</p>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-outline mt-1">
+<div class="flex items-center gap-2 text-success font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Evidence Complete</span>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-5 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+                            Decide
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="w-full py-4 bg-surface-variant border-t border-outline flex justify-between items-center px-margin-mobile md:px-margin-desktop mt-auto">
+<span class="font-caption text-caption text-on-surface-variant">© 2024 MUA Marketplace Admin Panel</span>
+<div class="flex gap-4">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Support</a>
+</div>
+</footer>
+</div>
+</body></html>

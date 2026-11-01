@@ -1,0 +1,28 @@
+:root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; background: #0b0f18; color: #f5f7ff; }
+* { box-sizing: border-box; }
+body { width: 350px; margin: 0; background: radial-gradient(circle at top right, #172a50 0, #0b0f18 43%); }
+main { padding: 16px; }
+header { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid #25304a; }
+header > span:nth-child(2) { display: flex; min-width: 0; flex: 1; flex-direction: column; }
+header strong { font-size: 14px; }
+header small, p, footer, .scan-context small { color: #98a5c2; font-size: 11px; line-height: 1.45; }
+.brand-mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 10px; background: linear-gradient(135deg, #65a0ff, #8055ff); font-weight: 900; }
+.state { padding: 4px 7px; border-radius: 99px; background: #20283b; color: #aab4cb; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.state.connected { color: #7de5ae; background: rgb(125 229 174 / .12); }
+section { display: grid; gap: 11px; padding-top: 15px; }
+label { display: grid; gap: 6px; color: #cbd3e8; font-size: 11px; font-weight: 700; }
+input { width: 100%; height: 40px; padding: 0 11px; border: 1px solid #34415f; border-radius: 9px; color: #fff; background: #141b2a; font: inherit; letter-spacing: .12em; text-transform: uppercase; outline: none; }
+input:focus { border-color: #5e92ff; box-shadow: 0 0 0 3px rgb(80 137 255 / .16); }
+button { min-height: 38px; border: 1px solid #34415f; border-radius: 9px; color: #dce4f7; background: #171f30; font: inherit; font-size: 11px; font-weight: 800; cursor: pointer; }
+button:hover { border-color: #5e92ff; }
+button:disabled { opacity: .55; cursor: wait; }
+.primary { border: 0; color: white; background: linear-gradient(135deg, #176bff, #6d4eff); }
+.quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.text-button { min-height: 28px; border: 0; color: #93a4c9; background: transparent; }
+.scan-context { display: flex; min-width: 0; flex-direction: column; gap: 4px; padding: 10px; border-radius: 9px; background: #121a29; }
+.scan-context span { font-size: 12px; font-weight: 800; }
+.scan-context small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.message { min-height: 16px; margin: 12px 0 0; }
+.message.error { color: #ffb4ab; }
+.message.success { color: #7de5ae; }
+footer { margin-top: 12px; padding-top: 11px; border-top: 1px solid #25304a; }

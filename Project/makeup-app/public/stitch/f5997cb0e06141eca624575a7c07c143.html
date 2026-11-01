@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Manajemen Kategori - MUA Admin Panel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#252323",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-variant": "#F5F2F0",
+                        "on-primary-fixed": "#3a0524",
+                        "secondary-container": "#fe8172",
+                        "surface-container-low": "#fdf0f3",
+                        "outline": "#E8E2DF",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#514348",
+                        "secondary": "#a23d32",
+                        "primary-fixed-dim": "#ffafd3",
+                        "surface-dim": "#e3d7da",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-tint": "#8b4969",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#BA1A1A",
+                        "tertiary": "#0b3302",
+                        "on-tertiary-fixed": "#042100",
+                        "inverse-surface": "#362f31",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8dba79",
+                        "tertiary-container": "#234a16",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "inverse-primary": "#ffafd3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#201a1c",
+                        "on-primary-container": "#e496b9",
+                        "surface-bright": "#fff8f8",
+                        "primary-fixed": "#ffd8e7",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d5c1c8",
+                        "on-secondary-container": "#731a13",
+                        "inverse-on-surface": "#fbeef0",
+                        "surface-container-high": "#f2e5e8",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#4d1634",
+                        "surface": "#FFFFFF",
+                        "background": "#FCFAF8",
+                        "primary-container": "#682c4b",
+                        "success": "#2E7D32",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container": "#f8ebee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "margin-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display": ["Geist"],
+                        "section-heading-mobile": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "page-title": ["Geist"],
+                        "caption": ["Inter"],
+                        "card-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .drag-handle { cursor: grab; }
+        .drag-handle:active { cursor: grabbing; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md flex h-screen overflow-hidden antialiased">
+<!-- Navigation Drawer (Shared Component) -->
+<aside class="bg-surface dark:bg-surface border-r border-outline dark:border-outline-variant h-screen w-64 fixed left-0 top-0 flex flex-col h-full p-margin-desktop gap-4 hidden md:flex z-20">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">SA</div>
+<div>
+<h2 class="font-label-md text-label-md text-on-surface">System Admin</h2>
+<p class="font-caption text-caption text-on-surface-variant">Global Administrator</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all rounded-lg transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">face_5</span>
+                MUAs
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all rounded-lg transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">group</span>
+                Users
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all rounded-lg transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                Bookings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all rounded-lg transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">payments</span>
+                Payments
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all rounded-lg transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">gavel</span>
+                Disputes
+            </a>
+<!-- Active State: Content -->
+<a class="flex items-center gap-3 px-4 py-3 font-label-md text-label-md bg-primary-container text-on-primary-container rounded-lg font-bold hover:bg-surface-variant transition-all transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+                Content
+            </a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline">
+<p class="font-caption text-caption text-on-surface-variant">v1.2.0</p>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col min-w-0 md:ml-64 relative">
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-surface dark:bg-surface w-full top-0 sticky border-b border-outline dark:border-outline-variant flex justify-between items-center px-margin-desktop py-4 z-10">
+<div class="flex items-center gap-4">
+<button class="md:hidden p-2 text-primary dark:text-inverse-primary hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display text-display text-primary dark:text-inverse-primary">Admin Dashboard</h1>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 px-4 py-2 rounded-lg font-label-md text-label-md flex items-center gap-2">
+                Notifications
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 overflow-y-auto bg-background p-margin-desktop flex flex-col gap-8">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-page-title text-page-title text-on-background">Manajemen Kategori</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Kelola dan atur struktur layanan yang tersedia di platform.</p>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-tint hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+                    Tambah Kategori Baru
+                </button>
+</div>
+<!-- Content Grid (Bento Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1: Service Categories -->
+<div class="bg-surface border border-outline rounded-xl flex flex-col overflow-hidden">
+<div class="p-6 border-b border-outline bg-surface-container-lowest flex justify-between items-center">
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Kategori Layanan Utama</h3>
+<p class="font-caption text-caption text-on-surface-variant">Layanan dasar yang ditawarkan</p>
+</div>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-2 bg-surface-variant">
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Wedding Makeup</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Graduation</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Party / Event</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Makeup Styles -->
+<div class="bg-surface border border-outline rounded-xl flex flex-col overflow-hidden">
+<div class="p-6 border-b border-outline bg-surface-container-lowest flex justify-between items-center">
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Gaya Makeup (Styles)</h3>
+<p class="font-caption text-caption text-on-surface-variant">Gaya spesifik yang dicari klien</p>
+</div>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-2 bg-surface-variant">
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Hijab Do</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Natural / Flawless</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Bold / Glamour</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Korean Look</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Add-ons -->
+<div class="bg-surface border border-outline rounded-xl flex flex-col overflow-hidden">
+<div class="p-6 border-b border-outline bg-surface-container-lowest flex justify-between items-center">
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Tipe Add-on</h3>
+<p class="font-caption text-caption text-on-surface-variant">Layanan tambahan opsional</p>
+</div>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-2 bg-surface-variant">
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Hairdo Styling</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Premium False Lashes</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<!-- List Item -->
+<div class="bg-surface border border-outline rounded-lg p-3 flex items-center gap-3 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant drag-handle">drag_indicator</span>
+<span class="font-body-md text-body-md text-on-surface flex-1">Touch-up Session</span>
+<div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-variant dark:bg-surface-container w-full py-4 border-t border-outline flex justify-between items-center px-margin-desktop mt-auto z-10">
+<span class="font-label-md text-label-md text-on-surface">© 2024 MUA Marketplace Admin Panel</span>
+<div class="flex gap-6">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Support</a>
+</div>
+</footer>
+</div>
+</body></html>

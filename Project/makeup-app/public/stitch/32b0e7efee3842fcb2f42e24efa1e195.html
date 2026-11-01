@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Manajemen Pengguna - Admin RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "outline-variant": "#d5c1c8",
+                      "on-tertiary-container": "#8dba79",
+                      "surface": "#FFFFFF",
+                      "primary-fixed": "#ffd8e7",
+                      "surface-container-high": "#f2e5e8",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#362f31",
+                      "on-background": "#201a1c",
+                      "success": "#2E7D32",
+                      "on-secondary-fixed": "#410001",
+                      "on-surface": "#201a1c",
+                      "on-tertiary-fixed": "#042100",
+                      "tertiary-fixed": "#c0f0aa",
+                      "on-error": "#ffffff",
+                      "background": "#FCFAF8",
+                      "error": "#BA1A1A",
+                      "tertiary": "#0b3302",
+                      "surface-bright": "#fff8f8",
+                      "on-primary-fixed": "#3a0524",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "primary-fixed-dim": "#ffafd3",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "on-surface-variant": "#514348",
+                      "on-primary-container": "#e496b9",
+                      "secondary": "#a23d32",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "inverse-primary": "#ffafd3",
+                      "surface-variant": "#ecdfe2",
+                      "surface-tint": "#8b4969",
+                      "secondary-container": "#fe8172",
+                      "surface-container-highest": "#ecdfe2",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-dim": "#e3d7da",
+                      "on-secondary-container": "#731a13",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#fdf0f3",
+                      "tertiary-container": "#234a16",
+                      "primary": "#4d1634",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#fbeef0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "unit": "8px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "card-title": ["Geist"],
+                      "body-md": ["Inter"],
+                      "section-heading": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "page-title": ["Geist"],
+                      "label-md": ["Inter"],
+                      "section-heading-mobile": ["Geist"],
+                      "display": ["Geist"],
+                      "caption": ["Inter"]
+              },
+              "fontSize": {
+                      "card-title": ["18px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "section-heading": ["22px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "1.55", "fontWeight": "400"}],
+                      "page-title": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "section-heading-mobile": ["20px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "display": ["32px", {"lineHeight": "1.15", "fontWeight": "700"}],
+                      "caption": ["12px", {"lineHeight": "1.45", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md m-0 p-0 overflow-x-hidden flex min-h-screen">
+<!-- SideNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface h-screen w-64 fixed left-0 top-0 border-r border-outline dark:border-outline-variant flat no shadows flex flex-col h-full p-4 z-50">
+<div class="mb-8 flex items-center gap-4 px-2">
+<img class="w-12 h-12 rounded-full object-cover border border-outline" data-alt="A professional headshot of an administrative manager in a corporate setting. They are wearing business casual attire, smiling slightly. The background is a clean, modern office environment with soft, bright, light-mode aesthetic lighting. Professional portrait photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4uQJt2G7HEIpl9ubtY0Ws9kMm_vZQ3KE7mjkxPmpaBADtS8YZBx15XiGXHNFLqKEpCrUWrK-H5WcUY183qzvzxfcTLX4Q3JhbPtUiKxLvH3BbmilSgcBD8QFBFBtgmbWntyU1PGxJN1qYtWJoGVH2GoHkpfdTfPGA4Sg1varF867kuW8VHNlvqpurUCGGc6F2BpvwVFuE3R_MbqELEo9oU3kHClvkaT8ic1C3-QcFBDeWsWTANClyhA">
+<div>
+<h2 class="font-card-title text-card-title text-primary dark:text-primary-fixed-dim">RiasKita Admin</h2>
+<p class="font-caption text-caption text-on-surface-variant">Platform Manager</p>
+</div>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="face">face</span>
+<span class="font-label-md text-label-md">MUAs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-lg active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="group" data-weight="fill">group</span>
+<span class="font-label-md text-label-md">Users</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+<span class="font-label-md text-label-md">Content</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 rounded-lg hover:bg-on-primary-fixed-variant transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                Export Report
+            </button>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md docked full-width top-0 sticky border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center h-16 px-6 z-40 transition-all duration-200 ease-in-out">
+<div class="flex items-center gap-4 w-1/3">
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim">RiasKita</h1>
+</div>
+<div class="w-1/3 flex justify-center">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline rounded-full font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Search users..." type="text">
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 w-1/3">
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<img class="w-8 h-8 rounded-full ml-4 object-cover border border-outline cursor-pointer" data-alt="A professional headshot of an administrative manager in a corporate setting. They are wearing business casual attire, smiling slightly. The background is a clean, modern office environment with soft, bright, light-mode aesthetic lighting. Professional portrait photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA34TZHDNjWb0UMvt-xIGfrO8Rpr88bTcBg4dwozY3YA3GHwiQd_Mt3sV7xEB9qCqP4g0B-8fr18WTEQoIOFuP9Ax6eUjbD_v7ChLX_6Gcq04auIuUxkP3Se-ovoBrXvJsjycQUJzAPc47W4l6Ym3pev28K-kIYjVTnQucMP67_4rdRDxmgsitTueeQyAl2PTSUoOlVdM1BsBTTkriZr0HIIl_KbAi-C8y4bdGBqfixyRqg9t35QNupVg">
+</div>
+</header>
+<!-- Page Content -->
+<main class="flex-1 p-margin-desktop bg-background">
+<!-- Header Section -->
+<div class="mb-8 flex justify-between items-end">
+<div>
+<h2 class="font-display text-display text-on-background mb-2">Manajemen Pengguna</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Kelola akun pelanggan dan makeup artist (MUA) di platform RiasKita.</p>
+</div>
+<div class="flex gap-4 border-b border-outline">
+<button class="px-6 py-3 font-label-md text-label-md text-primary font-bold border-b-2 border-primary">Pelanggan</button>
+<button class="px-6 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-lowest transition-colors">MUA</button>
+</div>
+</div>
+<!-- Bento Grid Layout for Data -->
+<div class="grid grid-cols-12 gap-margin-desktop">
+<!-- Summary Cards -->
+<div class="col-span-12 md:col-span-4 bg-surface border border-outline rounded-xl p-6 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container rounded-full opacity-20 blur-xl"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Pelanggan</span>
+<span class="material-symbols-outlined text-primary" data-icon="group">group</span>
+</div>
+<div class="font-display text-display text-on-background">12,450</div>
+<div class="flex items-center gap-1 text-success font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span>
+<span>+12% bulan ini</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface border border-outline rounded-xl p-6 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-success rounded-full opacity-10 blur-xl"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Pelanggan Aktif</span>
+<span class="material-symbols-outlined text-success" data-icon="how_to_reg">how_to_reg</span>
+</div>
+<div class="font-display text-display text-on-background">11,200</div>
+<div class="flex items-center gap-1 text-success font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span>
+<span>+5% minggu ini</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface border border-outline rounded-xl p-6 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-error rounded-full opacity-10 blur-xl"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Suspended</span>
+<span class="material-symbols-outlined text-error" data-icon="block">block</span>
+</div>
+<div class="font-display text-display text-on-background">45</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]" data-icon="horizontal_rule">horizontal_rule</span>
+<span>Tidak ada perubahan</span>
+</div>
+</div>
+<!-- Table Section -->
+<div class="col-span-12 bg-surface border border-outline rounded-xl overflow-hidden">
+<div class="p-4 border-b border-outline flex justify-between items-center bg-surface-container-lowest">
+<h3 class="font-card-title text-card-title text-on-background">Daftar Pelanggan</h3>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 border border-outline rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span> Filter
+                            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest border-b border-outline text-on-surface-variant font-label-md text-label-md">
+<th class="p-4 font-semibold w-12 text-center">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox">
+</th>
+<th class="p-4 font-semibold">Pengguna</th>
+<th class="p-4 font-semibold">Email</th>
+<th class="p-4 font-semibold">Tanggal Bergabung</th>
+<th class="p-4 font-semibold">Status</th>
+<th class="p-4 font-semibold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-outline">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4 text-center">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox">
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A close up portrait of a young indonesian woman with natural makeup. She is smiling warmly. The lighting is soft and flattering, creating a bright, modern look. The background is a slightly blurred, light-colored studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABjYMP2Xitj1PY9uXGYB3Filsm6L6T1wjv-IEEMmNClEuUhAj9WAZIncJDXrl849_rIorhMsUy9cJn-eJyiG7THgbncvuqFRp8sQ-WOmUI_yQOQZihhij-M8T_4pgGcilY0i5MRru6DuHj6RQBVyirrmWygrX6oBQjeOvnvCRiDoxXPGtuR_OlJQYUh_8z42f6N9CRpZM4VyNwtwqcdDUfrZCQLqT7Jaru3CCnwJtQYzNE3xpGYPToPw">
+<span class="font-medium text-on-background">Siti Aminah</span>
+</div>
+</td>
+<td class="p-4 text-on-surface-variant">siti.aminah@example.com</td>
+<td class="p-4 text-on-surface-variant">12 Okt 2023</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-caption text-caption font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant border border-tertiary-fixed-dim">
+                                            Active
+                                        </span>
+</td>
+<td class="p-4 text-right relative">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors focus:outline-none">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4 text-center">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox">
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-card-title text-card-title">
+                                                B
+                                            </div>
+<span class="font-medium text-on-background">Budi Santoso</span>
+</div>
+</td>
+<td class="p-4 text-on-surface-variant">budi.s@example.com</td>
+<td class="p-4 text-on-surface-variant">05 Nov 2023</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-caption text-caption font-medium bg-error-container text-on-error-container border border-outline-variant">
+                                            Suspended
+                                        </span>
+</td>
+<td class="p-4 text-right relative">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors focus:outline-none">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4 text-center">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox">
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A portrait of a young indonesian man in casual attire, looking directly at the camera with a neutral expression. Bright, even lighting. Light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALTNRkGqpk-SU8OK0Ss55HHkaBgfKONuG5yPYB1sBZVyVpGi9NIu6g-U0BVdn5B54ILHGTXAs9fbX4M1jvvZk3f0xkFXw27JclYq0M0uUtpSLCep0U42POptHklS16D3c9q2aK6axWJNnPAR1lWepG5WLTIWgsk0fKUX_d9Y0Vk3TdNN2p5Mxc5mgH9Q9qQtXFA0X3ROrngKrha8Qw8gXLvOHMUtBwWR-BNLH5mVA8Tty35Y_d91JOLQ">
+<span class="font-medium text-on-background">Dewi Lestari</span>
+</div>
+</td>
+<td class="p-4 text-on-surface-variant">dewi.l@example.com</td>
+<td class="p-4 text-on-surface-variant">20 Nov 2023</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-caption text-caption font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant border border-tertiary-fixed-dim">
+                                            Active
+                                        </span>
+</td>
+<td class="p-4 text-right relative">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors focus:outline-none">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-4 border-t border-outline flex items-center justify-between bg-surface-container-lowest">
+<span class="font-body-md text-body-md text-on-surface-variant">Menampilkan 1-3 dari 12,450 pengguna</span>
+<div class="flex gap-1">
+<button class="p-2 border border-outline rounded-lg text-on-surface-variant disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="px-3 py-1 bg-primary text-on-primary rounded-lg font-label-md text-label-md">1</button>
+<button class="px-3 py-1 hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors">2</button>
+<button class="px-3 py-1 hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors">3</button>
+<span class="px-2 py-1 text-on-surface-variant">...</span>
+<button class="p-2 border border-outline rounded-lg text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

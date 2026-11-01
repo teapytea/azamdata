@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Keuangan &amp; Transaksi - Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#252323",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "surface-variant": "#F5F2F0",
+                      "on-primary-fixed": "#3a0524",
+                      "secondary-container": "#fe8172",
+                      "surface-container-low": "#fdf0f3",
+                      "outline": "#E8E2DF",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#514348",
+                      "secondary": "#a23d32",
+                      "primary-fixed-dim": "#ffafd3",
+                      "surface-dim": "#e3d7da",
+                      "tertiary-fixed": "#c0f0aa",
+                      "surface-tint": "#8b4969",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "error": "#BA1A1A",
+                      "tertiary": "#0b3302",
+                      "on-tertiary-fixed": "#042100",
+                      "inverse-surface": "#362f31",
+                      "surface-container-highest": "#ecdfe2",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#8dba79",
+                      "tertiary-container": "#234a16",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "inverse-primary": "#ffafd3",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#201a1c",
+                      "on-primary-container": "#e496b9",
+                      "surface-bright": "#fff8f8",
+                      "primary-fixed": "#ffd8e7",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#d5c1c8",
+                      "on-secondary-container": "#731a13",
+                      "inverse-on-surface": "#fbeef0",
+                      "surface-container-high": "#f2e5e8",
+                      "on-secondary-fixed": "#410001",
+                      "primary": "#4d1634",
+                      "surface": "#FFFFFF",
+                      "background": "#FCFAF8",
+                      "primary-container": "#682c4b",
+                      "success": "#2E7D32",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container": "#f8ebee"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display": ["Geist"],
+                      "section-heading-mobile": ["Geist"],
+                      "section-heading": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "page-title": ["Geist"],
+                      "caption": ["Inter"],
+                      "card-title": ["Geist"]
+              },
+              "fontSize": {
+                      "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display": ["32px", {"lineHeight": "1.15", "fontWeight": "700"}],
+                      "section-heading-mobile": ["20px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "section-heading": ["22px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "1.55", "fontWeight": "400"}],
+                      "page-title": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "caption": ["12px", {"lineHeight": "1.45", "fontWeight": "400"}],
+                      "card-title": ["18px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[style*="FILL' 1"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0 pt-[72px]">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container docked full-width top-0 border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center w-full px-margin-mobile py-unit max-w-7xl mx-auto fixed z-50">
+<div class="flex items-center gap-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors p-2 rounded-full cursor-pointer">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="location_on">location_on</span>
+<span class="font-display text-display text-primary dark:text-primary-fixed leading-none tracking-tight font-extrabold">RiasKita</span>
+</div>
+<div class="flex items-center">
+<button class="font-label-md text-label-md text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-1.5 rounded-full">
+                ID | EN
+            </button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<!-- Headline -->
+<div class="mb-8">
+<h1 class="font-page-title text-page-title text-primary-container">Keuangan &amp; Transaksi</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Monitor platform revenue, pending payouts, and transaction history.</p>
+</div>
+<!-- KPI Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-8">
+<!-- Total Revenue -->
+<div class="bg-surface border border-outline rounded-xl p-4 flex flex-col justify-between h-full hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container bg-surface-container p-2 rounded-full" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-label-md text-label-md text-success flex items-center bg-tertiary-fixed-dim bg-opacity-20 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] mr-1">trending_up</span> +12%
+                    </span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Total Platform Revenue</h3>
+<p class="font-display text-[28px] font-bold text-on-background">Rp 45.200.000</p>
+</div>
+</div>
+<!-- Pending Payouts -->
+<div class="bg-surface border border-outline rounded-xl p-4 flex flex-col justify-between h-full hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary bg-surface-container-high p-2 rounded-full" style="font-variation-settings: 'FILL' 1;">pending_actions</span>
+<button class="font-label-md text-label-md text-primary hover:underline">Review All</button>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Pending Payouts to MUAs</h3>
+<p class="font-display text-[28px] font-bold text-on-background">Rp 12.850.000</p>
+</div>
+</div>
+<!-- Commission Earned -->
+<div class="bg-surface border border-outline rounded-xl p-4 flex flex-col justify-between h-full hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-full" style="font-variation-settings: 'FILL' 1;">pie_chart</span>
+<span class="font-caption text-caption text-on-surface-variant">This Month</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-1">Commission Earned (15%)</h3>
+<p class="font-display text-[28px] font-bold text-on-background">Rp 6.780.000</p>
+</div>
+</div>
+</div>
+<!-- Recent Transactions -->
+<div class="bg-surface border border-outline rounded-xl overflow-hidden">
+<div class="p-4 border-b border-outline flex justify-between items-center bg-surface-variant bg-opacity-50">
+<h2 class="font-section-heading text-section-heading text-on-background">Recent Transactions</h2>
+<div class="flex gap-2">
+<button class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface border border-outline px-3 py-1.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+                    </button>
+<button class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface border border-outline px-3 py-1.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span> Export
+                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline bg-surface-container-lowest">
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Transaction ID</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Date</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Type</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant text-right">Amount</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant">Status</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant text-center">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md">
+<tr class="border-b border-outline hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-mono text-sm text-on-background">TRX-2023-8901</td>
+<td class="p-4 text-on-surface-variant">Oct 24, 2023 14:30</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-primary-container text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> Payment
+                                </span>
+</td>
+<td class="p-4 text-right font-semibold text-on-background">Rp 1.500.000</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 text-success text-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Success
+                                </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="border-b border-outline hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-mono text-sm text-on-background">TRX-2023-8902</td>
+<td class="p-4 text-on-surface-variant">Oct 24, 2023 15:45</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> Payout
+                                </span>
+</td>
+<td class="p-4 text-right font-semibold text-on-background">Rp 2.850.000</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 text-secondary text-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Pending
+                                </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="border-b border-outline hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-mono text-sm text-on-background">TRX-2023-8903</td>
+<td class="p-4 text-on-surface-variant">Oct 24, 2023 16:10</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-primary-container text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> Payment
+                                </span>
+</td>
+<td class="p-4 text-right font-semibold text-on-background">Rp 750.000</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 text-success text-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Success
+                                </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-mono text-sm text-on-background">TRX-2023-8904</td>
+<td class="p-4 text-on-surface-variant">Oct 24, 2023 17:22</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-primary-container text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> Payment
+                                </span>
+</td>
+<td class="p-4 text-right font-semibold text-on-background">Rp 3.200.000</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1 text-error text-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">error</span> Failed
+                                </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-outline flex justify-center bg-surface-variant bg-opacity-30">
+<button class="font-label-md text-label-md text-primary-container hover:text-primary transition-colors flex items-center gap-1">
+                    Load More <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Hidden on Desktop, Visible on Mobile if Destination) -->
+<!-- Note: Semantic mapping for admin dashboard. Assuming "Akun" or a specialized admin nav. Based on JSON, suppressing nav as this is a specific admin view, or using the shell if it's a top-level admin destination. We'll use the JSON shell but it might not strictly fit an admin view, so we'll map to Akun as active if forced. However, as per instructions, "Akun" is active if Profile. For a financial dashboard, none perfectly fit. We'll use "Akun" as the closest fallback for admin settings/dashboard. -->
+<nav class="md:hidden fixed bottom-0 w-full flex justify-around items-center bg-surface dark:bg-surface-container-lowest px-2 py-3 border-t border-outline dark:border-outline-variant z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-md text-[10px]">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="font-label-md text-[10px]">Cari</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="event_note">event_note</span>
+<span class="font-label-md text-[10px]">Booking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="font-label-md text-[10px]">Favorit</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-on-primary-container bg-primary-fixed dark:bg-primary-container rounded-full px-4 py-1 scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-[10px]">Akun</span>
+</a>
+</nav>
+</body></html>

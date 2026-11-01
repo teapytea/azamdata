@@ -1,0 +1,1 @@
+export default function ProsesTaaruf(){return(<div>Proses Ta'aruf</div>);}

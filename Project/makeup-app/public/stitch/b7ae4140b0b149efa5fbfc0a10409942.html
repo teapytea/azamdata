@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MUA Booking Calendar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#F5F2F0",
+                        "surface-bright": "#fff8f8",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container-low": "#fdf0f3",
+                        "surface-dim": "#e3d7da",
+                        "success": "#2E7D32",
+                        "on-background": "#201a1c",
+                        "inverse-surface": "#362f31",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-surface": "#252323",
+                        "error": "#BA1A1A",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#234a16",
+                        "on-tertiary-container": "#8dba79",
+                        "surface-tint": "#8b4969",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-container-high": "#f2e5e8",
+                        "secondary-container": "#fe8172",
+                        "on-surface-variant": "#514348",
+                        "on-secondary-fixed": "#410001",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#a23d32",
+                        "on-primary-container": "#e496b9",
+                        "inverse-primary": "#ffafd3",
+                        "on-primary-fixed": "#3a0524",
+                        "inverse-on-surface": "#fbeef0",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffafd3",
+                        "background": "#FCFAF8",
+                        "on-secondary-container": "#731a13",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#E8E2DF",
+                        "on-tertiary-fixed": "#042100",
+                        "primary-container": "#682c4b",
+                        "surface-container": "#f8ebee",
+                        "primary-fixed": "#ffd8e7",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "surface": "#FFFFFF",
+                        "primary": "#4d1634",
+                        "tertiary": "#0b3302",
+                        "outline-variant": "#d5c1c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "24px",
+                        "unit": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "section-heading-mobile": ["Geist"],
+                        "caption": ["Inter"],
+                        "page-title": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "display": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "card-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0 font-sans">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background w-full top-0 sticky border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center px-margin-mobile py-unit w-full z-40 hidden md:flex">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim hover:bg-surface-variant transition-colors rounded-full p-2" data-icon="menu">menu</span>
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim">MUA Marketplace</h1>
+</div>
+<div class="flex gap-6 items-center">
+<nav class="flex gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="font-label-md text-label-md text-primary font-bold" href="#">Schedule</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Orders</a>
+</nav>
+<div class="cursor-pointer active:opacity-80">
+<img alt="MUA Profile Picture" class="w-10 h-10 rounded-full object-cover border border-outline" data-alt="Professional headshot of a makeup artist with bright, flawless makeup, smiling confidently in a modern studio setting with soft ring lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk0nR_c2zY1kJvtMUx9Ddg9gQJoNm96CEMbAOaSFCj7JB5W-NX_i7VxoG7TsGqquCDquzZYZ0jsikCkIYFzXUFvML9HY0axNlEHbErAszgQPQfUNV9vJ2sotHhmf52PoAvJNCGD-3fYsoHkwFQXgkfk4I5x53DEjuEgiJXU9l641g5kB8AFkgEazXMxPaR_Vj--Z1kxPJ2uAnMRovHsps5aq-79aW1Pty02TZqYIceadV49quC0LU5_A">
+</div>
+</div>
+</header>
+<!-- Mobile Top Header (Fallback for structural necessity when BottomNav is used) -->
+<header class="md:hidden bg-surface w-full top-0 sticky flex justify-between items-center px-margin-mobile py-4 z-40 border-b border-outline">
+<h1 class="font-section-heading-mobile text-section-heading-mobile text-primary">Schedule</h1>
+<img alt="MUA Profile Picture" class="w-8 h-8 rounded-full object-cover border border-outline" data-alt="Professional headshot of a makeup artist with bright, flawless makeup, smiling confidently in a modern studio setting with soft ring lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3cT7NolALljfJ4hFLX7p7_ZdhbBlnJJGYLQv_vjNkfgnPV6nGCM27W169v6F9wxRARbSZjqgTzGl5XRXkM5PEaKpM0BKlWOLY6Mv-VW9XKc3X-wRVqySHuv0q71dI0RjJl8LH8mRWskrDby0zDIINHHjJuiHkd8vyjrjXMHgfUps42wembHgaQXi8dhYk7fUbxHdZY3-2C8eEklXMi1NMpBA91kYXbuYzq1q_aX_rh9727Mo8z8ZwoA">
+</header>
+<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8">
+<!-- Calendar Section -->
+<section class="w-full md:w-[45%] lg:w-[40%] flex flex-col gap-6">
+<div class="bg-surface border border-outline rounded-xl p-4 md:p-6 shadow-sm flex flex-col">
+<!-- Month Header -->
+<div class="flex justify-between items-center mb-6">
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">chevron_left</span>
+</button>
+<h2 class="font-card-title text-card-title text-on-surface">October 2023</h2>
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">chevron_right</span>
+</button>
+</div>
+<!-- Days of Week -->
+<div class="grid grid-cols-7 gap-1 text-center mb-2">
+<span class="font-caption text-caption text-on-surface-variant">Su</span>
+<span class="font-caption text-caption text-on-surface-variant">Mo</span>
+<span class="font-caption text-caption text-on-surface-variant">Tu</span>
+<span class="font-caption text-caption text-on-surface-variant">We</span>
+<span class="font-caption text-caption text-on-surface-variant">Th</span>
+<span class="font-caption text-caption text-on-surface-variant">Fr</span>
+<span class="font-caption text-caption text-on-surface-variant">Sa</span>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-1 text-center font-body-md text-body-md">
+<!-- Previous Month -->
+<div class="p-2 text-on-surface-variant opacity-50">24</div>
+<div class="p-2 text-on-surface-variant opacity-50">25</div>
+<div class="p-2 text-on-surface-variant opacity-50">26</div>
+<div class="p-2 text-on-surface-variant opacity-50">27</div>
+<div class="p-2 text-on-surface-variant opacity-50">28</div>
+<div class="p-2 text-on-surface-variant opacity-50">29</div>
+<div class="p-2 text-on-surface-variant opacity-50">30</div>
+<!-- Current Month -->
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">1</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors relative">
+                        2
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">3</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors relative">
+                        4
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">5</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">6</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors relative">
+                        7
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">8</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">9</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">10</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors relative">
+                        11
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<!-- Selected Day -->
+<div class="p-2 bg-primary text-on-primary rounded-full font-bold cursor-pointer relative shadow-sm">
+                        12
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-on-primary rounded-full"></span>
+</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">13</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors relative">
+                        14
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<!-- Rest of Month (Simplified for example) -->
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">15</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">16</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">17</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors relative">
+                        18
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">19</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors">20</div>
+<div class="p-2 text-on-surface hover:bg-surface-variant rounded-full cursor-pointer transition-colors relative">
+                        21
+                        <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="col-span-7 text-left mt-4 border-t border-outline pt-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-caption text-caption text-on-surface-variant">Indicates dates with bookings</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mini Summary / Filter (Optional but adds density) -->
+<div class="bg-surface border border-outline rounded-xl p-4 flex gap-4 overflow-x-auto no-scrollbar">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-md text-label-md whitespace-nowrap">All Events</button>
+<button class="border border-outline text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md whitespace-nowrap hover:bg-surface-variant">Weddings</button>
+<button class="border border-outline text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md whitespace-nowrap hover:bg-surface-variant">Graduations</button>
+</div>
+</section>
+<!-- Schedule Detail Section -->
+<section class="w-full md:w-[55%] lg:w-[60%] flex flex-col gap-6">
+<div class="flex justify-between items-end pb-2 border-b border-outline">
+<div>
+<h2 class="font-section-heading text-section-heading text-on-surface">Thursday, Oct 12</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">3 Bookings Total</p>
+</div>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:opacity-80">
+<span class="material-symbols-outlined" style="font-size: 18px;">add</span> Add Block
+                </button>
+</div>
+<!-- Timeline View -->
+<div class="flex flex-col relative pl-4 md:pl-8">
+<!-- Vertical Timeline Line -->
+<div class="absolute left-0 md:left-4 top-2 bottom-4 w-px bg-outline-variant"></div>
+<!-- Event 1 -->
+<div class="relative pl-6 pb-8">
+<!-- Timeline Dot -->
+<div class="absolute left-[-5px] md:left-[11px] top-1 w-3 h-3 bg-primary rounded-full border-2 border-surface"></div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="font-label-md text-label-md text-on-surface">06:00 AM - 09:00 AM</span>
+<span class="font-caption text-caption text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">directions_car</span> 30m Travel Buffer (Pre)
+                        </span>
+</div>
+<div class="bg-surface border border-outline rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Traditional Wedding Makeup</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined" style="font-size: 16px;">person</span> Sarah Wijaya
+                                </p>
+</div>
+<span class="bg-surface-variant text-on-surface px-2 py-1 rounded text-[10px] font-semibold uppercase tracking-wider">Wedding</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-2 bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<span class="truncate">Grand Hyatt Jakarta, Jl. M.H. Thamrin</span>
+</div>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative pl-6 pb-8">
+<!-- Timeline Dot -->
+<div class="absolute left-[-5px] md:left-[11px] top-1 w-3 h-3 bg-primary rounded-full border-2 border-surface"></div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="font-label-md text-label-md text-on-surface">11:30 AM - 01:30 PM</span>
+<span class="font-caption text-caption text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">directions_car</span> 45m Travel Buffer (Pre)
+                        </span>
+</div>
+<div class="bg-surface border border-outline rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Graduation Glam</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined" style="font-size: 16px;">person</span> Nabila Putri
+                                </p>
+</div>
+<span class="bg-surface-variant text-on-surface px-2 py-1 rounded text-[10px] font-semibold uppercase tracking-wider">Graduation</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-2 bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<span class="truncate">Universitas Indonesia, Depok</span>
+</div>
+</div>
+</div>
+<!-- Blocked Time -->
+<div class="relative pl-6 pb-8">
+<!-- Timeline Dot (Hollow for blocked time) -->
+<div class="absolute left-[-5px] md:left-[11px] top-1 w-3 h-3 bg-surface border-2 border-outline-variant rounded-full"></div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">02:00 PM - 03:00 PM</span>
+</div>
+<div class="bg-surface-container-low border border-dashed border-outline-variant rounded-xl p-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">restaurant</span>
+<span class="font-body-md text-body-md text-on-surface-variant italic">Lunch Break &amp; Rest</span>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative pl-6">
+<!-- Timeline Dot -->
+<div class="absolute left-[-5px] md:left-[11px] top-1 w-3 h-3 bg-primary rounded-full border-2 border-surface"></div>
+<div class="flex flex-col gap-1 mb-2">
+<span class="font-label-md text-label-md text-on-surface">04:00 PM - 05:30 PM</span>
+<span class="font-caption text-caption text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined" style="font-size: 14px;">directions_car</span> 30m Travel Buffer (Pre)
+                        </span>
+</div>
+<div class="bg-surface border border-outline rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Photoshoot Makeup</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined" style="font-size: 16px;">person</span> Agency XYZ
+                                </p>
+</div>
+<span class="bg-surface-variant text-on-surface px-2 py-1 rounded text-[10px] font-semibold uppercase tracking-wider">Commercial</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-2 bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<span class="truncate">Studio 8, Kemang</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-surface dark:bg-on-background w-full fixed bottom-0 z-50 border-t border-outline dark:border-outline-variant flat no shadows flex justify-around items-center h-16 px-margin-mobile">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-md text-label-md text-[10px] font-bold">Schedule</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-md text-label-md text-[10px]">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

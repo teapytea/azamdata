@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MUA Portfolio Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#F5F2F0",
+                      "surface-bright": "#fff8f8",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container-low": "#fdf0f3",
+                      "surface-dim": "#e3d7da",
+                      "success": "#2E7D32",
+                      "on-background": "#201a1c",
+                      "inverse-surface": "#362f31",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#ecdfe2",
+                      "on-surface": "#252323",
+                      "error": "#BA1A1A",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#234a16",
+                      "on-tertiary-container": "#8dba79",
+                      "surface-tint": "#8b4969",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "tertiary-fixed": "#c0f0aa",
+                      "surface-container-high": "#f2e5e8",
+                      "secondary-container": "#fe8172",
+                      "on-surface-variant": "#514348",
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "secondary": "#a23d32",
+                      "on-primary-container": "#e496b9",
+                      "inverse-primary": "#ffafd3",
+                      "on-primary-fixed": "#3a0524",
+                      "inverse-on-surface": "#fbeef0",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffafd3",
+                      "background": "#FCFAF8",
+                      "on-secondary-container": "#731a13",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-tertiary-fixed": "#042100",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "primary-fixed": "#ffd8e7",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "surface": "#FFFFFF",
+                      "primary": "#4d1634",
+                      "tertiary": "#0b3302",
+                      "outline-variant": "#d5c1c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "24px",
+                      "unit": "8px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased md:flex">
+<!-- NavigationDrawer (Desktop) -->
+<aside class="hidden md:flex bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim font-card-title text-card-title h-screen w-80 rounded-r-xl border-r border-outline dark:border-outline-variant shadow-md flex-col py-6 sticky top-0 shrink-0 z-40">
+<div class="px-6 mb-8 flex items-center gap-4">
+<img alt="MUA Profile Image" class="w-12 h-12 rounded-full object-cover border border-outline" data-alt="Professional makeup artist portrait in a modern studio setting, soft lighting highlighting clean corporate style, deep plum background accents, highly detailed 8k." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-KLqhCFoWl_p1PETgav82NOgNY7HVIp3iFhNUfq_L-e23rZkHUq35VLSgJLE5lg28doJrC97GH3KHWtT6--xlEKGlP4oQhyHK-mFXjJH9ZP8aq7hFK4zAhVJ80VzKlee82Ol6nIZtZzQRET_uivz-ue5DH387oh6ZciZxlo-1uMawEOOStt6NN8wQBGDT9RxSNkXBqoYuY1cnhPdDeUGrbeZrHH1gq3QrxcqrujQgc9p4OwvAVCFIUA">
+<div>
+<h2 class="font-card-title text-card-title text-on-surface">Riana Makeup</h2>
+<p class="font-caption text-caption text-on-surface-variant">Professional MUA</p>
+<p class="font-caption text-caption text-on-surface-variant">Jakarta, ID</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2 px-4">
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-label-md text-label-md">Switch to Client</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="font-label-md text-label-md">Verification Status</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Service Settings</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container font-bold p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="photo_library" data-weight="fill">photo_library</span>
+<span class="font-label-md text-label-md">Portfolio</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg mt-auto" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col min-h-screen pb-20 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim font-section-heading-mobile text-section-heading-mobile w-full top-0 sticky flex justify-between items-center px-margin-mobile py-unit border-b border-outline dark:border-outline-variant z-30 md:px-margin-desktop md:hidden">
+<button class="text-on-surface-variant hover:bg-surface-variant transition-colors cursor-pointer active:opacity-80 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim">MUA Marketplace</h1>
+<img alt="MUA Profile Picture" class="w-8 h-8 rounded-full object-cover cursor-pointer hover:opacity-80 transition-opacity" data-alt="Professional makeup artist profile picture thumbnail, small circular avatar, bright modern lighting, professional presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBnSA637BWNdKIi-mmkBdQeRqQCuYsk24fnqI4Mk49L7BCpK1eEQMb7pZNE79huI4XKP4_11TOsWSTGK28Z1B3b7KoS_odDVSk3L6nrAd33sFYXKHCMmih0M7mxFumE0I-XOo9RQvBDKqyO4YjF6JyJKY-ybC9W6CL09Fy8dsFhxKNFYKYaTFV0Ozaj9rSgFTIISLEHTBOLNur0T2E647zsn3Wleh6ZMrZ-T5sC_FRfB-mWDiRr6R66A">
+</header>
+<main class="flex-1 p-margin-mobile md:p-margin-desktop max-w-7xl mx-auto w-full flex flex-col gap-6">
+<!-- Header Actions -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
+<div>
+<h1 class="font-page-title text-page-title text-on-surface mb-1">Portfolio Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage and organize your makeup work to attract more clients.</p>
+</div>
+<div class="flex gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none bg-surface border border-outline text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-surface-variant transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+                        Edit Kategori
+                    </button>
+<button class="flex-1 sm:flex-none bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                        Tambah Foto
+                    </button>
+</div>
+</div>
+<!-- Filter/Tabs -->
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide w-full border-b border-outline">
+<button class="font-label-md text-label-md text-primary border-b-2 border-primary pb-2 px-2 whitespace-nowrap">Semua Foto (24)</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface pb-2 px-2 whitespace-nowrap">Wedding (12)</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface pb-2 px-2 whitespace-nowrap">Graduation (8)</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface pb-2 px-2 whitespace-nowrap">Party (4)</button>
+</div>
+<!-- Bento Grid Portfolio -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter w-full">
+<!-- Portfolio Item 1 (Cover) -->
+<div class="bg-surface border border-primary rounded-xl overflow-hidden group relative flex flex-col shadow-sm col-span-1 sm:col-span-2 lg:col-span-2 row-span-2">
+<div class="absolute top-3 left-3 bg-primary text-on-primary font-caption text-caption px-2 py-1 rounded-md z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill">star</span>
+                        Sampul Utama
+                    </div>
+<div class="absolute top-3 right-3 bg-surface/80 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-1 rounded-md z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="visibility">visibility</span>
+                        1.2k
+                    </div>
+<div class="h-64 sm:h-full w-full relative">
+<img alt="Bridal Makeup Cover" class="w-full h-full object-cover" data-alt="Stunning close-up of bridal makeup featuring flawless glowing skin, soft neutral eyeshadow, perfect winged eyeliner, and natural glossy lips. Bright, modern, high-fashion lighting. Corporate clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGsWyvuLCgCHdUcJGVSaKffi2zbdj3szzJS9gFIrVzZrYH9pUbDbn8Q4nkcbZQVLJUls-Mh1QktXLSycecEsO6YSyVMkZKC8Ng7-pH6Zw7JoC0IVTevnuOjmxLyYCEn7UIsluGHtpT-NKu6fq_A3V6EYAnirK8eYn4wcnVukXxBctgZeaDnooX-NYHtt87pheZPPavQ8SQe_u2oHkoTBZegYr36Qj2wTqq8hZd56UVo26clFslut69Uw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<div class="flex gap-2 justify-end mb-2">
+<button class="bg-surface text-on-surface p-2 rounded-full hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="bg-surface text-error p-2 rounded-full hover:bg-error-container transition-colors" title="Delete">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-outline bg-surface">
+<h3 class="font-card-title text-card-title text-on-surface truncate">Traditional Javanese Bride</h3>
+<div class="flex gap-2 mt-2">
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded-sm">Wedding</span>
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded-sm">Traditional</span>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="bg-surface border border-outline rounded-xl overflow-hidden group relative flex flex-col">
+<div class="absolute top-2 right-2 bg-surface/80 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-1 rounded-md z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="visibility">visibility</span>
+                        450
+                    </div>
+<div class="h-48 w-full relative">
+<img alt="Graduation Makeup" class="w-full h-full object-cover" data-alt="Elegant graduation makeup look, soft pink blush, natural tones, modern fresh-faced aesthetic, professional studio lighting, clear bright background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBetipyZVDCNAcm-dVAWj9UMNQKguJdrpkNUKJrX01vpUg7x7RBfvBi53koF8YgfwaaGRuhZT-rm0gkyKeAZq7h_wqcfzIfd_6b071ggVWSYKRzuStiHURcdskf2lqr-Qa8VjUeVAHab6YSjIU-Y-A2df7lVjaFeJ6_l696379RBhPK7x7Fsnxujyy4jRTBt9qtL36Ue1QO6SEnfgpkxnPQ_Z6t3W6Bs4v-r99ZI3GrMkD9AnmdSS3MKA">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-2">
+<button class="bg-surface text-on-surface p-2 rounded-full hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit">edit</span>
+</button>
+<button class="bg-surface text-on-surface font-caption text-caption px-3 py-2 rounded-full hover:bg-surface-variant transition-colors">
+                                Atur Sampul
+                            </button>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="bg-surface border border-outline rounded-xl overflow-hidden group relative flex flex-col">
+<div class="absolute top-2 right-2 bg-surface/80 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-1 rounded-md z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="visibility">visibility</span>
+                        320
+                    </div>
+<div class="h-48 w-full relative">
+<img alt="Party Makeup" class="w-full h-full object-cover" data-alt="Bold party makeup look with dramatic smokey eyes, rich plum lipstick, high fashion editorial style lighting, clean professional studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLpnHUGTXWckxLb42waxywk37MoHD7mlEKHvEkFyOKRLZRKK4PDc_1zDhwjyElPtNmyXcdMrmK3BY4_IZ85HO2qSSOfhr7E9f_itFj6qpQpc79vxcCpzOqjGQ0fLfYU-CCxm2BN6mhg35Cu8nvX89bOHYNB8g-eJUWuQ7l7HE5OMQNxrkhmZJ2LyYBnSItr9hy-MtYEMajnmXsSGLC8_cCerCuAhHWTeaHW67JbLNTc48LuUa8XfmIDg">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-2">
+<button class="bg-surface text-on-surface p-2 rounded-full hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit">edit</span>
+</button>
+<button class="bg-surface text-on-surface font-caption text-caption px-3 py-2 rounded-full hover:bg-surface-variant transition-colors">
+                                Atur Sampul
+                            </button>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 4 -->
+<div class="bg-surface border border-outline rounded-xl overflow-hidden group relative flex flex-col">
+<div class="absolute top-2 right-2 bg-surface/80 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-1 rounded-md z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="visibility">visibility</span>
+                        890
+                    </div>
+<div class="h-48 w-full relative">
+<img alt="Modern Bridal" class="w-full h-full object-cover" data-alt="Modern minimalist bridal makeup, dewy skin finish, soft peach tones, elegant updo hair, natural sunlight aesthetic, clean corporate marketplace style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_cX8o-2UPwcKBJK1XH2l9TKF6Dyqzp1G104rZbrGdbwqFUQkw4BFznl47lr4ICGYTyCYdwHOgoRH87WJOJBAx3f4j1bENizUKyF-9-qCuVrxgaR3poapxZO5ZHs-1Izemsju7cr7oaeKKUAS-0OYm0wT0TgwvseFSPaLIz9ZNVI_jrXW6mwB8ZuB0XMbrSoLB2uy7DgJwDrlf8VFvdIm5Sgmgip9N7lW4S2hiUkCUXHDYAg0-Wg59gQ">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-2">
+<button class="bg-surface text-on-surface p-2 rounded-full hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit">edit</span>
+</button>
+<button class="bg-surface text-on-surface font-caption text-caption px-3 py-2 rounded-full hover:bg-surface-variant transition-colors">
+                                Atur Sampul
+                            </button>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 5 -->
+<div class="bg-surface border border-outline rounded-xl overflow-hidden group relative flex flex-col">
+<div class="absolute top-2 right-2 bg-surface/80 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-1 rounded-md z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="visibility">visibility</span>
+                        210
+                    </div>
+<div class="h-48 w-full relative">
+<img alt="Engagement Makeup" class="w-full h-full object-cover" data-alt="Soft glam makeup for engagement photoshoot, focus on glowing complexion and fluttery lashes, professional beauty lighting, clean backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1rc3hHO1UOajRsQcXac0gar8qG1I35UXPRd-kl_lZihYeod4-pRLG4H9NPtDywd8r2688TAJtIEis-_pXMjyKXBH-SuTlQSJsjWwFZxS-z9KDni0IY5nCQfw1r6z7di4WhlN_X5fox6P1JOkIFHmMb0zGjmlDFLB3vRU9m1zdRt8Nq1CUM_NUJdAein3YZMMUv0Hy1LAigZLhNP_xxn_9rKnrIMBIeiigRmRFpBZVLxB6DSqtNUHYFg">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-2">
+<button class="bg-surface text-on-surface p-2 rounded-full hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit">edit</span>
+</button>
+<button class="bg-surface text-on-surface font-caption text-caption px-3 py-2 rounded-full hover:bg-surface-variant transition-colors">
+                                Atur Sampul
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full flex justify-center mt-4">
+<button class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors py-2 px-4 rounded-lg border border-transparent hover:border-outline">
+                    Load More
+                </button>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim font-label-md text-label-md fixed bottom-0 w-full z-50 border-t border-outline dark:border-outline-variant flex justify-around items-center h-16 px-margin-mobile">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md mt-1 text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md mt-1 text-[10px]">Schedule</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-md text-label-md mt-1 text-[10px]">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person" data-weight="fill">person</span>
+<span class="font-label-md text-label-md mt-1 text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

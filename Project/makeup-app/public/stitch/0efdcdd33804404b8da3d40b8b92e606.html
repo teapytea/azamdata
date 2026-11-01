@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RiasKita - Monitoring Pesanan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#252323",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-variant": "#F5F2F0",
+                        "on-primary-fixed": "#3a0524",
+                        "secondary-container": "#fe8172",
+                        "surface-container-low": "#fdf0f3",
+                        "outline": "#E8E2DF",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#514348",
+                        "secondary": "#a23d32",
+                        "primary-fixed-dim": "#ffafd3",
+                        "surface-dim": "#e3d7da",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-tint": "#8b4969",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#BA1A1A",
+                        "tertiary": "#0b3302",
+                        "on-tertiary-fixed": "#042100",
+                        "inverse-surface": "#362f31",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8dba79",
+                        "tertiary-container": "#234a16",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "inverse-primary": "#ffafd3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#201a1c",
+                        "on-primary-container": "#e496b9",
+                        "surface-bright": "#fff8f8",
+                        "primary-fixed": "#ffd8e7",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d5c1c8",
+                        "on-secondary-container": "#731a13",
+                        "inverse-on-surface": "#fbeef0",
+                        "surface-container-high": "#f2e5e8",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#4d1634",
+                        "surface": "#FFFFFF",
+                        "background": "#FCFAF8",
+                        "primary-container": "#682c4b",
+                        "success": "#2E7D32",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container": "#f8ebee"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "margin-desktop": "24px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display": ["Geist"],
+                        "section-heading-mobile": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "page-title": ["Geist"],
+                        "caption": ["Inter"],
+                        "card-title": ["Geist"]
+                    },
+                    fontSize: {
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 226, 223, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container docked full-width top-0 border-b border-outline dark:border-outline-variant flat no shadows z-40 sticky">
+<div class="flex justify-between items-center w-full px-margin-mobile py-unit max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h1 class="font-display text-display text-primary dark:text-primary-fixed tracking-tight">RiasKita</h1>
+</div>
+<!-- Desktop Nav Cluster -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" href="#">Beranda</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" href="#">Cari</a>
+<a class="text-primary dark:text-primary-fixed font-bold bg-primary-container/10 px-3 py-2 rounded-lg font-label-md text-label-md opacity-80 scale-95 transition-all" href="#">Booking</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" href="#">Favorit</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" href="#">Akun</a>
+</nav>
+<button class="font-label-md text-label-md text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-1.5 rounded border border-outline">
+                ID | EN
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6 flex flex-col gap-8">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<h2 class="font-page-title text-page-title text-primary">Monitoring Pesanan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Kelola dan pantau semua transaksi platform.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface border border-outline rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Ekspor
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Pesanan Baru
+                </button>
+</div>
+</div>
+<!-- Dashboard Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="glass-panel rounded-xl p-5 flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-16 h-16 bg-primary-container/20 rounded-full blur-xl"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">Total Pesanan</span>
+<span class="font-display text-[28px] font-bold text-on-background">1,284</span>
+<div class="flex items-center gap-1 text-success mt-auto">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-caption text-caption">+12% bulan ini</span>
+</div>
+</div>
+<div class="glass-panel rounded-xl p-5 flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Akan Datang</span>
+<span class="font-display text-[28px] font-bold text-primary">342</span>
+</div>
+<div class="glass-panel rounded-xl p-5 flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Selesai</span>
+<span class="font-display text-[28px] font-bold text-on-background">890</span>
+</div>
+<div class="glass-panel rounded-xl p-5 flex flex-col gap-2 border-error/20 bg-error-container/10">
+<span class="font-label-md text-label-md text-error">Sengketa</span>
+<span class="font-display text-[28px] font-bold text-error">12</span>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex overflow-x-auto pb-2 gap-2 hide-scrollbar">
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-on-background text-surface whitespace-nowrap">Semua Status</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface border border-outline text-on-surface-variant hover:bg-surface-variant transition-colors whitespace-nowrap">Akan Datang</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface border border-outline text-on-surface-variant hover:bg-surface-variant transition-colors whitespace-nowrap">Selesai</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface border border-outline text-on-surface-variant hover:bg-surface-variant transition-colors whitespace-nowrap">Dibatalkan</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface border border-outline text-on-surface-variant hover:bg-surface-variant transition-colors whitespace-nowrap">Sengketa</button>
+</div>
+<!-- Bookings Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Booking Card 1 (Upcoming) -->
+<div class="bg-surface border border-outline rounded-xl p-5 flex flex-col gap-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">ID: #BKG-2023-1042</span>
+<span class="font-label-md text-label-md text-on-background mt-1">24 Okt 2023 • 08:00 WIB</span>
+</div>
+<span class="px-2.5 py-1 bg-surface-variant text-primary rounded font-caption text-caption font-semibold">Akan Datang</span>
+</div>
+<div class="flex items-center gap-4 py-3 border-y border-outline border-dashed">
+<div class="flex items-center gap-3 flex-1">
+<img class="w-10 h-10 rounded-full object-cover bg-surface-variant" data-alt="A professional headshot of a smiling Indonesian woman with minimal makeup, brightly lit in a modern studio setting with a clean background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaRjWiF42zTo2gjtxFC0w4e0pdTWVh3X2vfSNjGA6x9fUEha0ttH_-FsnJJVmmTxTXvvbRGOI_U0H-tI4f7Vkufm1RU9enLhrhJzFP5uQ6tTZpBXZA-djgi7gD_BFScNECYT66PiyrvTiFwUyE-KDs2vLQkPMECCgGLXiYOtkyrsQcN6RNzjvaGCqz-L3SpT60U6BQuJKgDr09a3I4g5W651wCTa5iCWmFCIPW0GvMcVRW2Pr4nus8ow">
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md text-on-background truncate">Siti Nurhaliza</span>
+<span class="font-caption text-caption text-on-surface-variant">Pelanggan</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">arrow_forward</span>
+<div class="flex items-center gap-3 flex-1 justify-end text-right">
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md text-on-background truncate">MUA By Bunga</span>
+<span class="font-caption text-caption text-on-surface-variant">Vendor</span>
+</div>
+<img class="w-10 h-10 rounded-full object-cover bg-surface-variant" data-alt="A vibrant logo or avatar for a makeup artist, featuring a stylized brush and floral motifs in rich plum and coral tones on a light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyia0mAAXV-WAC8Moo9X29OyHfJDnMkeko9Ng4D5_i13FNxdYy3h8liw0071bFr6CaIhxGJ3_YHJJSjH-9s0nyOao_h5AkeCXwMgzIwqPRNTDMGFE5suP49bc6D-fqm5zPJQxYeNoIsA3uGvgS-NaVs8XTdlHh2pKFNTMstMNIEewhtq1iw0hTplK0MRzSOlzNBwfd6-anbO8aM89FbFg5Irh8tLei0AM7CQ3pU3oBwiWTKnTuhedqhQ">
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Layanan</span>
+<span class="font-body-md text-body-md text-on-background line-clamp-1">Wedding Makeup Full Package</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-caption text-caption text-on-surface-variant">Total</span>
+<span class="font-card-title text-card-title text-primary">Rp 4.500.000</span>
+</div>
+</div>
+</div>
+<!-- Booking Card 2 (Completed) -->
+<div class="bg-surface border border-outline rounded-xl p-5 flex flex-col gap-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">ID: #BKG-2023-0988</span>
+<span class="font-label-md text-label-md text-on-background mt-1">20 Okt 2023 • 10:00 WIB</span>
+</div>
+<span class="px-2.5 py-1 bg-tertiary-container text-on-tertiary-container rounded font-caption text-caption font-semibold">Selesai</span>
+</div>
+<div class="flex items-center gap-4 py-3 border-y border-outline border-dashed">
+<div class="flex items-center gap-3 flex-1">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold">A</div>
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md text-on-background truncate">Anisa Rahma</span>
+<span class="font-caption text-caption text-on-surface-variant">Pelanggan</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">arrow_forward</span>
+<div class="flex items-center gap-3 flex-1 justify-end text-right">
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md text-on-background truncate">Glam by Dian</span>
+<span class="font-caption text-caption text-on-surface-variant">Vendor</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">G</div>
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Layanan</span>
+<span class="font-body-md text-body-md text-on-background line-clamp-1">Wisuda Flawless</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-caption text-caption text-on-surface-variant">Total</span>
+<span class="font-card-title text-card-title text-primary">Rp 650.000</span>
+</div>
+</div>
+</div>
+<!-- Booking Card 3 (Disputed) -->
+<div class="bg-surface border border-error/30 rounded-xl p-5 flex flex-col gap-4 hover:shadow-sm transition-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1 h-full bg-error"></div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">ID: #BKG-2023-1002</span>
+<span class="font-label-md text-label-md text-on-background mt-1">22 Okt 2023 • 14:00 WIB</span>
+</div>
+<span class="px-2.5 py-1 bg-error-container text-on-error-container rounded font-caption text-caption font-semibold">Sengketa</span>
+</div>
+<div class="flex items-center gap-4 py-3 border-y border-outline border-dashed">
+<div class="flex items-center gap-3 flex-1">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold">R</div>
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md text-on-background truncate">Rina Melati</span>
+<span class="font-caption text-caption text-on-surface-variant">Pelanggan</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">arrow_forward</span>
+<div class="flex items-center gap-3 flex-1 justify-end text-right">
+<div class="flex flex-col overflow-hidden">
+<span class="font-label-md text-label-md text-on-background truncate">Studio Cantik</span>
+<span class="font-caption text-caption text-on-surface-variant">Vendor</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold">S</div>
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Layanan</span>
+<span class="font-body-md text-body-md text-on-background line-clamp-1">Photoshoot Makeup</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-caption text-caption text-on-surface-variant">Total</span>
+<span class="font-card-title text-card-title text-primary">Rp 1.200.000</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-surface-container-lowest docked full-width bottom-0 z-50 border-t border-outline dark:border-outline-variant flat no shadows fixed w-full flex justify-around items-center px-2 py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-[10px] mt-1">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-md text-[10px] mt-1">Cari</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-on-primary-container bg-primary-fixed dark:bg-primary-container rounded-full px-4 py-1 scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">event_note</span>
+<span class="font-label-md text-[10px] mt-1">Booking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-md text-[10px] mt-1">Favorit</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-[10px] mt-1">Akun</span>
+</a>
+</nav>
+</body></html>

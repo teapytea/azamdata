@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Booking Requests - MUA Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#F5F2F0",
+                        "surface-bright": "#fff8f8",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container-low": "#fdf0f3",
+                        "surface-dim": "#e3d7da",
+                        "success": "#2E7D32",
+                        "on-background": "#201a1c",
+                        "inverse-surface": "#362f31",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-surface": "#252323",
+                        "error": "#BA1A1A",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#234a16",
+                        "on-tertiary-container": "#8dba79",
+                        "surface-tint": "#8b4969",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-container-high": "#f2e5e8",
+                        "secondary-container": "#fe8172",
+                        "on-surface-variant": "#514348",
+                        "on-secondary-fixed": "#410001",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#a23d32",
+                        "on-primary-container": "#e496b9",
+                        "inverse-primary": "#ffafd3",
+                        "on-primary-fixed": "#3a0524",
+                        "inverse-on-surface": "#fbeef0",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffafd3",
+                        "background": "#FCFAF8",
+                        "on-secondary-container": "#731a13",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#E8E2DF",
+                        "on-tertiary-fixed": "#042100",
+                        "primary-container": "#682c4b",
+                        "surface-container": "#f8ebee",
+                        "primary-fixed": "#ffd8e7",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "surface": "#FFFFFF",
+                        "primary": "#4d1634",
+                        "tertiary": "#0b3302",
+                        "outline-variant": "#d5c1c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "24px",
+                        "unit": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "section-heading-mobile": ["Geist"],
+                        "caption": ["Inter"],
+                        "page-title": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "display": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "card-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen font-body-md text-body-md flex flex-col md:flex-row">
+<!-- Mobile TopAppBar -->
+<header class="bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim w-full top-0 sticky border-b border-outline dark:border-outline-variant flex justify-between items-center px-margin-mobile py-unit w-full md:hidden z-40">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80 transition-colors hover:bg-surface-variant p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary font-bold">menu</span>
+<h1 class="font-section-heading-mobile text-section-heading-mobile font-bold text-primary dark:text-primary-fixed-dim">MUA Marketplace</h1>
+</div>
+<div class="cursor-pointer active:opacity-80 transition-colors hover:bg-surface-variant p-2 rounded-full overflow-hidden w-10 h-10 border border-outline">
+<img alt="MUA Profile Picture" class="w-full h-full object-cover" data-alt="A professional headshot of an Indonesian makeup artist, bright and natural lighting, warm coral and deep plum subtle accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Fjzq6j9lKU9QYVWcvt4BULZfQW3QdQXcslPNns9_Er8jYC80X6CrClnsIvJ3psk4GVS-wcoHEt4EZJnUOpz4Kxmzr8hpJsNPH3IVaLo6nNaQ9nDOCCGiqc94BUaL_8zE2H8ggXpV9yQohoL3Cz3gZIKRdZDDoji0ImNBJXyqcqvaISEBDETzWwtNF1vtJ7aCDPoe2jus3FxaTkeXNeb7Vjlr6o7I0gKeLHfM_U0ZKhhcEG8TntoZcg">
+</div>
+</header>
+<!-- Desktop NavigationDrawer -->
+<aside class="hidden md:flex flex-col h-full py-6 bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim h-screen w-80 rounded-r-xl shadow-md sticky top-0 bg-surface-container-low dark:bg-surface-container-highest z-40 flex-shrink-0">
+<div class="px-6 pb-6 border-b border-outline dark:border-outline-variant mb-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="MUA Profile Image" class="w-full h-full object-cover" data-alt="A professional headshot of an Indonesian makeup artist, bright and natural lighting, warm coral and deep plum subtle accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiMFhO2QzYpjBDog53MP6V-HAkULXxhgF5VknVu8qmlf1EkbyjklDal_vIBIhX9DOZNzmYv44N799CP795e_LGzKWXCDY91NyLPq_A3k53dwFVR0wXeA6Q2kUhxzncGCV4AMUevi5R_uOCyunjNtDZzuw18z9ZXqFcaqpiQN6E0_aL2IA_pRxT8RMcCXDNdqRILjLy3rNadO7vum-BhPGVP2B3Jk_SI3T8XLEjW7a1v2hWlONdGQjNfg">
+</div>
+<div>
+<h2 class="font-card-title text-card-title text-primary">Riana Makeup</h2>
+<p class="font-caption text-caption text-on-surface-variant">Professional MUA</p>
+<p class="font-caption text-caption text-on-surface-variant opacity-75">Jakarta, ID</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container font-bold p-4 flex items-center gap-4 rounded-lg transition-all duration-200 shadow-sm" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md">Orders</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Schedule</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-2">
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="font-label-md text-label-md">Switch to Client</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Service Settings</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop pb-24 md:pb-8 w-full max-w-7xl mx-auto">
+<header class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-page-title text-page-title text-primary mb-2">Booking Requests</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Review and manage your pending makeup service requests.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface border border-outline rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filter
+                </button>
+</div>
+</header>
+<!-- Requests Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Request Card 1 -->
+<article class="bg-surface border border-outline rounded-xl p-4 flex flex-col gap-4 relative overflow-hidden transition-all hover:shadow-sm">
+<!-- Status indicator line -->
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary-container"></div>
+<div class="flex justify-between items-start pl-2">
+<div class="flex gap-3 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline bg-surface-variant">
+<img alt="Customer Avatar" class="w-full h-full object-cover" data-alt="A portrait of a young Indonesian woman smiling warmly, natural lighting, looking directly at the camera, conveying excitement for her upcoming event. Soft, light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3dBfz4jgpamE4d9OKK1ZRsRGXl3ogz5hju0ZE4DVfbKf4drlxGdhMgqSzcjKWnuY0ppIvXW859W8apnWV1B3_NCDV2Fv2bkPfWS5A-gG55Dw4hCQf-teNmhzGKpHEFGtsPsZe6VHdMmDEhsB4tjEGVxOAIkojmJRQPdJ7ClS9ZjjugtFwAKdbGBxkcvgXM6ExxInjdXEkevE8cQArBvdasoiylUeFWbt1VMe2LytXcHmWgIj8_UDYfg">
+</div>
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Siti Nurhaliza</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded-sm font-caption text-caption">Wedding</span>
+<span class="text-on-surface-variant font-caption text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                                    Pending
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pl-2 pt-2 border-t border-surface-variant">
+<div>
+<p class="font-caption text-caption text-on-surface-variant mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_month</span> Date &amp; Time</p>
+<p class="font-body-md text-body-md text-on-surface">24 Aug 2024, 05:00 AM</p>
+</div>
+<div>
+<p class="font-caption text-caption text-on-surface-variant mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Location</p>
+<p class="font-body-md text-body-md text-on-surface">Kebayoran Baru, Jakarta</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 pl-4 flex justify-between items-center ml-2">
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Penghasilan Estimasi</p>
+<p class="font-section-heading text-section-heading text-primary">Rp 3.500.000</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-outline text-on-surface font-label-md text-label-md rounded-lg hover:bg-error-container hover:text-on-error-container hover:border-error-container transition-colors">Tolak</button>
+<button class="px-4 py-2 bg-secondary text-on-secondary font-label-md text-label-md rounded-lg hover:opacity-90 transition-opacity shadow-sm">Terima</button>
+</div>
+</div>
+</article>
+<!-- Request Card 2 -->
+<article class="bg-surface border border-outline rounded-xl p-4 flex flex-col gap-4 relative overflow-hidden transition-all hover:shadow-sm">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary-container"></div>
+<div class="flex justify-between items-start pl-2">
+<div class="flex gap-3 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline bg-surface-variant flex items-center justify-center text-on-surface-variant font-card-title text-card-title">
+                             AD
+                        </div>
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Anita Dewi</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded-sm font-caption text-caption">Graduation</span>
+<span class="text-on-surface-variant font-caption text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                                    Pending
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pl-2 pt-2 border-t border-surface-variant">
+<div>
+<p class="font-caption text-caption text-on-surface-variant mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_month</span> Date &amp; Time</p>
+<p class="font-body-md text-body-md text-on-surface">12 Sep 2024, 04:30 AM</p>
+</div>
+<div>
+<p class="font-caption text-caption text-on-surface-variant mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Location</p>
+<p class="font-body-md text-body-md text-on-surface">Depok, Jawa Barat</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 pl-4 flex justify-between items-center ml-2">
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Penghasilan Estimasi</p>
+<p class="font-section-heading text-section-heading text-primary">Rp 850.000</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-outline text-on-surface font-label-md text-label-md rounded-lg hover:bg-error-container hover:text-on-error-container hover:border-error-container transition-colors">Tolak</button>
+<button class="px-4 py-2 bg-secondary text-on-secondary font-label-md text-label-md rounded-lg hover:opacity-90 transition-opacity shadow-sm">Terima</button>
+</div>
+</div>
+</article>
+<!-- Request Card 3 -->
+<article class="bg-surface border border-outline rounded-xl p-4 flex flex-col gap-4 relative overflow-hidden transition-all hover:shadow-sm opacity-60 pointer-events-none">
+<div class="absolute top-0 left-0 w-1 h-full bg-success"></div>
+<div class="flex justify-between items-start pl-2">
+<div class="flex gap-3 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline bg-surface-variant flex items-center justify-center text-on-surface-variant font-card-title text-card-title">
+                             BP
+                        </div>
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Budi Pratama</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded-sm font-caption text-caption">Pre-Wedding</span>
+<span class="text-success font-caption text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                    Accepted
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pl-2 pt-2 border-t border-surface-variant">
+<div>
+<p class="font-caption text-caption text-on-surface-variant mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_month</span> Date &amp; Time</p>
+<p class="font-body-md text-body-md text-on-surface">05 Oct 2024, 06:00 AM</p>
+</div>
+<div>
+<p class="font-caption text-caption text-on-surface-variant mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Location</p>
+<p class="font-body-md text-body-md text-on-surface">Tangerang Selatan</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 pl-4 flex justify-between items-center ml-2">
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Penghasilan Estimasi</p>
+<p class="font-section-heading text-section-heading text-primary">Rp 2.000.000</p>
+</div>
+<div class="flex gap-2">
+<span class="text-on-surface-variant font-label-md text-label-md italic px-4 py-2">Responded</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Mobile BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-outline dark:border-outline-variant bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim font-page-title text-page-title flex justify-around items-center h-16 px-margin-mobile md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md text-[10px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md text-[10px]">Schedule</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md text-[10px]">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

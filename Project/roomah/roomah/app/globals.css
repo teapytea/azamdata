@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Roomah Light Design Tokens (HSL) */
+:root {
+  --background: 100 22% 97%;
+  --surface-1: 100 20% 95%;
+  --surface-2: 60 8% 98%;
+  --card: 0 0% 100%;
+  --popover: 0 0% 100%;
+
+  --foreground: 220 25% 12%;
+  --muted-foreground: 220 15% 36%;
+
+  --primary: 84 60% 42%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 100 18% 90%;
+  --secondary-foreground: 220 25% 18%;
+  --accent: 42 92% 50%;
+  --accent-foreground: 26 90% 12%;
+
+  --link: 200 85% 42%;
+  --link-foreground: 0 0% 100%;
+
+  --success: 140 60% 38%;
+  --warning: 38 92% 52%;
+  --info: 200 90% 48%;
+  --destructive: 0 75% 50%;
+
+  --border: 100 12% 86%;
+  --input: 100 12% 96%;
+  --ring: 84 70% 50%;
+
+  --sidebar: 100 16% 94%;
+  --sidebar-foreground: 220 25% 18%;
+
+  --hero-from: 100 30% 94%;
+  --hero-to: 200 55% 92%;
+  --footer-from: 126 14% 10%;
+  --footer-to: 200 30% 12%;
+
+  --chart-1: 84 60% 42%;
+  --chart-2: 42 92% 50%;
+  --chart-3: 200 85% 42%;
+  --chart-4: 12 78% 54%;
+  --chart-5: 170 60% 40%;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

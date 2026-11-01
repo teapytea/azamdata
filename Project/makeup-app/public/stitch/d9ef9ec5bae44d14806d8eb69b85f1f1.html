@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MUA Business Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#F5F2F0",
+                      "surface-bright": "#fff8f8",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container-low": "#fdf0f3",
+                      "surface-dim": "#e3d7da",
+                      "success": "#2E7D32",
+                      "on-background": "#201a1c",
+                      "inverse-surface": "#362f31",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#ecdfe2",
+                      "on-surface": "#252323",
+                      "error": "#BA1A1A",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#234a16",
+                      "on-tertiary-container": "#8dba79",
+                      "surface-tint": "#8b4969",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "tertiary-fixed": "#c0f0aa",
+                      "surface-container-high": "#f2e5e8",
+                      "secondary-container": "#fe8172",
+                      "on-surface-variant": "#514348",
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "secondary": "#a23d32",
+                      "on-primary-container": "#e496b9",
+                      "inverse-primary": "#ffafd3",
+                      "on-primary-fixed": "#3a0524",
+                      "inverse-on-surface": "#fbeef0",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffafd3",
+                      "background": "#FCFAF8",
+                      "on-secondary-container": "#731a13",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-tertiary-fixed": "#042100",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "primary-fixed": "#ffd8e7",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "surface": "#FFFFFF",
+                      "primary": "#4d1634",
+                      "tertiary": "#0b3302",
+                      "outline-variant": "#d5c1c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "24px",
+                      "unit": "8px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center px-margin-mobile py-unit z-40">
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-variant transition-colors cursor-pointer active:opacity-80 p-2 rounded-full hidden md:block">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim hidden md:block">MUA Marketplace</h1>
+</div>
+<div class="flex items-center gap-4 ml-auto">
+<button class="relative p-2 hover:bg-surface-variant transition-colors rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-variant border border-outline overflow-hidden cursor-pointer">
+<img alt="MUA Profile Picture" class="w-full h-full object-cover" data-alt="A professional headshot of a female makeup artist in a clean, modern studio setting. She is wearing a simple black top. The background is a soft, muted grey. The lighting is flattering and high-key, emphasizing a clean, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvkQ45JWxUgFM9rFknRgJ_GCOnBjIDfsa1qGnWhv01HfyHS-SDZM1MJdNj1dMeOE1v3FaSAHK3GRWoAK7xFAwKVrgsnerhtFFFd-4NvPspP66MxjO_VyB9Lhsny7IAESqX78buG1s85FLP52oO4HqbvjD4S11RJvss9E3v8Gw93ALaeXYX32HqEsqYHCu7rDamv2urQFSzbFPWwoZdUI9oAN9Ug0RmAkUpn61zcE-mEHCsyjOiMtkgkg">
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- NavigationDrawer (Desktop) -->
+<aside class="hidden md:flex flex-col h-full w-80 rounded-r-xl bg-surface dark:bg-on-background bg-surface-container-low dark:bg-surface-container-highest shadow-md py-6 z-30 fixed left-0 top-[72px] bottom-0">
+<div class="px-6 pb-6 border-b border-outline">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden shrink-0">
+<img alt="MUA Profile Image" class="w-full h-full object-cover" data-alt="A professional headshot of a female makeup artist in a clean, modern studio setting. She is wearing a simple black top. The background is a soft, muted grey. The lighting is flattering and high-key, emphasizing a clean, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmgqea-dlUWcD73N26SgJxIaBOZq2CuoLNLKARXBklGN6OTd5jwJLQjqHCW8mjLgCKel7ZdPq-dLXjdmTKbPXs3Na_w_b04fABxbs_-NE2jt96w9Sj1zCCTlMeHNgY5fcLXEwxmgZWuLZnA-9AK-PZ2Tn5o7qLmMre6IVyox0ni2ThJ17yEuCxfFz27drH5aKOTAI2R9bL5MCKT0F60T_VFThXe8mAEWUqxCQ2s8zeWwNWQLHJ8F6kXw">
+</div>
+<div>
+<h2 class="font-card-title text-card-title text-on-surface">Riana Makeup</h2>
+<p class="font-caption text-caption text-on-surface-variant">Professional MUA</p>
+<p class="font-caption text-caption text-on-surface-variant">Jakarta, ID</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto mt-4 px-2 flex flex-col gap-1">
+<a class="bg-secondary-container text-on-secondary-container font-bold p-4 flex items-center gap-4 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 rounded-xl hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Schedule</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 rounded-xl hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md">Orders</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 rounded-xl hover:bg-surface-variant transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+<a class="text-on-surface p-4 flex items-center gap-4 rounded-xl hover:bg-surface-variant transition-all duration-200 mt-auto" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="font-label-md text-label-md">Switch to Client</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full overflow-y-auto md:ml-80 pb-24 md:pb-8 pt-4 md:pt-8 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-display text-display text-on-surface">Overview</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Welcome back, Riana. Here's your business at a glance.</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                        New Booking
+                    </button>
+</div>
+<!-- Bento Grid for Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Revenue Card -->
+<div class="bg-surface border border-outline rounded-xl p-6 flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Monthly Revenue</span>
+<span class="material-symbols-outlined text-success">trending_up</span>
+</div>
+<div class="mt-2">
+<h3 class="font-display text-display text-on-surface">Rp 12.500.000</h3>
+<p class="font-caption text-caption text-success flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+                                15% vs last month
+                            </p>
+</div>
+</div>
+<!-- Bookings Card -->
+<div class="bg-surface border border-outline rounded-xl p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Bookings</span>
+<span class="material-symbols-outlined text-primary">event_available</span>
+</div>
+<div class="mt-2">
+<h3 class="font-display text-display text-on-surface">24</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1">This month</p>
+</div>
+</div>
+<!-- Profile Views Card -->
+<div class="bg-surface border border-outline rounded-xl p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Profile Views</span>
+<span class="material-symbols-outlined text-secondary">visibility</span>
+</div>
+<div class="mt-2">
+<h3 class="font-display text-display text-on-surface">1,204</h3>
+<p class="font-caption text-caption text-success flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+                                8% vs last month
+                            </p>
+</div>
+</div>
+</div>
+<!-- Two Column Layout for Schedule & Recent -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Jadwal Hari Ini Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-section-heading text-section-heading text-on-surface">Jadwal Hari Ini</h3>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="space-y-4">
+<!-- Appointment 1 -->
+<div class="bg-surface border border-outline rounded-xl p-4 flex gap-4 items-start hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-lg bg-surface-variant flex flex-col items-center justify-center shrink-0 border border-outline group-hover:bg-primary-container group-hover:border-primary-container transition-colors">
+<span class="font-label-md text-label-md text-primary">09:00</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-card-title text-card-title text-on-surface">Wedding Makeup - Sarah</h4>
+<span class="px-2 py-1 bg-surface-variant text-on-surface font-caption text-caption rounded-sm">Confirmed</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                        Grand Hyatt, Jakarta
+                                    </p>
+</div>
+</div>
+<!-- Appointment 2 -->
+<div class="bg-surface border border-outline rounded-xl p-4 flex gap-4 items-start hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-lg bg-surface-variant flex flex-col items-center justify-center shrink-0 border border-outline group-hover:bg-primary-container group-hover:border-primary-container transition-colors">
+<span class="font-label-md text-label-md text-primary">14:30</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-card-title text-card-title text-on-surface">Pre-Wedding Photo - Linda</h4>
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-caption text-caption rounded-sm">Upcoming</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                        Studio 45, Kebayoran
+                                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Permintaan Baru Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-section-heading text-section-heading text-on-surface flex items-center gap-2">
+                                Permintaan Baru
+                                <span class="bg-error text-on-error font-caption text-caption px-2 py-0.5 rounded-full">3</span>
+</h3>
+</div>
+<div class="bg-surface border border-outline rounded-xl overflow-hidden">
+<div class="divide-y divide-outline">
+<!-- Request 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-variant transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden">
+<img alt="Client 1" class="w-full h-full object-cover" data-alt="A portrait of a young Indonesian woman looking directly at the camera. She has natural makeup and her hair is pulled back. The lighting is soft and natural. The background is a slightly blurred interior setting. The aesthetic is warm and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0O7NU1hQ2jPwBPffbC4UiFOlBGtY5m_LrOsMF17dMBN5qJfsc8IlxCLFi8xLdNtfTeEhpUCcfV3GR27LiFHuY2m6s3KWFHDmTMLqF1uOqHjIAXX0ADbkLZGWsxo-Nx2F4oCytURWAQA2XyYV9pmRjtDTY9kyOUnOP3Lhxc4kIHkdQocnac03IzuNFpXUV3WfhFts1zNZt5WlWklvnR5OmLMf8J-APF5zShRhEVqhWLeg2QvM7SRJm7w">
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Amanda S.</p>
+<p class="font-caption text-caption text-on-surface-variant">Graduation Makeup • 12 Nov</p>
+</div>
+</div>
+<button class="bg-[#E66F61] hover:bg-[#E66F61]/90 text-white px-4 py-2 rounded-lg font-label-md text-label-md transition-colors">Review</button>
+</div>
+<!-- Request 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-variant transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden">
+<span class="material-symbols-outlined w-full h-full flex items-center justify-center text-on-surface-variant">person</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Budi T.</p>
+<p class="font-caption text-caption text-on-surface-variant">Party Makeup • 15 Nov</p>
+</div>
+</div>
+<button class="bg-[#E66F61] hover:bg-[#E66F61]/90 text-white px-4 py-2 rounded-lg font-label-md text-label-md transition-colors">Review</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface dark:bg-on-background text-primary dark:text-primary-fixed-dim border-t border-outline dark:border-outline-variant flat no shadows flex justify-around items-center h-16 px-margin-mobile">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md text-[10px] mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md text-[10px] mt-1">Schedule</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md text-[10px] mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

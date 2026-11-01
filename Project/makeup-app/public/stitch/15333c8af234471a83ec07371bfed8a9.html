@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Notification Center - RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&amp;family=Inter:wght@400..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#fbeef0",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container-highest": "#ecdfe2",
+                      "surface-variant": "#F5F2F0",
+                      "on-background": "#201a1c",
+                      "primary": "#4d1634",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "surface-bright": "#fff8f8",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#514348",
+                      "primary-container": "#682c4b",
+                      "error": "#BA1A1A",
+                      "on-surface": "#252323",
+                      "on-secondary-fixed": "#410001",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "outline-variant": "#d5c1c8",
+                      "surface-container-low": "#fdf0f3",
+                      "on-tertiary-container": "#8dba79",
+                      "tertiary-fixed": "#c0f0aa",
+                      "on-secondary": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "primary-fixed-dim": "#ffafd3",
+                      "surface": "#FFFFFF",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#fe8172",
+                      "surface-tint": "#8b4969",
+                      "surface-dim": "#e3d7da",
+                      "surface-container-high": "#f2e5e8",
+                      "on-primary-container": "#e496b9",
+                      "tertiary-container": "#234a16",
+                      "secondary": "#a23d32",
+                      "on-secondary-container": "#731a13",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#362f31",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#ffd8e7",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "success": "#2E7D32",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "tertiary": "#0b3302",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "on-tertiary-fixed": "#042100",
+                      "background": "#FCFAF8",
+                      "surface-container": "#f8ebee",
+                      "on-primary-fixed": "#3a0524",
+                      "inverse-primary": "#ffafd3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "24px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Geist"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-20 md:pb-0 font-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container docked full-width top-0 border-b border-outline dark:border-outline-variant flat no shadows sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile py-unit max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed">Notifikasi</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors p-2 rounded">
+                    Tandai semua dibaca
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<!-- Section: Terbaru -->
+<section class="mb-8">
+<h2 class="font-section-heading-mobile md:font-section-heading text-section-heading-mobile md:text-section-heading mb-4 text-on-surface">Terbaru</h2>
+<div class="space-y-3">
+<!-- Unread Booking Notification -->
+<div class="bg-surface border border-outline rounded-lg p-4 flex gap-4 items-start relative hover:bg-surface-variant transition-colors cursor-pointer">
+<div class="absolute top-4 right-4 w-2.5 h-2.5 bg-secondary rounded-full"></div>
+<div class="shrink-0 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">event_available</span>
+</div>
+<div class="flex-1 pr-6">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Booking Dikonfirmasi!</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Booking Anda dengan MUA Sarah S. untuk tanggal 24 Okt telah dikonfirmasi.</p>
+<span class="font-caption text-caption text-on-surface-variant opacity-70">2 jam yang lalu</span>
+</div>
+</div>
+<!-- Unread Message Notification -->
+<div class="bg-surface border border-outline rounded-lg p-4 flex gap-4 items-start relative hover:bg-surface-variant transition-colors cursor-pointer">
+<div class="absolute top-4 right-4 w-2.5 h-2.5 bg-secondary rounded-full"></div>
+<img class="shrink-0 w-12 h-12 rounded-full object-cover border border-outline" data-alt="A small circular avatar of a professional makeup artist smiling. The style is modern, well-lit, set against a clean studio background. Corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkUqozRKRYl0PGdZqHEdtcbMhDRZ5uGUZjgA7hrc2_vyAe8qyizK7FDonmWW156MjUiQ6l25LFuMT7YCTieYegpSjihXOGFsVk2-19R0N53QVr8y27wUJuoIAtAzmSVdUYo-uQW0zYyLRXz472QAqV6pPAN5FOV3TUzhzN_fbJAs13zX8Cwk5tqawIinf4Xu3RJkKqLFHY7auLVH4TLlFauAYyYGUeQgVJOHv4sHJGl8K5-YRtiGar6g">
+<div class="flex-1 pr-6">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Pesan Baru dari Dina MUA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">"Halo kak, untuk trial makeup minggu depan apakah bisa maju jam 10 pagi?"</p>
+<span class="font-caption text-caption text-on-surface-variant opacity-70">5 jam yang lalu</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Sebelumnya -->
+<section>
+<h2 class="font-section-heading-mobile md:font-section-heading text-section-heading-mobile md:text-section-heading mb-4 text-on-surface">Sebelumnya</h2>
+<div class="space-y-3">
+<!-- Read Promo Notification -->
+<div class="bg-surface border border-outline rounded-lg p-4 flex gap-4 items-start hover:bg-surface-variant transition-colors cursor-pointer opacity-80">
+<div class="shrink-0 w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_offer</span>
+</div>
+<div class="flex-1">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Diskon 20% Paket Wedding</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Jangan lewatkan promo spesial akhir bulan untuk semua paket Wedding. Klaim sekarang!</p>
+<span class="font-caption text-caption text-on-surface-variant opacity-70">Kemarin, 14:30</span>
+</div>
+</div>
+<!-- Read System Notification -->
+<div class="bg-surface border border-outline rounded-lg p-4 flex gap-4 items-start hover:bg-surface-variant transition-colors cursor-pointer opacity-80">
+<div class="shrink-0 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div class="flex-1">
+<h3 class="font-label-md text-label-md text-on-surface mb-1">Pembayaran Berhasil</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Pembayaran DP untuk booking #BK-0921 telah kami terima.</p>
+<span class="font-caption text-caption text-on-surface-variant opacity-70">2 Hari yang lalu</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

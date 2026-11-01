@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MUA Favorit - RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#ecdfe2",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container": "#f8ebee",
+                      "success": "#2E7D32",
+                      "inverse-on-surface": "#fbeef0",
+                      "on-surface": "#252323",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "on-secondary-container": "#731a13",
+                      "tertiary-container": "#234a16",
+                      "secondary": "#a23d32",
+                      "on-tertiary-fixed": "#042100",
+                      "on-primary-container": "#e496b9",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#201a1c",
+                      "tertiary-fixed": "#c0f0aa",
+                      "on-secondary-fixed": "#410001",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#fe8172",
+                      "on-tertiary-container": "#8dba79",
+                      "primary-fixed": "#ffd8e7",
+                      "surface-tint": "#8b4969",
+                      "surface-dim": "#e3d7da",
+                      "surface-container-high": "#f2e5e8",
+                      "primary-fixed-dim": "#ffafd3",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "surface-bright": "#fff8f8",
+                      "on-secondary": "#ffffff",
+                      "error": "#BA1A1A",
+                      "surface-container-low": "#fdf0f3",
+                      "inverse-primary": "#ffafd3",
+                      "tertiary": "#0b3302",
+                      "surface": "#FFFFFF",
+                      "on-primary-fixed": "#3a0524",
+                      "primary-container": "#682c4b",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "surface-container-highest": "#ecdfe2",
+                      "primary": "#4d1634",
+                      "inverse-surface": "#362f31",
+                      "on-primary": "#ffffff",
+                      "background": "#FCFAF8",
+                      "outline": "#E8E2DF",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#d5c1c8",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-surface-variant": "#514348"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "24px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "card-title": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-[80px] md:pb-0 font-body-md text-body-md antialiased">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container docked full-width top-0 border-b border-outline dark:border-outline-variant flat no shadows sticky z-40">
+<div class="flex justify-between items-center w-full px-margin-mobile py-unit max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="location_on">location_on</span>
+<span class="font-display text-display text-primary dark:text-primary-fixed font-bold tracking-tight">RiasKita</span>
+</div>
+<div>
+<button class="font-label-md text-label-md text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md">ID | EN</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<!-- Page Title Section -->
+<div class="mb-8">
+<h1 class="font-page-title text-page-title text-primary">MUA Favorit</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Make-up artist pilihan Anda yang telah disimpan.</p>
+</div>
+<!-- Favorites List -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<article class="bg-surface border border-outline rounded-xl overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300">
+<div class="relative h-48 w-full">
+<img alt="Portfolio of Ayu Pratiwi" class="object-cover w-full h-full" data-alt="A professional makeup artist applying bridal makeup in a well-lit studio setting. High quality, modern aesthetic, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxw_BXX4Lk2Ty21WuYakEs3QHIGp6X84NFqabqJg8oSdD7SEcBJJcg4c0veVYYB91z4ShtUUAw9fULmr9e3Popr3la1M21s1A1MQlaGdCjWJ1iWztz0a-WRCRkkEdzgzDMdyd4wUN0hG02MzrVVOngKVAjmLtYXDhfbaJuLDbDj3nrScjxyGqCYBmyC5ioXdOFKKFc1cc-0xN1snjoY_Hav0-6Jmz7RWqVZ4w-XkvzKyrtT81pxJQJxg">
+<button aria-label="Hapus dari Favorit" class="absolute top-3 right-3 bg-surface/90 rounded-full p-2 text-primary hover:bg-surface transition-colors shadow-sm" title="Hapus dari Favorit">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-surface-variant/90 backdrop-blur-sm rounded px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-yellow-500" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.9 (120 ulasan)</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-card-title text-card-title text-on-surface truncate pr-2">Ayu Pratiwi MUA</h2>
+<span class="material-symbols-outlined text-success" data-icon="verified" style="font-variation-settings: 'FILL' 1;" title="Verified">verified</span>
+</div>
+<div class="flex items-center text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md">Jakarta Selatan</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-1 rounded-sm font-caption text-caption">Wedding</span>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-1 rounded-sm font-caption text-caption">Graduation</span>
+</div>
+<div class="mt-auto pt-4 border-t border-outline flex justify-between items-center">
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Mulai dari</p>
+<p class="font-label-md text-label-md text-primary font-bold">Rp 1.500.000</p>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-colors">
+                            Lihat Profil
+                        </button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface border border-outline rounded-xl overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300">
+<div class="relative h-48 w-full">
+<img alt="Portfolio of Bunga Lestari" class="object-cover w-full h-full" data-alt="A close up shot of a model with glamorous evening makeup, featuring dramatic eyes and bold lips, captured in high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8W-MHSJonSsYp1G9-PzRzJE0gFIHe4sqUMIICFJhg5zWOs4oiGsRSMvFGGUcBlidGnh6To9UlYrGTu_fJp57eHYeek8ZszUkOhkldcjowMAP5MDD2P8PubAGwoqJcaIWBldyVmzbLFsTcHU2ksutq8CrQFXOGamfNJUdQ9iRLSE4gdEOUe5tLjl2NC4-JJcB6POuzpBejOWaoIg2wEzvZiZ83WdJl7JNlq7KRqmkS-E9y_b4P0KLhDQ">
+<button aria-label="Hapus dari Favorit" class="absolute top-3 right-3 bg-surface/90 rounded-full p-2 text-primary hover:bg-surface transition-colors shadow-sm" title="Hapus dari Favorit">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-surface-variant/90 backdrop-blur-sm rounded px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-yellow-500" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.8 (85 ulasan)</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-card-title text-card-title text-on-surface truncate pr-2">Bunga Lestari Beauty</h2>
+<span class="material-symbols-outlined text-success" data-icon="verified" style="font-variation-settings: 'FILL' 1;" title="Verified">verified</span>
+</div>
+<div class="flex items-center text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md">Bandung</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-1 rounded-sm font-caption text-caption">Party</span>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-1 rounded-sm font-caption text-caption">Photoshoot</span>
+</div>
+<div class="mt-auto pt-4 border-t border-outline flex justify-between items-center">
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Mulai dari</p>
+<p class="font-label-md text-label-md text-primary font-bold">Rp 800.000</p>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-colors">
+                            Lihat Profil
+                        </button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface border border-outline rounded-xl overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300">
+<div class="relative h-48 w-full">
+<img alt="Portfolio of Citra Kirana" class="object-cover w-full h-full" data-alt="A soft, romantic makeup look on a bride holding a bouquet, outdoors in a garden setting with soft bokeh background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqSQtULT1sTUefCse3OxolgMlo8yfjaGAH6MFYJuEWHv4FwoUDw5T14JwUZ1_NqrAzfxwF0p0JQIAUP2xKE1R9BMNEDjydzbIgD3q7V3lZxtQM8CNXJGTYeTLmO-lJ3srn470GGgOvTSF13CyTIePKyDPN3mmTIe_iTWN8MDPv1ODXRT5qhhpsoYzaZJE4MLV04oiRc3wX9PCsmj4X0ucuP1PWA250bCBIbkw0jUADLJjLLBBowc1HuQ">
+<button aria-label="Hapus dari Favorit" class="absolute top-3 right-3 bg-surface/90 rounded-full p-2 text-primary hover:bg-surface transition-colors shadow-sm" title="Hapus dari Favorit">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-surface-variant/90 backdrop-blur-sm rounded px-2 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-yellow-500" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">5.0 (210 ulasan)</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-card-title text-card-title text-on-surface truncate pr-2">Citra Kirana Bridal</h2>
+<span class="material-symbols-outlined text-success" data-icon="verified" style="font-variation-settings: 'FILL' 1;" title="Verified">verified</span>
+</div>
+<div class="flex items-center text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md">Surabaya</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-1 rounded-sm font-caption text-caption">Wedding</span>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-1 rounded-sm font-caption text-caption">Traditional</span>
+</div>
+<div class="mt-auto pt-4 border-t border-outline flex justify-between items-center">
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Mulai dari</p>
+<p class="font-label-md text-label-md text-primary font-bold">Rp 2.500.000</p>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-colors">
+                            Lihat Profil
+                        </button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-surface-container-lowest docked full-width bottom-0 z-50 border-t border-outline dark:border-outline-variant flat no shadows fixed bottom-0 w-full flex justify-around items-center px-2 py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-md text-label-md-mobile">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="font-label-md text-label-md-mobile">Cari</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="event_note">event_note</span>
+<span class="font-label-md text-label-md-mobile">Booking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-on-primary-container bg-primary-fixed dark:bg-primary-container rounded-full px-4 py-1 scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md-mobile">Favorit</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-label-md text-label-md-mobile">Akun</span>
+</a>
+</nav>
+<script>
+        // Simple script to toggle favorite icon state (visual feedback only)
+        document.querySelectorAll('button[aria-label="Hapus dari Favorit"]').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent navigating if wrapped in a link later
+                const icon = this.querySelector('.material-symbols-outlined');
+                // In a real app, this would remove the card or prompt confirmation.
+                // Here we just toggle the fill state for visual interactivity.
+                if(icon.style.fontVariationSettings.includes("'FILL' 1")) {
+                     icon.style.fontVariationSettings = "'FILL' 0";
+                     icon.classList.replace('text-primary', 'text-on-surface-variant');
+                } else {
+                     icon.style.fontVariationSettings = "'FILL' 1";
+                     icon.classList.replace('text-on-surface-variant', 'text-primary');
+                }
+            });
+        });
+    </script>
+</body></html>

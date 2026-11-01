@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "signava-dev",
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["run", "--cwd", "proyek", "dev"],
+      "port": 3000
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Moderasi Ulasan - Admin Panel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#252323",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "surface-variant": "#F5F2F0",
+                        "on-primary-fixed": "#3a0524",
+                        "secondary-container": "#fe8172",
+                        "surface-container-low": "#fdf0f3",
+                        "outline": "#E8E2DF",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#514348",
+                        "secondary": "#a23d32",
+                        "primary-fixed-dim": "#ffafd3",
+                        "surface-dim": "#e3d7da",
+                        "tertiary-fixed": "#c0f0aa",
+                        "surface-tint": "#8b4969",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#BA1A1A",
+                        "tertiary": "#0b3302",
+                        "on-tertiary-fixed": "#042100",
+                        "inverse-surface": "#362f31",
+                        "surface-container-highest": "#ecdfe2",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8dba79",
+                        "tertiary-container": "#234a16",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "inverse-primary": "#ffafd3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#201a1c",
+                        "on-primary-container": "#e496b9",
+                        "surface-bright": "#fff8f8",
+                        "primary-fixed": "#ffd8e7",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d5c1c8",
+                        "on-secondary-container": "#731a13",
+                        "inverse-on-surface": "#fbeef0",
+                        "surface-container-high": "#f2e5e8",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#4d1634",
+                        "surface": "#FFFFFF",
+                        "background": "#FCFAF8",
+                        "primary-container": "#682c4b",
+                        "success": "#2E7D32",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container": "#f8ebee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "margin-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display": ["Geist"],
+                        "section-heading-mobile": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "page-title": ["Geist"],
+                        "caption": ["Inter"],
+                        "card-title": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased flex h-screen overflow-hidden">
+<!-- NavigationDrawer -->
+<nav class="bg-surface dark:bg-surface text-primary dark:text-inverse-primary font-label-md text-label-md h-screen w-64 fixed left-0 top-0 border-r border-outline dark:border-outline-variant flat no shadows flex flex-col p-margin-desktop gap-4 z-20 hidden md:flex">
+<div class="mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img alt="Admin Portrait" class="w-full h-full object-cover" data-alt="A professional headshot of an administrative professional in a bright, modern office setting. The lighting is crisp and even, highlighting a clean corporate aesthetic with neutral tones. High quality, clear focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiG2EMJUldfQfHuY8CsI3U0h3XFqTVW1fBmwJlcuQ2Q_dE3ewV5bt-5O-Eg0IbdMgOnaj8UJOGPKP5th1CBBdpXM5OXNvZt8P_Wyv52SUy9F4oVSQFP_TbnUhYHocKa59-4-Llw6u8gqIsiTsc_NAYDGgn8SXqg0fbwqv3dCbOVtk-fnq5j6oP5pwanpHyzT3SdQyZCOB293esXQPNQTJPNltYDotUKHixtKoSwXZD6YPDUfIhBu9Huw">
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">System Admin</span>
+<span class="font-caption text-caption text-on-surface-variant">Global Administrator</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">face_5</span>
+                MUAs
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+                Users
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                Bookings
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">payments</span>
+                Payments
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary-container text-on-primary-container rounded-lg font-bold hover:bg-surface-variant transition-all cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">gavel</span>
+                Disputes
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-variant transition-all cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+                Content
+            </a>
+</div>
+<div class="mt-auto pt-4 border-t border-outline">
+<span class="font-caption text-caption text-on-surface-variant">v1.2.0</span>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 w-full overflow-y-auto">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface w-full top-0 sticky border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center px-margin-desktop py-4 z-10">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-page-title text-page-title text-primary dark:text-inverse-primary font-bold">Admin Dashboard</h1>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 flex items-center gap-2 px-4 py-2 rounded-lg">
+<span class="font-label-md text-label-md">Notifications</span>
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop flex flex-col gap-6 max-w-7xl mx-auto w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<h2 class="font-display text-display text-on-background">Moderasi Ulasan</h2>
+<!-- Filters/Stats -->
+<div class="flex gap-4">
+<div class="bg-surface border border-outline rounded-lg p-3 flex flex-col min-w-[120px]">
+<span class="font-caption text-caption text-on-surface-variant">Pending Review</span>
+<span class="font-section-heading text-section-heading text-error">12</span>
+</div>
+<div class="bg-surface border border-outline rounded-lg p-3 flex flex-col min-w-[120px]">
+<span class="font-caption text-caption text-on-surface-variant">Processed Today</span>
+<span class="font-section-heading text-section-heading text-primary">45</span>
+</div>
+</div>
+</div>
+<!-- Review Queue List -->
+<div class="flex flex-col gap-4">
+<!-- Review Card 1 -->
+<div class="bg-surface border border-outline rounded-xl p-4 md:p-6 flex flex-col md:flex-row gap-6 hover:shadow-sm transition-shadow">
+<!-- Left: Metadata & Rating -->
+<div class="flex flex-col md:w-1/4 gap-2 border-b md:border-b-0 md:border-r border-outline pb-4 md:pb-0 md:pr-6">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Reported By:</span>
+<span class="font-body-md text-body-md text-on-surface-variant">@user123</span>
+</div>
+<span class="bg-error-container text-on-error-container font-caption text-caption px-2 py-1 rounded-full">Inappropriate</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Target MUA:</span>
+<span class="font-body-md text-body-md text-primary">Bella Makeup</span>
+</div>
+<div class="mt-auto pt-4 flex gap-1 text-[#F59E0B]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<!-- Middle: Content -->
+<div class="flex-1 flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">"Pelayanannya sangat buruk, makeup luntur dalam 1 jam. MUA juga datang terlambat dan bersikap kasar. Tidak direkomendasikan!"</p>
+<div class="flex gap-2 overflow-x-auto pb-2">
+<div class="w-24 h-24 rounded-lg flex-shrink-0 overflow-hidden border border-outline">
+<img class="w-full h-full object-cover" data-alt="A close up photo showing smudged makeup on a person's face, taken in poor lighting. The image looks like a casual smartphone photo submitted as evidence in a review. High contrast, slightly blurry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3KUAgIeQKKd-SaK8PcPXJGBxdg-hqXqQNKK-qf14lWZIghB-TKDuWpSMiP-g0PE1pbAdqGp5Vsa1CZ1fWRk6hSRr0tNfgZStV3vuUhoznMmbLocb7YFyUmBgmvOGXFqip38TeBV_vPTBJRCsBDj1wNfH5Vgpiims9u6zEXxGE_On5-rsQQNKopFQBgqAIVFUb1rSGTagsnPntqlLREeOxkpqbF-jrXKnho858Tn9Rzgdo5pH8Z9vaYg">
+</div>
+</div>
+</div>
+<!-- Right: Actions -->
+<div class="flex flex-row md:flex-col gap-3 md:w-48 justify-end md:justify-center border-t md:border-t-0 border-outline pt-4 md:pt-0">
+<button class="flex-1 md:flex-none bg-surface border border-outline text-on-surface hover:bg-surface-container-low px-4 py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">visibility</span>
+                            Keep
+                        </button>
+<button class="flex-1 md:flex-none bg-error text-on-error hover:bg-[#A31616] px-4 py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">delete</span>
+                            Delete
+                        </button>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface border border-outline rounded-xl p-4 md:p-6 flex flex-col md:flex-row gap-6 hover:shadow-sm transition-shadow">
+<div class="flex flex-col md:w-1/4 gap-2 border-b md:border-b-0 md:border-r border-outline pb-4 md:pb-0 md:pr-6">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Reported By:</span>
+<span class="font-body-md text-body-md text-on-surface-variant">@weddingplanner_id</span>
+</div>
+<span class="bg-surface-variant text-on-surface-variant font-caption text-caption px-2 py-1 rounded-full">Spam</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Target MUA:</span>
+<span class="font-body-md text-body-md text-primary">Dian Glam</span>
+</div>
+<div class="mt-auto pt-4 flex gap-1 text-[#F59E0B]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">"Cari uang tambahan dari rumah? Klik link ini http://spamlink.com/promo untuk mendapatkan jutaan rupiah tiap minggu! Terbukti membayar."</p>
+</div>
+<div class="flex flex-row md:flex-col gap-3 md:w-48 justify-end md:justify-center border-t md:border-t-0 border-outline pt-4 md:pt-0">
+<button class="flex-1 md:flex-none bg-surface border border-outline text-on-surface hover:bg-surface-container-low px-4 py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">visibility</span>
+                            Keep
+                        </button>
+<button class="flex-1 md:flex-none bg-error text-on-error hover:bg-[#A31616] px-4 py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">delete</span>
+                            Delete
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-variant dark:bg-surface-container text-on-surface-variant font-caption text-caption w-full py-4 border-t border-outline flat no shadows flex justify-between items-center px-margin-desktop mt-auto">
+<div class="font-label-md text-label-md text-on-surface">
+                © 2024 MUA Marketplace Admin Panel
+            </div>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors cursor-pointer" href="#">Support</a>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pengaturan Wilayah - RiasKita Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#252323",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "surface-variant": "#F5F2F0",
+                      "on-primary-fixed": "#3a0524",
+                      "secondary-container": "#fe8172",
+                      "surface-container-low": "#fdf0f3",
+                      "outline": "#E8E2DF",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#514348",
+                      "secondary": "#a23d32",
+                      "primary-fixed-dim": "#ffafd3",
+                      "surface-dim": "#e3d7da",
+                      "tertiary-fixed": "#c0f0aa",
+                      "surface-tint": "#8b4969",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "error": "#BA1A1A",
+                      "tertiary": "#0b3302",
+                      "on-tertiary-fixed": "#042100",
+                      "inverse-surface": "#362f31",
+                      "surface-container-highest": "#ecdfe2",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#8dba79",
+                      "tertiary-container": "#234a16",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "inverse-primary": "#ffafd3",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#201a1c",
+                      "on-primary-container": "#e496b9",
+                      "surface-bright": "#fff8f8",
+                      "primary-fixed": "#ffd8e7",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#d5c1c8",
+                      "on-secondary-container": "#731a13",
+                      "inverse-on-surface": "#fbeef0",
+                      "surface-container-high": "#f2e5e8",
+                      "on-secondary-fixed": "#410001",
+                      "primary": "#4d1634",
+                      "surface": "#FFFFFF",
+                      "background": "#FCFAF8",
+                      "primary-container": "#682c4b",
+                      "success": "#2E7D32",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-container": "#f8ebee"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display": ["Geist"],
+                      "section-heading-mobile": ["Geist"],
+                      "section-heading": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "page-title": ["Geist"],
+                      "caption": ["Inter"],
+                      "card-title": ["Geist"]
+              },
+              "fontSize": {
+                      "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display": ["32px", {"lineHeight": "1.15", "fontWeight": "700"}],
+                      "section-heading-mobile": ["20px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "section-heading": ["22px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "1.55", "fontWeight": "400"}],
+                      "page-title": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "caption": ["12px", {"lineHeight": "1.45", "fontWeight": "400"}],
+                      "card-title": ["18px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row">
+<!-- NavigationDrawer (Hidden on Mobile, Visible on Desktop) -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface dark:bg-surface border-r border-outline dark:border-outline-variant p-margin-desktop gap-4 z-20">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden">
+<img alt="Admin Portrait" class="w-full h-full object-cover" data-alt="A professional headshot of a system administrator. The lighting is clean and modern. The background is a subtle, neutral tone. The aesthetic is corporate and trustworthy, aligning with a high-end marketplace interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPtSOWaTCOWVzhlgo7x9ik9gtOM0t-cWZ-OhTkSXD2P7vREluX3B5a6j5vFmlGXYjND3_9htT0XAs700xCRfdZZluBS_09MszpSTBV3uHaGGwwRiSVnnNgczZhczTq69-Sygmv3g41YmwvyRv7arFWQCMjNaWjtUJ7g71oXv70w12VXkzELmT4yaIjV6bq4gSNm_aTkBuVB_MDwpaG1S5evtTsvrm-uS1eOgJE4DC9L-vxYKAIh4nsbQ">
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">System Admin</span>
+<span class="font-caption text-caption text-on-surface-variant">Global Administrator</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="face_5">face_5</span>
+<span class="font-label-md text-label-md">MUAs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-md text-label-md">Users</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="font-label-md text-label-md">Disputes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-label-md text-label-md">Content</span>
+</a>
+<!-- Active state for Settings/Configuration intent -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold transition-all active:scale-95 mt-auto" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</div>
+<div class="mt-auto pt-4 border-t border-outline">
+<span class="font-caption text-caption text-on-surface-variant">v1.2.0</span>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface flex justify-between items-center px-margin-desktop py-4 z-10 border-b border-outline dark:border-outline-variant">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary dark:text-inverse-primary cursor-pointer active:opacity-80 p-2 hover:bg-surface-container-high transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-page-title text-page-title text-primary dark:text-inverse-primary font-bold tracking-tight">Pengaturan Wilayah</h1>
+</div>
+<button class="text-on-surface-variant cursor-pointer active:opacity-80 p-2 hover:bg-surface-container-high transition-colors rounded-full flex items-center gap-2">
+<span class="hidden md:inline font-label-md text-label-md">Notifications</span>
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Canvas -->
+<div class="flex-1 p-margin-mobile md:p-margin-desktop flex flex-col gap-6 max-w-7xl mx-auto w-full">
+<!-- Bento Grid Layout for Settings -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Active Cities Panel -->
+<section class="lg:col-span-2 bg-surface rounded-xl border border-outline p-6 flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<h2 class="font-section-heading text-section-heading text-on-surface">Active Cities</h2>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="add">add</span> Add City
+                        </button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- City Item 1 -->
+<div class="flex justify-between items-center p-4 border border-outline rounded-lg bg-surface-bright">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="location_city">location_city</span>
+</div>
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Jakarta</h3>
+<p class="font-caption text-caption text-on-surface-variant">Primary Hub • 150+ MUAs active</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-caption text-caption">Active</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- City Item 2 -->
+<div class="flex justify-between items-center p-4 border border-outline rounded-lg bg-surface-bright">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="location_city">location_city</span>
+</div>
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Surabaya</h3>
+<p class="font-caption text-caption text-on-surface-variant">Secondary Hub • 85 MUAs active</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-caption text-caption">Active</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- City Item 3 -->
+<div class="flex justify-between items-center p-4 border border-outline rounded-lg bg-surface-bright opacity-70">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="location_city">location_city</span>
+</div>
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Bandung</h3>
+<p class="font-caption text-caption text-on-surface-variant">Onboarding Phase • 12 MUAs active</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-caption text-caption border border-outline">Paused</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Configuration Sidebar -->
+<div class="flex flex-col gap-6">
+<!-- Default Radius Settings -->
+<section class="bg-surface rounded-xl border border-outline p-6 flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="my_location">my_location</span>
+<h2 class="font-card-title text-card-title text-on-surface">Default Operational Radius</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Set the default travel distance limit for MUAs. This can be overridden per city.</p>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Maximum Distance (km)</label>
+<input class="w-full border border-outline rounded-lg px-4 py-2 font-body-md text-body-md bg-surface text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" type="number" value="25">
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-label-md text-label-md text-on-surface">Enforce strictly</span>
+<!-- Custom Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value="">
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-outline after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<button class="mt-4 w-full bg-surface-container-high text-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors border border-outline">
+                            Save Defaults
+                        </button>
+</section>
+<!-- Map Preview / Coverage Area Placeholder -->
+<section class="bg-surface rounded-xl border border-outline p-4 flex flex-col gap-3 relative overflow-hidden h-64">
+<div class="absolute inset-0 bg-surface-variant flex flex-col items-center justify-center p-4 text-center">
+<div class="w-full h-full rounded-lg bg-cover bg-center opacity-50 mb-2 border border-outline" data-alt="A stylized, simplified map interface showing a generic city layout with a glowing radial zone indicating a coverage area. The map uses light, subtle tones from the primary palette, with a soft plum highlight indicating the active zone. It feels professional and abstract, fitting a modern dashboard." data-location="Jakarta" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9DqCUzvZdGvNCxfrptLNj8KVwcth8o82SnEkc8sK45_qVbGqvPbomsyu2ZCUgH0gYQyuXB7wv5Lh4DZY_WFP2BqBgYleNHm44Ben2nFvRpPmHzeo-h_69LlIIpPBnNkuU6C5upLllljhoI6pqCKKxjIhWrw2KbNIZLPaPhZDZeR_q1yC2E_bh7nwpYShwUW4HJGm1X8R-QKjOyOrpJq2g84CeiDM89ik31mRmgLFNgQirvdE0X1ltOw');"></div>
+<span class="absolute bottom-6 font-label-md text-label-md text-on-surface-variant bg-surface px-4 py-1 rounded-full shadow-sm">Coverage Preview</span>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-4 bg-surface-variant dark:bg-surface-container border-t border-outline flex justify-between items-center px-margin-desktop mt-auto flex-wrap gap-4">
+<span class="font-label-md text-label-md text-on-surface">© 2024 MUA Marketplace Admin Panel</span>
+<div class="flex gap-4">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Support</a>
+</div>
+</footer>
+</main>
+</body></html>

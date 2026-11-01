@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Antrean Verifikasi MUA - Admin RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "outline-variant": "#d5c1c8",
+                        "on-tertiary-container": "#8dba79",
+                        "surface": "#FFFFFF",
+                        "primary-fixed": "#ffd8e7",
+                        "surface-container-high": "#f2e5e8",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#E8E2DF",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#362f31",
+                        "on-background": "#201a1c",
+                        "success": "#2E7D32",
+                        "on-secondary-fixed": "#410001",
+                        "on-surface": "#201a1c",
+                        "on-tertiary-fixed": "#042100",
+                        "tertiary-fixed": "#c0f0aa",
+                        "on-error": "#ffffff",
+                        "background": "#FCFAF8",
+                        "error": "#BA1A1A",
+                        "tertiary": "#0b3302",
+                        "surface-bright": "#fff8f8",
+                        "on-primary-fixed": "#3a0524",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#682c4b",
+                        "surface-container": "#f8ebee",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "primary-fixed-dim": "#ffafd3",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "on-surface-variant": "#514348",
+                        "on-primary-container": "#e496b9",
+                        "secondary": "#a23d32",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "inverse-primary": "#ffafd3",
+                        "surface-variant": "#ecdfe2",
+                        "surface-tint": "#8b4969",
+                        "secondary-container": "#fe8172",
+                        "surface-container-highest": "#ecdfe2",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-dim": "#e3d7da",
+                        "on-secondary-container": "#731a13",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#fdf0f3",
+                        "tertiary-container": "#234a16",
+                        "primary": "#4d1634",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#fbeef0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "unit": "8px",
+                        "margin-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "card-title": ["Geist"],
+                        "body-md": ["Inter"],
+                        "section-heading": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "page-title": ["Geist"],
+                        "label-md": ["Inter"],
+                        "section-heading-mobile": ["Geist"],
+                        "display": ["Geist"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden min-h-screen">
+<!-- SideNavBar (Desktop Only) -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface dark:bg-inverse-surface border-r border-outline dark:border-outline-variant p-4 z-50">
+<div class="mb-8 px-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-3xl" data-weight="fill">face_retouching_natural</span>
+<div>
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim tracking-tight">RiasKita</h1>
+<p class="font-caption text-caption text-on-surface-variant">Admin Platform</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<!-- MUAs - Active -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-lg active:scale-95 transition-transform font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">face</span>
+                MUAs
+            </a>
+<!-- Users -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform font-label-md text-label-md rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+                Users
+            </a>
+<!-- Bookings -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform font-label-md text-label-md rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                Bookings
+            </a>
+<!-- Payments -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform font-label-md text-label-md rounded-lg" href="#">
+<span class="material-symbols-outlined">payments</span>
+                Payments
+            </a>
+<!-- Content -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform font-label-md text-label-md rounded-lg" href="#">
+<span class="material-symbols-outlined">article</span>
+                Content
+            </a>
+<!-- Settings -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform font-label-md text-label-md rounded-lg mt-auto" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+<div class="mt-4 border-t border-outline pt-4 px-2">
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2 border border-outline rounded-lg text-primary hover:bg-surface-container-low transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm">download</span>
+                Export Report
+            </button>
+</div>
+</nav>
+<!-- TopAppBar (Desktop) -->
+<header class="hidden md:flex justify-between items-center h-16 px-6 ml-64 w-[calc(100%-16rem)] bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 z-40 border-b border-outline dark:border-outline-variant transition-all duration-200 ease-in-out">
+<div class="flex-1 flex items-center">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline rounded-full text-body-md font-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search applications, names, or IDs..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full transition-all duration-200 ease-in-out relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="ml-4 h-8 w-8 rounded-full border border-outline overflow-hidden">
+<img alt="Admin Profile Picture" class="w-full h-full object-cover" data-alt="A close up professional headshot of an Asian woman with clear skin, subtle elegant makeup, wearing a structured dark plum blazer against a bright minimalist studio background, high-key lighting, corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqn6sEPWtK9gp2iKckqCqPm7BizBu4ceID3FXMwkY_U0YKHPrSTC8I1CT8TMfBJFbGqZJaooraYWhIXzHslrhe8xjbNX0AXdKcIBsyO5ihQH9b8w2hs3F-oWjrnupNG1fVf2METlBZRsy2exmiZrXhH9TMPRds2-azU4l9pd-Ttn01HqurstceHfP30aue8H-a2RQc_ErgvicXAhmGlFoEeM10pfKDXaIg7AMWsj24W8hctoN0CTKkSA">
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 p-margin-desktop pt-8 pb-24 md:pb-12 min-h-screen">
+<!-- Page Header -->
+<div class="max-w-7xl mx-auto mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<nav aria-label="Breadcrumb" class="flex text-caption font-caption text-on-surface-variant mb-2">
+<ol class="inline-flex items-center space-x-1 md:space-x-2">
+<li class="inline-flex items-center">
+<a class="hover:text-primary transition-colors" href="#">MUAs</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mx-1">chevron_right</span>
+<span class="text-on-surface">Verification Queue</span>
+</div>
+</li>
+</ol>
+</nav>
+<h2 class="font-page-title text-page-title text-on-background">Antrean Verifikasi MUA</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Review and approve pending makeup artist applications.</p>
+</div>
+<div class="flex gap-3">
+<select class="bg-surface border border-outline text-body-md font-body-md rounded-lg px-4 py-2 focus:ring-primary focus:border-primary">
+<option>All Statuses</option>
+<option>Priority</option>
+<option>Pending</option>
+<option>Incomplete</option>
+</select>
+<button class="bg-surface border border-outline text-body-md font-body-md rounded-lg px-4 py-2 hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                    Filter
+                </button>
+</div>
+</div>
+<!-- Dashboard Stats -->
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-surface border border-outline rounded-xl p-6 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Pending</span>
+<span class="material-symbols-outlined text-primary bg-primary-container/30 p-2 rounded-lg">pending_actions</span>
+</div>
+<span class="font-display text-display text-on-background">142</span>
+<span class="font-caption text-caption text-on-surface-variant mt-2">+12 this week</span>
+</div>
+<div class="bg-surface border border-outline rounded-xl p-6 flex flex-col relative overflow-hidden">
+<div class="absolute right-0 top-0 w-16 h-16 bg-error/5 rounded-bl-full z-0"></div>
+<div class="flex justify-between items-start mb-2 relative z-10">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Priority Review</span>
+<span class="material-symbols-outlined text-error bg-error/10 p-2 rounded-lg">priority_high</span>
+</div>
+<span class="font-display text-display text-on-background relative z-10">28</span>
+<span class="font-caption text-caption text-error mt-2 relative z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> Needs attention
+                </span>
+</div>
+<div class="bg-surface border border-outline rounded-xl p-6 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Avg. Processing Time</span>
+<span class="material-symbols-outlined text-success bg-success/10 p-2 rounded-lg">timer</span>
+</div>
+<span class="font-display text-display text-on-background">2.4<span class="text-card-title text-on-surface-variant"> days</span></span>
+<span class="font-caption text-caption text-success mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_down</span> -0.5 days from last month
+                </span>
+</div>
+</div>
+<!-- Data Grid -->
+<div class="max-w-7xl mx-auto bg-surface border border-outline rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest border-b border-outline">
+<th class="p-4 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">Applicant Info</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">Specialty</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">Submitted</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">Status</th>
+<th class="p-4 font-label-md text-label-md text-on-surface-variant whitespace-nowrap text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline">
+<!-- Row 1: Priority -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border border-outline overflow-hidden shrink-0">
+<img alt="Siti Aminah" class="w-full h-full object-cover" data-alt="A well lit headshot of a confident female Indonesian makeup artist, wearing a professional black smock in a brightly lit modern studio, shallow depth of field, corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWSsba7HP-MKnJS5fUIZ9cGB_x79dQfgtrKENXE3bv55nUk45RfmBWjFQ_apPoxvA4jB92d4OuCgrPvPa4j_u7WPzdAyM1DpMZqH6RyjvzuxGbdGK0DeaHmgCY94o1PP0vx6EUKYK6DV_qctzoOpC2eBEqiFqEM6LkQL66kBVelxRpqUJPtOYS_mvzpQZ81QPodNP3GfzdKlGrNdRYUm-MzgEcNPVXbkXphQ2bPTSzTNFycLmb55hp4Q">
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background">Siti Aminah</p>
+<p class="font-caption text-caption text-on-surface-variant">ID: MUA-2023-8842</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface-variant text-on-surface">Wedding</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface-variant text-on-surface">Traditional</span>
+</div>
+</td>
+<td class="p-4">
+<p class="font-body-md text-body-md text-on-background">Oct 24, 2023</p>
+<p class="font-caption text-caption text-error">Overdue (4 days)</p>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-error/10 text-error border border-error/20">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                                    Priority
+                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="inline-flex items-center justify-center px-4 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
+                                    Review Docs
+                                </button>
+</td>
+</tr>
+<!-- Row 2: Pending -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border border-outline overflow-hidden shrink-0">
+<img alt="Budi Santoso" class="w-full h-full object-cover" data-alt="A professional profile photo of a male Indonesian makeup artist, stylish haircut, wearing a crisp white shirt in a clean well lit salon setting, neutral minimalist background, modern corporate look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFWF7ddn3SEZCIDZXnOZ7fyzg5c_oXzXHPyh0Iv2bw9PeURITdGhS2Sh6TVyPLmZ_LSK0PIYYS3W3g_ZgdqGGEdODt_tXOSMNjXCOTiYlEDGIS37Rl0CEuaG_8l_MFjjrd8qQC_5Es_Ob-nbrdDG-JYd-t769i5vjK54eAiD6gd4hPRQ68GeuRFIMK7IZxrSwVQiaMd7Meov_XG9cXE1PJCKfhS-b0MJv9jaiKK_2W8g7POO27rZG-OQ">
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background">Budi Santoso</p>
+<p class="font-caption text-caption text-on-surface-variant">ID: MUA-2023-8845</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface-variant text-on-surface">Commercial</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface-variant text-on-surface">Editorial</span>
+</div>
+</td>
+<td class="p-4">
+<p class="font-body-md text-body-md text-on-background">Oct 27, 2023</p>
+<p class="font-caption text-caption text-on-surface-variant">1 day ago</p>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-container/30 text-primary border border-primary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                    Pending
+                                </span>
+</td>
+<td class="p-4 text-right">
+<button class="inline-flex items-center justify-center px-4 py-2 border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary-container/10 transition-colors">
+                                    Review Docs
+                                </button>
+</td>
+</tr>
+<!-- Row 3: Incomplete -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border border-outline bg-surface-variant flex items-center justify-center shrink-0">
+<span class="font-label-md text-on-surface-variant">DW</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background">Dewi Lestari</p>
+<p class="font-caption text-caption text-on-surface-variant">ID: MUA-2023-8850</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex flex-wrap gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface-variant text-on-surface">Graduation</span>
+</div>
+</td>
+<td class="p-4">
+<p class="font-body-md text-body-md text-on-background">Oct 28, 2023</p>
+<p class="font-caption text-caption text-on-surface-variant">Today</p>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-surface-variant text-on-surface-variant border border-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+                                    Incomplete
+                                </span>
+</td>
+<td class="p-4 text-right flex justify-end gap-2">
+<button class="inline-flex items-center justify-center p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors border border-transparent hover:border-outline" title="Send Reminder">
+<span class="material-symbols-outlined text-xl">mail</span>
+</button>
+<button class="inline-flex items-center justify-center px-4 py-2 border border-outline text-on-background font-label-md text-label-md rounded-lg hover:bg-surface-container-low transition-colors">
+                                    View Details
+                                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="bg-surface border-t border-outline px-4 py-3 flex items-center justify-between sm:px-6">
+<div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+<div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Showing <span class="font-label-md text-on-background">1</span> to <span class="font-label-md text-on-background">10</span> of <span class="font-label-md text-on-background">142</span> results
+                        </p>
+</div>
+<div>
+<nav aria-label="Pagination" class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+<a class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-outline bg-surface text-sm font-medium text-on-surface-variant hover:bg-surface-container-low" href="#">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a aria-current="page" class="z-10 bg-primary-container text-on-primary-container relative inline-flex items-center px-4 py-2 border border-primary text-sm font-medium" href="#">
+                                1
+                            </a>
+<a class="bg-surface border-outline text-on-surface-variant hover:bg-surface-container-low relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="#">
+                                2
+                            </a>
+<a class="bg-surface border-outline text-on-surface-variant hover:bg-surface-container-low relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="#">
+                                3
+                            </a>
+<a class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-outline bg-surface text-sm font-medium text-on-surface-variant hover:bg-surface-container-low" href="#">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

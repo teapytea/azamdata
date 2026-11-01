@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pesan - RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#d5c1c8",
+                        "primary-fixed-dim": "#ffafd3",
+                        "secondary-container": "#fe8172",
+                        "on-tertiary-fixed": "#042100",
+                        "surface-bright": "#fff8f8",
+                        "secondary-fixed": "#ffdad5",
+                        "inverse-on-surface": "#fbeef0",
+                        "primary": "#4d1634",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "on-surface-variant": "#514348",
+                        "error": "#BA1A1A",
+                        "surface": "#FFFFFF",
+                        "secondary": "#a23d32",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#252323",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#362f31",
+                        "tertiary-fixed": "#c0f0aa",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "surface-container-highest": "#ecdfe2",
+                        "surface-tint": "#8b4969",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#731a13",
+                        "tertiary": "#0b3302",
+                        "surface-variant": "#ecdfe2",
+                        "primary-fixed": "#ffd8e7",
+                        "on-primary-fixed": "#3a0524",
+                        "outline": "#E8E2DF",
+                        "tertiary-container": "#234a16",
+                        "surface-container-low": "#fdf0f3",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-primary-container": "#e496b9",
+                        "surface-container": "#f8ebee",
+                        "inverse-primary": "#ffafd3",
+                        "surface-container-high": "#f2e5e8",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#252323",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-tertiary-container": "#8dba79",
+                        "surface-dim": "#e3d7da",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "on-secondary-fixed": "#410001",
+                        "primary-container": "#682c4b",
+                        "background": "#FCFAF8",
+                        "success": "#2E7D32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "24px",
+                        "unit": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "label-md": ["Inter"],
+                        "section-heading-mobile": ["Geist"],
+                        "card-title": ["Geist"],
+                        "display": ["Geist"],
+                        "page-title": ["Geist"],
+                        "body-md": ["Inter"],
+                        "section-heading": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar (From JSON) -->
+<header class="bg-surface dark:bg-surface-container docked full-width top-0 border-b border-outline dark:border-outline-variant flat no shadows sticky z-40">
+<div class="flex justify-between items-center w-full px-margin-mobile py-unit max-w-7xl mx-auto md:px-margin-desktop">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h1 class="font-display text-display text-primary dark:text-primary-fixed">RiasKita</h1>
+</div>
+<!-- Desktop Navigation Area (Hidden on Mobile) -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md font-label-md text-label-md" href="#">Beranda</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md font-label-md text-label-md" href="#">Cari</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md font-label-md text-label-md" href="#">Booking</a>
+<!-- Active Tab -->
+<a class="text-primary dark:text-primary-fixed font-bold opacity-80 scale-95 transition-all px-3 py-2 rounded-md font-label-md text-label-md border-b-2 border-primary" href="#">Pesan</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md font-label-md text-label-md" href="#">Favorit</a>
+</nav>
+<button class="font-label-md text-label-md text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors px-2 py-1 rounded">ID | EN</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6 pb-24 md:pb-8">
+<div class="mb-6 flex justify-between items-end">
+<div>
+<h2 class="font-page-title text-page-title text-on-background">Pesan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Kelola komunikasi Anda dengan Makeup Artist.</p>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors" data-icon="search">search</button>
+</div>
+<!-- Messages List -->
+<div class="bg-surface border border-outline rounded-xl overflow-hidden">
+<!-- Message Item 1 (Unread) -->
+<a class="flex items-center gap-4 p-4 border-b border-outline hover:bg-surface-container-low transition-colors group bg-surface-container-low/30 relative" href="#">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="relative w-12 h-12 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-full border border-outline" data-alt="A professional headshot of a young Indonesian female makeup artist with a bright, welcoming smile. She is wearing a modern, minimalist plum-colored blazer. The background is a softly blurred, high-key white studio setting, reflecting a clean, corporate, and modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBHeSJZjIY9OdqEzw_fU9AAsiRw2lZL35eH7MVeSzCw0-sKckCFW5j2tKqyvKV-3nuuhSy5Qse7ibEzsewn1kclQ6tzNxAXGOxfUNwFjTnEEJgyLo7OB4mLO1kdr8NOggxc0YCcosAgm7c4kdGoQljQNvlRTzArzFiHYe_FiF7UGahfi3WSdtRqiEsUYjFhIkw1mGxX6OuD_njqSWLp0j8ojq6wEMShqqrLVvv9ghDiOZd9wtFbsTNoA">
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-success border-2 border-surface rounded-full"></span>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-card-title text-card-title text-on-surface truncate">Siti Aminah MUA</h3>
+<span class="font-caption text-caption text-primary font-bold whitespace-nowrap ml-2">09:45</span>
+</div>
+<p class="font-body-md text-body-md text-on-background font-semibold truncate">Halo Kak, untuk tanggal 25 November apakah masih bisa untuk makeup wedding?</p>
+</div>
+<div class="flex-shrink-0 w-5 h-5 bg-primary text-on-primary rounded-full flex items-center justify-center font-caption text-caption font-bold">1</div>
+</a>
+<!-- Message Item 2 (Read) -->
+<a class="flex items-center gap-4 p-4 border-b border-outline hover:bg-surface-container-low transition-colors group" href="#">
+<div class="relative w-12 h-12 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-full border border-outline" data-alt="A portrait of a male Indonesian makeup artist holding a makeup brush. He has a sophisticated and calm expression. The lighting is soft and studio-quality, emphasizing a professional and transparent brand personality. The color palette leans towards neutral tones with a subtle warm coral accent in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9qwMq9hOcNht4EprBIZkrwiqAm8zrzAbXwxRvG_bXn-9lC1XrFvfGUcpZOAU0E2IXlLmQVVta-TbOHlXBj9MZRFSz65R1a1mW4o34JU7t-AZrNRcEijB7RnXcGbP5a4SWXmXvpvYTifo1FUnxHxn5jYjlmHFx_aSUu7jYjXDeu6pLYKCucCqgMjqJJJ_-d4tbhD4uXDHzqcNNQO655LvvucCEg92DAgO77fUrfNDBfOC1Q65UGApEeA">
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-card-title text-card-title text-on-surface truncate">Budi Santoso</h3>
+<span class="font-caption text-caption text-on-surface-variant whitespace-nowrap ml-2">Kemarin</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-success" data-icon="done_all">done_all</span>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Baik, saya tunggu transfer DP nya ya. Terima kasih.</p>
+</div>
+</div>
+</a>
+<!-- Message Item 3 (Read) -->
+<a class="flex items-center gap-4 p-4 border-b border-outline hover:bg-surface-container-low transition-colors group" href="#">
+<div class="relative w-12 h-12 flex-shrink-0">
+<div class="w-full h-full bg-surface-variant text-on-surface-variant flex items-center justify-center rounded-full font-card-title text-card-title">DA</div>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-card-title text-card-title text-on-surface truncate">Dian Sastro Makeup</h3>
+<span class="font-caption text-caption text-on-surface-variant whitespace-nowrap ml-2">Senin</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant" data-icon="done_all">done_all</span>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Invoicenya sudah saya kirimkan ke email ya Kak.</p>
+</div>
+</div>
+</a>
+<!-- Message Item 4 (Read) -->
+<a class="flex items-center gap-4 p-4 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="relative w-12 h-12 flex-shrink-0">
+<img class="w-full h-full object-cover rounded-full border border-outline" data-alt="A close-up shot of professional makeup tools, including brushes and palettes, arranged neatly on a clean white surface. The lighting is bright and clear, highlighting the high density and structural clarity of the tools. The image reflects a modern, utilitarian aesthetic suitable for a transactional marketplace app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxOO38eSFsVTgfx9jdZI9YQ4_V4WW8cdfQzRUkCEE0Uy5Pb1iw6zJb86puFfANLEwsD07rX_j9CkGmSL-s7dD8OZaGfD9NXpGmysjdXPp_rqk3qL56eG0-iE-Rrop7dkIUu6jGHxr5NgISmed30nGOieBvUAbjzQWS5vJEJnIZ0odfVoKie9Jp4rC_e7M4LeIKOSeijp6H0FUpKfUc96dt3CdH7aBED4C-XASPcW7M-boIgS2D1gxUlQ">
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-card-title text-card-title text-on-surface truncate">Beauty by Rina</h3>
+<span class="font-caption text-caption text-on-surface-variant whitespace-nowrap ml-2">12 Okt</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Sama-sama Kak, semoga lancar acaranya!</p>
+</div>
+</a>
+</div>
+</main>
+<!-- BottomNavBar (From JSON) - Hidden on Desktop -->
+<nav class="md:hidden bg-surface dark:bg-surface-container-lowest docked full-width bottom-0 z-50 border-t border-outline dark:border-outline-variant flat no shadows fixed w-full flex justify-around items-center px-2 py-3">
+<!-- Beranda -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed w-16" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md-mobile mt-1">Beranda</span>
+</a>
+<!-- Cari -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed w-16" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-md text-label-md-mobile mt-1">Cari</span>
+</a>
+<!-- Booking -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed w-16" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-label-md text-label-md-mobile mt-1">Booking</span>
+</a>
+<!-- Favorit -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed w-16" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-md text-label-md-mobile mt-1">Favorit</span>
+</a>
+<!-- Akun - Note: Intent fallback implies Messages might fall under Account in this specific JSON structure if not explicit -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-on-primary-container bg-primary-fixed dark:bg-primary-container rounded-full px-4 py-1 scale-90 duration-150 w-20" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md-mobile mt-1">Akun</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Detail Booking Aktif - RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#ecdfe2",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container": "#f8ebee",
+                        "success": "#2E7D32",
+                        "inverse-on-surface": "#fbeef0",
+                        "on-surface": "#252323",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#28501b",
+                        "on-secondary-container": "#731a13",
+                        "tertiary-container": "#234a16",
+                        "secondary": "#a23d32",
+                        "on-tertiary-fixed": "#042100",
+                        "on-primary-container": "#e496b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#201a1c",
+                        "tertiary-fixed": "#c0f0aa",
+                        "on-secondary-fixed": "#410001",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fe8172",
+                        "on-tertiary-container": "#8dba79",
+                        "primary-fixed": "#ffd8e7",
+                        "surface-tint": "#8b4969",
+                        "surface-dim": "#e3d7da",
+                        "surface-container-high": "#f2e5e8",
+                        "primary-fixed-dim": "#ffafd3",
+                        "on-secondary-fixed-variant": "#83251d",
+                        "surface-bright": "#fff8f8",
+                        "on-secondary": "#ffffff",
+                        "error": "#BA1A1A",
+                        "surface-container-low": "#fdf0f3",
+                        "inverse-primary": "#ffafd3",
+                        "tertiary": "#0b3302",
+                        "surface": "#FFFFFF",
+                        "on-primary-fixed": "#3a0524",
+                        "primary-container": "#682c4b",
+                        "tertiary-fixed-dim": "#a5d390",
+                        "surface-container-highest": "#ecdfe2",
+                        "primary": "#4d1634",
+                        "inverse-surface": "#362f31",
+                        "on-primary": "#ffffff",
+                        "background": "#FCFAF8",
+                        "outline": "#E8E2DF",
+                        "on-primary-fixed-variant": "#6f3251",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d5c1c8",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-surface-variant": "#514348"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "section-heading-mobile": ["Geist"],
+                        "page-title": ["Geist"],
+                        "section-heading": ["Geist"],
+                        "caption": ["Inter"],
+                        "display": ["Geist"],
+                        "card-title": ["Geist"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "1.55", "fontWeight": "400" }],
+                        "section-heading-mobile": ["20px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "page-title": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "section-heading": ["22px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.45", "fontWeight": "400" }],
+                        "display": ["32px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                        "card-title": ["18px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased md:bg-surface-container-low min-h-screen pb-32">
+<!-- Top App Bar (Task-focused, suppressing global nav shell) -->
+<header class="sticky top-0 z-50 bg-surface border-b border-outline w-full px-margin-mobile py-unit md:px-margin-desktop shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button aria-label="Kembali" class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-section-heading-mobile text-section-heading-mobile text-on-surface">Detail Booking</h1>
+</div>
+<div>
+<span class="material-symbols-outlined text-primary p-2">help_outline</span>
+</div>
+</header>
+<main class="max-w-3xl mx-auto md:mt-6 p-margin-mobile md:p-0 md:px-margin-desktop grid gap-6">
+<!-- Status Progress -->
+<section class="bg-surface p-4 rounded-xl border border-outline shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h2 class="font-card-title text-card-title text-on-surface">Status Pesanan</h2>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-md text-caption uppercase tracking-wide">Menunggu Pelunasan</span>
+</div>
+<div class="relative pt-6 pb-2">
+<!-- Progress Line -->
+<div class="absolute top-8 left-[10%] right-[10%] h-1 bg-surface-variant -z-10 rounded-full"></div>
+<div class="absolute top-8 left-[10%] right-[50%] h-1 bg-primary -z-10 rounded-full"></div>
+<div class="flex justify-between relative z-0">
+<div class="flex flex-col items-center gap-2 w-1/3">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px] fill">check</span>
+</div>
+<span class="font-caption text-caption text-center text-on-surface">Dibayar<br>(DP)</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-1/3">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary border-4 border-primary-fixed">
+<div class="w-2 h-2 bg-on-primary rounded-full"></div>
+</div>
+<span class="font-caption text-caption text-center text-on-surface font-semibold">Pelunasan</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-1/3">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">brush</span>
+</div>
+<span class="font-caption text-caption text-center text-on-surface-variant">Selesai</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Summary -->
+<section class="bg-surface p-4 rounded-xl border border-outline shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center border-b border-outline pb-3">
+<span class="text-on-surface-variant">No. Referensi</span>
+<span class="font-label-md text-label-md text-on-surface">RK-2309-88X2P</span>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-1">
+<div class="flex flex-col gap-1">
+<span class="text-on-surface-variant flex items-center gap-1 text-sm"><span class="material-symbols-outlined text-[16px]">calendar_today</span> Tanggal</span>
+<span class="font-label-md text-label-md text-on-surface">15 Okt 2023</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-on-surface-variant flex items-center gap-1 text-sm"><span class="material-symbols-outlined text-[16px]">schedule</span> Waktu Mulai</span>
+<span class="font-label-md text-label-md text-on-surface">06:00 WIB</span>
+</div>
+<div class="col-span-2 flex flex-col gap-1 mt-2">
+<span class="text-on-surface-variant flex items-center gap-1 text-sm"><span class="material-symbols-outlined text-[16px]">location_on</span> Lokasi Acara</span>
+<span class="font-body-md text-body-md text-on-surface">Gedung Serbaguna Senayan, Jl. Pintu Satu Senayan No. 1, Gelora, Tanah Abang, Jakarta Pusat</span>
+</div>
+</div>
+</section>
+<!-- MUA Info -->
+<section class="bg-surface p-4 rounded-xl border border-outline shadow-sm flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<img class="w-14 h-14 rounded-full object-cover border border-outline" data-alt="A highly detailed professional portrait of a female Indonesian Makeup Artist in a modern studio setting. She is wearing a professional deep plum blazer, smiling warmly. Soft, high-key lighting illuminates her face, reflecting a clean, corporate yet approachable aesthetic. The background is a crisp, bright white studio, emphasizing trust and professionalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMuOoiqUNRvvdXoxb5fdFdv3gHvJG6xH0CaNlWVaPaAIsPWiT8d9Grts6NcotozlKRkViAy2BJiCp8YEgKnJFVjumaTuYcXmk9owPrdIpHAJxhfpPcHH1S7VZK5dUBDYa_fOuKoz_fMJGJY2Vk-QCv7DYSfE3r41Rwfg4ACuRYkR8A5AGx6Bm9R0up-YEaApK9lmVUtjXAt_8tlMzE6Qs2lAKk1-w70L7CtXcexnOiLWyZkudM27ZHAg">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Sarah Ayu Makeup</span>
+<span class="text-on-surface-variant text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-yellow-500 fill">star</span> 4.9 (120 ulasan)</span>
+</div>
+</div>
+<button class="flex items-center gap-2 border border-primary text-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                Tanya MUA
+            </button>
+</section>
+<!-- Service Details -->
+<section class="bg-surface p-4 rounded-xl border border-outline shadow-sm flex flex-col gap-4">
+<h3 class="font-card-title text-card-title text-on-surface border-b border-outline pb-2">Detail Layanan</h3>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Paket Wedding Intimate</span>
+<span class="text-on-surface-variant text-sm">1x Makeup Pengantin Wanita, 1x Retouch</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Rp 3.500.000</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Hairdo Pengantin</span>
+<span class="text-on-surface-variant text-sm">Add-on</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Rp 500.000</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Biaya Transportasi</span>
+<span class="text-on-surface-variant text-sm">Area Jakarta Pusat</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Rp 150.000</span>
+</div>
+</div>
+</section>
+<!-- Price Breakdown & Action -->
+<section class="bg-surface p-4 rounded-xl border border-outline shadow-sm flex flex-col gap-4">
+<h3 class="font-card-title text-card-title text-on-surface border-b border-outline pb-2">Rincian Pembayaran</h3>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Total Biaya Layanan</span>
+<span class="text-on-surface">Rp 4.150.000</span>
+</div>
+<div class="flex justify-between text-success">
+<span>DP Dibayar (30%)</span>
+<span>- Rp 1.245.000</span>
+</div>
+<div class="flex justify-between mt-2 pt-2 border-t border-outline border-dashed">
+<span class="font-label-md text-label-md text-on-surface">Sisa Pelunasan</span>
+<span class="font-section-heading-mobile text-section-heading-mobile text-secondary font-bold">Rp 2.905.000</span>
+</div>
+</div>
+<div class="mt-4 p-3 bg-surface-container-low rounded-lg border border-outline-variant flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">info</span>
+<p class="text-sm text-on-surface-variant">Pelunasan wajib diselesaikan paling lambat 3 hari sebelum tanggal acara (12 Okt 2023).</p>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar (Contextual FAB equivalent for transaction) -->
+<div class="fixed bottom-0 w-full bg-surface border-t border-outline p-margin-mobile flex items-center justify-between z-50 md:hidden shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col">
+<span class="text-sm text-on-surface-variant">Sisa Tagihan</span>
+<span class="font-section-heading-mobile text-section-heading-mobile text-on-surface">Rp 2.905.000</span>
+</div>
+<button class="bg-[#E66F61] text-white px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-opacity shadow-sm">
+            Bayar Pelunasan
+        </button>
+</div>
+</body></html>

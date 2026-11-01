@@ -1,0 +1,41 @@
+/* Tailwind v4: satu import */
+@import "tailwindcss";
+
+/* Daftarkan nama warna yang ingin dipakai sebagai utilitas:
+   bg-background, text-foreground, border, ring, dll. */
+@theme {
+  --color-background: hsl(100 22% 97%);
+  --color-foreground: hsl(220 25% 12%);
+  --color-card: hsl(0 0% 100%);
+  --color-popover: hsl(0 0% 100%);
+  --color-muted: hsl(100 20% 95%);
+  --color-muted-foreground: hsl(220 15% 36%);
+
+  --color-primary: hsl(84 60% 42%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(100 18% 90%);
+  --color-secondary-foreground: hsl(220 25% 18%);
+  --color-accent: hsl(42 92% 50%);
+  --color-accent-foreground: hsl(26 90% 12%);
+  --color-link: hsl(200 85% 42%);
+
+  --color-border: hsl(100 12% 86%);
+  --color-input: hsl(100 12% 96%);
+  --color-ring: hsl(84 70% 50%);
+  --color-destructive: hsl(0 75% 50%);
+
+  /* Radius util opsional (pakai di rounded-[var(--radius)] atau custom class) */
+  --radius: 0.5rem;
+}
+
+/* Gaya dasar */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* Sekarang Tailwind mengenali bg-background & text-foreground */
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}

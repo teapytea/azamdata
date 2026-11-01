@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Komisi Platform - Admin RiasKita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "outline-variant": "#d5c1c8",
+                      "on-tertiary-container": "#8dba79",
+                      "surface": "#FFFFFF",
+                      "primary-fixed": "#ffd8e7",
+                      "surface-container-high": "#f2e5e8",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#E8E2DF",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#362f31",
+                      "on-background": "#201a1c",
+                      "success": "#2E7D32",
+                      "on-secondary-fixed": "#410001",
+                      "on-surface": "#201a1c",
+                      "on-tertiary-fixed": "#042100",
+                      "tertiary-fixed": "#c0f0aa",
+                      "on-error": "#ffffff",
+                      "background": "#FCFAF8",
+                      "error": "#BA1A1A",
+                      "tertiary": "#0b3302",
+                      "surface-bright": "#fff8f8",
+                      "on-primary-fixed": "#3a0524",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#682c4b",
+                      "surface-container": "#f8ebee",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "primary-fixed-dim": "#ffafd3",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "on-surface-variant": "#514348",
+                      "on-primary-container": "#e496b9",
+                      "secondary": "#a23d32",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "inverse-primary": "#ffafd3",
+                      "surface-variant": "#ecdfe2",
+                      "surface-tint": "#8b4969",
+                      "secondary-container": "#fe8172",
+                      "surface-container-highest": "#ecdfe2",
+                      "secondary-fixed": "#ffdad5",
+                      "surface-dim": "#e3d7da",
+                      "on-secondary-container": "#731a13",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#fdf0f3",
+                      "tertiary-container": "#234a16",
+                      "primary": "#4d1634",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#fbeef0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "unit": "8px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "card-title": ["Geist"],
+                      "body-md": ["Inter"],
+                      "section-heading": ["Geist"],
+                      "body-lg": ["Inter"],
+                      "page-title": ["Geist"],
+                      "label-md": ["Inter"],
+                      "section-heading-mobile": ["Geist"],
+                      "display": ["Geist"],
+                      "caption": ["Inter"]
+              },
+              "fontSize": {
+                      "card-title": ["18px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "section-heading": ["22px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "1.55", "fontWeight": "400"}],
+                      "page-title": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "section-heading-mobile": ["20px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                      "display": ["32px", {"lineHeight": "1.15", "fontWeight": "700"}],
+                      "caption": ["12px", {"lineHeight": "1.45", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface h-screen w-64 fixed left-0 top-0 border-r border-outline dark:border-outline-variant z-20 flex flex-col h-full p-4">
+<div class="mb-8 px-4 py-2">
+<h1 class="font-page-title text-page-title text-primary dark:text-primary-fixed-dim">RiasKita Admin</h1>
+<p class="font-caption text-caption text-on-surface-variant">Platform Manager</p>
+</div>
+<ul class="flex flex-col gap-2 flex-grow">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="face">face</span>
+<span class="font-label-md text-label-md">MUAs</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-md text-label-md">Users</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-label-md text-label-md">Payments</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+<span class="font-label-md text-label-md">Content</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto">
+<button class="w-full py-3 px-4 bg-surface-container text-primary font-label-md text-label-md rounded-lg hover:bg-surface-container-high transition-colors border border-outline flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span> Export Report
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md docked full-width top-0 sticky border-b border-outline dark:border-outline-variant z-10 flex justify-between items-center h-16 px-6">
+<div class="flex items-center gap-4">
+<div class="relative text-on-surface-variant">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-lg">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline rounded-full font-body-md text-body-md focus:outline-none focus:border-primary w-64 transition-colors" placeholder="Search..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-all duration-200 ease-in-out w-10 h-10 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-full p-2 transition-all duration-200 ease-in-out w-10 h-10 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline overflow-hidden ml-2">
+<img alt="Admin User Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a corporate admin manager in a well-lit office setting. The lighting is soft and neutral, fitting a modern light-mode dashboard context. The subject looks approachable yet professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEOYKC9Nb5xMER2hVTbnjwb1pFZrnMO6toAHDxyMtlK5npfj3vcZ9xbSt_VPmiaL69IeQit55JgWn6sCT3M7inijR8J5OoHc6LSyqWgXYp2A9g6LJoTCyMleV-y9DQ89T7TKQTkAU81LMIYA3MMWhmxA3L077Jsyp7BYCgi8CuV2tC_CsL5oBYaElWcC3eVWCJZ9mBs9iuIHwQmAHbdnb6Eq75AekVPjFli6iNRFO7SgdcUa-gDE-UWw">
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-margin-desktop w-full max-w-7xl mx-auto flex flex-col gap-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<h2 class="font-display text-display text-on-background">Platform Commission</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Manage current rates and view historical adjustments.</p>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Current Rate Card (Large) -->
+<div class="col-span-1 lg:col-span-4 bg-surface rounded-xl border border-outline p-6 flex flex-col relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-0"></div>
+<div class="relative z-10 flex-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+<h3 class="font-card-title text-card-title text-on-surface">Current Base Rate</h3>
+</div>
+<div class="my-6">
+<span class="font-display text-[48px] font-bold text-primary leading-none">12.5%</span>
+<span class="font-label-md text-label-md text-on-surface-variant block mt-2">Applied to all standard MUA bookings</span>
+</div>
+<div class="mt-auto space-y-3 pt-6 border-t border-outline">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Last Updated</span>
+<span class="font-label-md text-label-md text-on-surface">15 Oct 2023</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Modified By</span>
+<span class="font-label-md text-label-md text-on-surface">System Admin</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Adjust Rate Interface -->
+<div class="col-span-1 lg:col-span-8 bg-surface rounded-xl border border-outline p-6 flex flex-col">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary">tune</span>
+<h3 class="font-card-title text-card-title text-on-surface">Adjust Commission Rate</h3>
+</div>
+<form class="flex flex-col gap-6 flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">New Base Rate (%)</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline rounded-lg font-body-lg text-body-lg focus:outline-none focus:border-primary transition-colors pr-12" placeholder="e.g. 15.0" step="0.1" type="number">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant">%</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Effective Date</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline rounded-lg font-body-lg text-body-lg focus:outline-none focus:border-primary transition-colors text-on-surface" type="date">
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<label class="font-label-md text-label-md text-on-surface">Reason for Adjustment</label>
+<textarea class="w-full px-4 py-3 bg-surface-container-lowest border border-outline rounded-lg font-body-md text-body-md focus:outline-none focus:border-primary transition-colors resize-none flex-1 min-h-[100px]" placeholder="Provide internal notes for this rate change..."></textarea>
+</div>
+<div class="flex justify-end gap-3 mt-auto pt-4 border-t border-outline">
+<button class="px-6 py-2.5 font-label-md text-label-md text-on-surface border border-outline rounded-lg hover:bg-surface-container-low transition-colors" type="button">
+                                Cancel
+                            </button>
+<button class="px-6 py-2.5 font-label-md text-label-md text-on-primary bg-primary rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-sm">check_circle</span> Apply Change
+                            </button>
+</div>
+</form>
+</div>
+<!-- Historical Table -->
+<div class="col-span-1 lg:col-span-12 bg-surface rounded-xl border border-outline overflow-hidden">
+<div class="p-6 border-b border-outline flex justify-between items-center bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+<h3 class="font-card-title text-card-title text-on-surface">Rate History</h3>
+</div>
+<button class="font-label-md text-label-md text-primary flex items-center gap-1 hover:underline">
+                            View Full Logs <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline">
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant font-medium">Effective Date</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant font-medium">Rate</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant font-medium">Previous</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant font-medium">Changed By</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant font-medium">Notes</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y divide-outline">
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">15 Oct 2023</td>
+<td class="px-6 py-4 whitespace-nowrap font-label-md text-label-md text-primary">12.5%</td>
+<td class="px-6 py-4 whitespace-nowrap text-on-surface-variant">10.0%</td>
+<td class="px-6 py-4 whitespace-nowrap">Sarah Jenkins (Admin)</td>
+<td class="px-6 py-4 text-on-surface-variant max-w-xs truncate" title="Market adjustment aligned with Q4 strategy review.">Market adjustment aligned with Q4 strategy review.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">01 Jan 2022</td>
+<td class="px-6 py-4 whitespace-nowrap font-label-md text-label-md">10.0%</td>
+<td class="px-6 py-4 whitespace-nowrap text-on-surface-variant">8.0%</td>
+<td class="px-6 py-4 whitespace-nowrap">System Default</td>
+<td class="px-6 py-4 text-on-surface-variant max-w-xs truncate" title="Initial platform launch baseline rate.">Initial platform launch baseline rate.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">15 Aug 2021</td>
+<td class="px-6 py-4 whitespace-nowrap font-label-md text-label-md">8.0%</td>
+<td class="px-6 py-4 whitespace-nowrap text-on-surface-variant">5.0%</td>
+<td class="px-6 py-4 whitespace-nowrap">Beta Admin</td>
+<td class="px-6 py-4 text-on-surface-variant max-w-xs truncate" title="Beta testing phase 2 adjustment.">Beta testing phase 2 adjustment.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

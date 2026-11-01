@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RiasKita - Booking Konfirmasi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#362f31",
+                      "surface-bright": "#fff8f8",
+                      "on-secondary-container": "#731a13",
+                      "on-primary-container": "#e496b9",
+                      "outline-variant": "#d5c1c8",
+                      "tertiary-fixed": "#c0f0aa",
+                      "tertiary-fixed-dim": "#a5d390",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-surface": "#252323",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#8dba79",
+                      "primary-fixed-dim": "#ffafd3",
+                      "success": "#2E7D32",
+                      "on-background": "#252323",
+                      "outline": "#E8E2DF",
+                      "on-secondary-fixed": "#410001",
+                      "surface": "#FFFFFF",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#e3d7da",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#4d1634",
+                      "on-tertiary-fixed": "#042100",
+                      "on-tertiary-fixed-variant": "#28501b",
+                      "inverse-primary": "#ffafd3",
+                      "surface-variant": "#ecdfe2",
+                      "inverse-on-surface": "#fbeef0",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#83251d",
+                      "error": "#BA1A1A",
+                      "secondary": "#a23d32",
+                      "tertiary-container": "#234a16",
+                      "surface-container": "#f8ebee",
+                      "primary-container": "#682c4b",
+                      "background": "#FCFAF8",
+                      "surface-container-high": "#f2e5e8",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#514348",
+                      "on-primary-fixed-variant": "#6f3251",
+                      "tertiary": "#0b3302",
+                      "surface-container-low": "#fdf0f3",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#ecdfe2",
+                      "primary-fixed": "#ffd8e7",
+                      "surface-tint": "#8b4969",
+                      "secondary-container": "#fe8172",
+                      "on-primary-fixed": "#3a0524",
+                      "secondary-fixed": "#ffdad5",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "unit": "8px",
+                      "margin-desktop": "24px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Geist"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "section-heading-mobile": [
+                              "Geist"
+                      ],
+                      "section-heading": [
+                              "Geist"
+                      ],
+                      "page-title": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.45",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.15",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "section-heading-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "section-heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "page-title": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.55",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col justify-center items-center p-margin-mobile md:p-margin-desktop">
+<!-- Transactional Success Screen - Navigation Suppressed -->
+<main class="w-full max-w-md bg-surface border border-outline rounded-xl p-6 md:p-8 shadow-sm flex flex-col items-center">
+<!-- Success Icon & Headline -->
+<div class="bg-surface-container-low rounded-full p-4 mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-success" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="font-page-title text-page-title text-center text-primary mb-2">Booking Terkonfirmasi</h1>
+<p class="font-body-md text-body-md text-on-surface-variant text-center mb-6">Terima kasih! Pesanan Anda telah berhasil dikonfirmasi dan deposit telah diterima.</p>
+<!-- Reference Number -->
+<div class="bg-surface-container w-full rounded-lg p-4 mb-6 flex flex-col items-center border border-outline-variant">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Nomor Referensi</span>
+<span class="font-card-title text-card-title text-on-surface font-mono tracking-tight">#RK-20231012</span>
+</div>
+<!-- Booking Summary Bento Box -->
+<div class="w-full border border-outline rounded-lg p-4 mb-6 bg-surface grid grid-cols-1 gap-y-4">
+<!-- MUA Info -->
+<div class="flex items-center gap-3 pb-4 border-b border-outline-variant">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a makeup artist with clear lighting and a soft background, representing high quality service in a light mode app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFl_uAw50LDIdmtH_gOAn8tb5BVibCDfo4a3MalcNJP-bEEazzA9WdUth1su4lPjnwJ5P_90fThrdmGyed_khMB9fzGFKmwdV6NKW_dMsRaX04np0am5V1OC1Acz-fHjTurtS3MieXWXTHzWhuew4IWm2syrwBt9KUmIMqGZJJIurjLiOssctIkucAvvhpH98-zbr7zUKqyyw57vh_sBmQ9i1iFDsMXqMCU0yUgQ9O-rNsGAHlYcHvog">
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Bunga Lestari MUA</h3>
+<p class="font-caption text-caption text-on-surface-variant">Wedding Package - Platinum</p>
+</div>
+</div>
+<!-- Date & Time -->
+<div class="grid grid-cols-2 gap-4 pb-4 border-b border-outline-variant">
+<div>
+<span class="font-caption text-caption text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span>Tanggal</span>
+<p class="font-body-md text-body-md text-on-surface mt-1">24 Nov 2023</p>
+</div>
+<div>
+<span class="font-caption text-caption text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>Waktu</span>
+<p class="font-body-md text-body-md text-on-surface mt-1">05:00 - 08:30 WIB</p>
+</div>
+</div>
+<!-- Location -->
+<div class="pb-4 border-b border-outline-variant">
+<span class="font-caption text-caption text-on-surface-variant flex items-center gap-1 mb-1"><span class="material-symbols-outlined text-[14px]">location_on</span>Lokasi</span>
+<p class="font-body-md text-body-md text-on-surface">Kempinski Grand Ballroom, Jl. MH Thamrin No. 1, Jakarta</p>
+</div>
+<!-- Payment (Deposit) -->
+<div class="flex justify-between items-center pt-2">
+<span class="font-body-md text-body-md text-on-surface-variant">Total Dibayar (Deposit)</span>
+<span class="font-card-title text-card-title text-primary">Rp 2.500.000</span>
+</div>
+</div>
+<!-- Next Steps Checklist -->
+<div class="w-full mb-8">
+<h4 class="font-label-md text-label-md text-on-surface mb-3">Langkah Selanjutnya</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim mt-0.5">check_circle</span>
+<span class="font-caption text-caption text-on-surface">MUA akan menghubungi Anda H-3 untuk konfirmasi detail.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim mt-0.5">check_circle</span>
+<span class="font-caption text-caption text-on-surface">Siapkan ruang rias dengan pencahayaan yang cukup.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim mt-0.5">check_circle</span>
+<span class="font-caption text-caption text-on-surface">Pelunasan dilakukan maksimal H-1 acara.</span>
+</li>
+</ul>
+</div>
+<!-- Actions -->
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary-container font-label-md text-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+                Lihat Detail Booking
+            </button>
+<div class="grid grid-cols-2 gap-3 w-full">
+<button class="bg-surface border border-outline text-on-surface font-label-md text-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">event</span>
+                    Ke Kalender
+                </button>
+<button class="bg-surface border border-outline text-on-surface font-label-md text-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors">
+                    Beranda
+                </button>
+</div>
+</div>
+</main>
+</body></html>
