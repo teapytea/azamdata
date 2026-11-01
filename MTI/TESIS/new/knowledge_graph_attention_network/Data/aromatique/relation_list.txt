@@ -1,0 +1,7 @@
+org_id	remap_id
+inspired_by	0
+has_accord	1
+has_visual_note	2
+belongs_to_family	3
+has_global_accord	4
+belongs_to_global_family	5

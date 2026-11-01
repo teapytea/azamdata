@@ -1,0 +1,341 @@
+org_id	remap_id
+Berrylicious	0
+Verve Vale	1
+Secret of Bandit	2
+Spicy Day	3
+Fancy Dress	4
+Moz Art	5
+Superclass Woman	6
+Black Lax	7
+Red Glass	8
+Classic Vintage	9
+Aquazone	10
+Solstice	11
+Our First Love	12
+Pentavenue	13
+Black Ball	14
+Patchouli Petals	15
+Bosi Bottle	16
+Fuck Boy	17
+Colate Sport	18
+Vandora	19
+Cloud Grande	20
+Whisper of Passion	21
+SCENT SQUAD	22
+SAFETY FIRST	23
+Reef 33 Perfumes	24
+CHARMING DECIVER	25
+Golden Secret	26
+Oran Cle	27
+Authentic Discovery	28
+Turathi Blue Afnan	29
+Spring Breeze	30
+Bright Cloud	31
+Barbie	32
+Jack Sparrow	33
+Will You	34
+Will Deep	35
+Maxima Gold	36
+deep water	37
+Rainforest	38
+Blue Crocodile	39
+Treasure to Love	40
+Dreamland	41
+Spell Out	42
+Stardust	43
+Kenzoba	44
+Autumn	45
+The Scent Diva	46
+Bad Boy	47
+Vicaro	48
+Dusk musk	49
+aqua fresh woman	50
+Harry Up	51
+Last Season	52
+Glamorious	53
+Cover Girl	54
+Lavish Lily	55
+Lovin Him	56
+Shout Man	57
+Blatherskite	58
+My Crush	59
+Five Years	60
+D Nova	61
+How Deep	62
+Sombrero	63
+Woman In Love Never Cross	64
+Breezy Bouquet	65
+Bosa Nova	66
+Victory	67
+White Sense	68
+Woman In Red	69
+FOF	70
+Darkness	71
+Bamboo Cici	72
+Rouge Velaurs	73
+Add 5	74
+Tacenda	75
+Rayon	76
+Dark Ages	77
+Foreo Ice	78
+Silk Blossom	79
+Dory	80
+King of Parties	81
+Black Bond	82
+cinnabar	83
+Deep Crush	84
+Zero Two	85
+Erost	86
+Momento	87
+Usain Bolt	88
+Big Boss	89
+Vagabond	90
+Only You	91
+Jeep Shine	92
+Spice Up	93
+Advens	94
+Mellifluous	95
+Just A Boy	96
+Great Police	97
+Calestial Citrus	98
+Tow Combination	99
+Vintage Vision	100
+Blue Hills	101
+Forfive	102
+Far From Home	103
+Princess Charming	104
+Haruke	105
+D sava	106
+Ocean Lounge	107
+Queen Star	108
+Perfect Girl	109
+Axapollo	110
+Hey Ma	111
+Zimba	112
+Moon AA	113
+Blanc Space	114
+Black Floral	115
+Temperature	116
+Bewitching	117
+Plat Low	118
+Aegen Si	119
+Be Feminim	120
+Popular	121
+Jellyfish	122
+Alinenor	123
+My Angel	124
+Chosen	125
+Yamato One	126
+eramusk	127
+Ood Super	128
+Dor Favor	129
+Eifel	130
+Champion Man	131
+Silky Pink	132
+Fit Woman	133
+Twilight	134
+Strong Girl	135
+Tunefull	136
+XO Nine	137
+Gotcha	138
+Arouse	139
+Eternal Sunset	140
+In The Groove	141
+Omniscient	142
+Ford Leather	143
+Boomtown	144
+London Love	145
+Be Del Woman	146
+Road Spice	147
+Artemis	148
+Dark Green	149
+Forest	150
+Mighty	151
+Fresh Matcha	152
+Gracias Garden	153
+Haystack	154
+Man in Green	155
+Passion Art	156
+Floral Noir	157
+lost in space	158
+Black Ford	159
+Sweaty Man	160
+Secret Code	161
+Majesty	162
+Fast and Furious	163
+Fiori Leys	164
+silk safron	165
+Longlive	166
+Milord	167
+Classy Bless	168
+Felice	169
+CR 7	170
+Blue Black	171
+Liquid	172
+Aqua Legend	173
+Badge	174
+MIB	175
+Jeep White	176
+Head Turner	177
+Heritage	178
+Ombredesire	179
+Oudhi	180
+Oud Man	181
+Sandal an Oud	182
+Monarca	183
+Forest Night	184
+Beatrize	185
+Oud Noir	186
+Musk Oud	187
+Vetiver Intense	188
+Blue Shine	189
+Malika	190
+Bidden Rose	191
+Qardashi	192
+Groovy Glam	193
+Devine	194
+Pixie Petals	195
+Rosella	196
+Ebbio	197
+Scent Vintage	198
+White Luxury	199
+Bright Sunshine	200
+Truly	201
+Ruby Red	202
+Full Of Passion	203
+Charmile	204
+Marveiles	205
+Green Steam	206
+Valesca	207
+Rose of The Vent	208
+Seven San	209
+Celindion Sensation	210
+Gempita	211
+Waka-Waka	212
+Mirage Moon	213
+Candy Night	214
+Glitter Glam	215
+given sea	216
+Callisto	217
+Goo Squid	218
+Cartir	219
+Guci Gold	220
+Sis Leys	221
+Ice Americano	222
+Axcoffe	223
+Black Cocain	224
+Collector's Edition	225
+Rose of The Sea	226
+Sweet Sunshine	227
+Queen Flowers	228
+Born to Shine	229
+Calypso	230
+Particless	231
+Samericek	232
+Black Mirage	233
+Dalal	234
+Soxy	235
+She Walf	236
+Cassanova	237
+Milazombie	238
+Yiper	239
+Heather Sweet	240
+Luminous Lotus	241
+Sweet Saphier	242
+Jongleuse	243
+Clue Story	244
+Days Girl	245
+Nozomi	246
+Spookie	247
+Still With You	248
+Green Eternity	249
+Unicorn Lady	250
+Twicy	251
+High Lily	252
+Endless Love	253
+Just A Girl	254
+Flower Mag	255
+Glowing Face	256
+Baorela	257
+moonlit meadow	258
+Fire Up	259
+Gravy Glam	260
+Opiate	261
+Limited	262
+Lovin You	263
+In Love 1	264
+Durant	265
+Scarlett Heels	266
+The Master	267
+Hughes	268
+Blooming	269
+Insider	270
+White Light	271
+Mystery Girl	272
+Sweet Vanilla	273
+Choc Choco	274
+CR Seven	275
+Mady Girl	276
+Delight Blue	277
+Ice Cream	278
+Sauve Kiss	279
+Ana Sweet	280
+Nowadays Man	281
+Accadiantaly	282
+Red Sunset	283
+Sauvage Classy	284
+Tokyo 2020	285
+One Sixty	286
+Expose	287
+Superclass Man	288
+-	289
+Sexy Killer	290
+Dwelling	291
+Elvishore	292
+Chance	293
+Tribes	294
+Mannequin	295
+Pina Coach	296
+You So Lovely	297
+Spices Fragrance	298
+Glamour Glam	299
+Jeep Black	300
+Moonlight Muse	301
+Exits	302
+Savile Row	303
+Exotic Escape	304
+Na Or Ya	305
+Senyasen	306
+Floresta	307
+Solitary Man	308
+Fornine	309
+Pine Fir	310
+Rafi Ahmad Touch Rafatar	311
+Arabic Spice	312
+English M	313
+Sweet Home	314
+Black Square	315
+Run Away	316
+Iron Man	317
+Excelsior	318
+Be Mine	319
+Shine Review	320
+Black Snow	321
+Moment of Truth	322
+Timber	323
+Groove Large	324
+Conoir	325
+Dorsava	326
+Lugsary	327
+Festive Love	328
+Pyramid	329
+Guardino	330
+Haleef	331
+Esava-X	332
+Golden Dust	333
+Camaraderia	334
+tobacco	335
+Vanilla Woody	336
+Satnight	337
+M Too Man	338
+Dhuga Light	339

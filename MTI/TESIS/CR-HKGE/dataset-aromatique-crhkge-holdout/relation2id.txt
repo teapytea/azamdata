@@ -1,0 +1,8 @@
+7
+has_accord	0
+has_visual_note	1
+belongs_to_family	2
+sem_similar	3
+inspired_by	4
+has_global_accord	5
+belongs_to_global_family	6

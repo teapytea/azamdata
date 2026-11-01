@@ -1,0 +1,972 @@
+org_id	remap_id
+Berrylicious	0
+Verve Vale	1
+Secret of Bandit	2
+Spicy Day	3
+Fancy Dress	4
+Moz Art	5
+Superclass Woman	6
+Black Lax	7
+Red Glass	8
+Classic Vintage	9
+Aquazone	10
+Solstice	11
+Our First Love	12
+Pentavenue	13
+Black Ball	14
+Patchouli Petals	15
+Bosi Bottle	16
+Fuck Boy	17
+Colate Sport	18
+Vandora	19
+Cloud Grande	20
+Whisper of Passion	21
+SCENT SQUAD	22
+SAFETY FIRST	23
+Reef 33 Perfumes	24
+CHARMING DECIVER	25
+Golden Secret	26
+Oran Cle	27
+Authentic Discovery	28
+Turathi Blue Afnan	29
+Spring Breeze	30
+Bright Cloud	31
+Barbie	32
+Jack Sparrow	33
+Will You	34
+Will Deep	35
+Maxima Gold	36
+deep water	37
+Rainforest	38
+Blue Crocodile	39
+Treasure to Love	40
+Dreamland	41
+Spell Out	42
+Stardust	43
+Kenzoba	44
+Autumn	45
+The Scent Diva	46
+Bad Boy	47
+Vicaro	48
+Dusk musk	49
+aqua fresh woman	50
+Harry Up	51
+Last Season	52
+Glamorious	53
+Cover Girl	54
+Lavish Lily	55
+Lovin Him	56
+Shout Man	57
+Blatherskite	58
+My Crush	59
+Five Years	60
+D Nova	61
+How Deep	62
+Sombrero	63
+Woman In Love Never Cross	64
+Breezy Bouquet	65
+Bosa Nova	66
+Victory	67
+White Sense	68
+Woman In Red	69
+FOF	70
+Darkness	71
+Bamboo Cici	72
+Rouge Velaurs	73
+Add 5	74
+Tacenda	75
+Rayon	76
+Dark Ages	77
+Foreo Ice	78
+Silk Blossom	79
+Dory	80
+King of Parties	81
+Black Bond	82
+cinnabar	83
+Deep Crush	84
+Zero Two	85
+Erost	86
+Momento	87
+Usain Bolt	88
+Big Boss	89
+Vagabond	90
+Only You	91
+Jeep Shine	92
+Spice Up	93
+Advens	94
+Mellifluous	95
+Just A Boy	96
+Great Police	97
+Calestial Citrus	98
+Tow Combination	99
+Vintage Vision	100
+Blue Hills	101
+Forfive	102
+Far From Home	103
+Princess Charming	104
+Haruke	105
+D sava	106
+Ocean Lounge	107
+Queen Star	108
+Perfect Girl	109
+Axapollo	110
+Hey Ma	111
+Zimba	112
+Moon AA	113
+Blanc Space	114
+Black Floral	115
+Temperature	116
+Bewitching	117
+Plat Low	118
+Aegen Si	119
+Be Feminim	120
+Popular	121
+Jellyfish	122
+Alinenor	123
+My Angel	124
+Chosen	125
+Yamato One	126
+eramusk	127
+Ood Super	128
+Dor Favor	129
+Eifel	130
+Champion Man	131
+Silky Pink	132
+Fit Woman	133
+Twilight	134
+Strong Girl	135
+Tunefull	136
+XO Nine	137
+Gotcha	138
+Arouse	139
+Eternal Sunset	140
+In The Groove	141
+Omniscient	142
+Ford Leather	143
+Boomtown	144
+London Love	145
+Be Del Woman	146
+Road Spice	147
+Artemis	148
+Dark Green	149
+Forest	150
+Mighty	151
+Fresh Matcha	152
+Gracias Garden	153
+Haystack	154
+Man in Green	155
+Passion Art	156
+Floral Noir	157
+lost in space	158
+Black Ford	159
+Sweaty Man	160
+Secret Code	161
+Majesty	162
+Fast and Furious	163
+Fiori Leys	164
+silk safron	165
+Longlive	166
+Milord	167
+Classy Bless	168
+Felice	169
+CR 7	170
+Blue Black	171
+Liquid	172
+Aqua Legend	173
+Badge	174
+MIB	175
+Jeep White	176
+Head Turner	177
+Heritage	178
+Ombredesire	179
+Oudhi	180
+Oud Man	181
+Sandal an Oud	182
+Monarca	183
+Forest Night	184
+Beatrize	185
+Oud Noir	186
+Musk Oud	187
+Vetiver Intense	188
+Blue Shine	189
+Malika	190
+Bidden Rose	191
+Qardashi	192
+Groovy Glam	193
+Devine	194
+Pixie Petals	195
+Rosella	196
+Ebbio	197
+Scent Vintage	198
+White Luxury	199
+Bright Sunshine	200
+Truly	201
+Ruby Red	202
+Full Of Passion	203
+Charmile	204
+Marveiles	205
+Green Steam	206
+Valesca	207
+Rose of The Vent	208
+Seven San	209
+Celindion Sensation	210
+Gempita	211
+Waka-Waka	212
+Mirage Moon	213
+Candy Night	214
+Glitter Glam	215
+given sea	216
+Callisto	217
+Goo Squid	218
+Cartir	219
+Guci Gold	220
+Sis Leys	221
+Ice Americano	222
+Axcoffe	223
+Black Cocain	224
+Collector's Edition	225
+Rose of The Sea	226
+Sweet Sunshine	227
+Queen Flowers	228
+Born to Shine	229
+Calypso	230
+Particless	231
+Samericek	232
+Black Mirage	233
+Dalal	234
+Soxy	235
+She Walf	236
+Cassanova	237
+Milazombie	238
+Yiper	239
+Heather Sweet	240
+Luminous Lotus	241
+Sweet Saphier	242
+Jongleuse	243
+Clue Story	244
+Days Girl	245
+Nozomi	246
+Spookie	247
+Still With You	248
+Green Eternity	249
+Unicorn Lady	250
+Twicy	251
+High Lily	252
+Endless Love	253
+Just A Girl	254
+Flower Mag	255
+Glowing Face	256
+Baorela	257
+moonlit meadow	258
+Fire Up	259
+Gravy Glam	260
+Opiate	261
+Limited	262
+Lovin You	263
+In Love 1	264
+Durant	265
+Scarlett Heels	266
+The Master	267
+Hughes	268
+Blooming	269
+Insider	270
+White Light	271
+Mystery Girl	272
+Sweet Vanilla	273
+Choc Choco	274
+CR Seven	275
+Mady Girl	276
+Delight Blue	277
+Ice Cream	278
+Sauve Kiss	279
+Ana Sweet	280
+Nowadays Man	281
+Accadiantaly	282
+Red Sunset	283
+Sauvage Classy	284
+Tokyo 2020	285
+One Sixty	286
+Expose	287
+Superclass Man	288
+-	289
+Sexy Killer	290
+Dwelling	291
+Elvishore	292
+Chance	293
+Tribes	294
+Mannequin	295
+Pina Coach	296
+You So Lovely	297
+Spices Fragrance	298
+Glamour Glam	299
+Jeep Black	300
+Moonlight Muse	301
+Exits	302
+Savile Row	303
+Exotic Escape	304
+Na Or Ya	305
+Senyasen	306
+Floresta	307
+Solitary Man	308
+Fornine	309
+Pine Fir	310
+Rafi Ahmad Touch Rafatar	311
+Arabic Spice	312
+English M	313
+Sweet Home	314
+Black Square	315
+Run Away	316
+Iron Man	317
+Excelsior	318
+Be Mine	319
+Shine Review	320
+Black Snow	321
+Moment of Truth	322
+Timber	323
+Groove Large	324
+Conoir	325
+Dorsava	326
+Lugsary	327
+Festive Love	328
+Pyramid	329
+Guardino	330
+Haleef	331
+Esava-X	332
+Golden Dust	333
+Camaraderia	334
+tobacco	335
+Vanilla Woody	336
+Satnight	337
+M Too Man	338
+Dhuga Light	339
+1 Million Lucky — Rabanne	340
+1 Million — Rabanne	341
+212 VIP Men Carolina Herrera	342
+5th Avenue by Elizabeth Arden	343
+5th Avenue — Elizabeth Arden	344
+724 — Maison Francis Kurkdjian	345
+Acqua di Gio by Giorgio Armani for Women	346
+Aigner Black for Men — Etienne Aigner	347
+Alexandria II by xerjoff	348
+Allure Homme Sport by Chanel	349
+Amber Fever by Mancera	350
+Amor Amor by Cacharel	351
+Angels' Share by Kilian	352
+Aoud Lemon Mint by Mancera	353
+Aoud Vanille by Mancera	354
+Aqua Lily 2008 — The Body Shop	355
+Aqua Universalis by Maison Francis Kurkdjian	356
+Aqva Pour Homme by Bvlgari	357
+Aura Loewe Floral — Loewe	358
+Aura by Swarovski	359
+Axe Dark Temptation	360
+B. United Woman Benetton	361
+Baccarat Rouge 540 Extrait de Parfum by Maison Francis Kurkdjian	362
+Baccarat Rouge 540 — Maison Francis Kurkdjian	363
+Back to Pink by Victoria’s Secret / Pink line	364
+Bad Boy Extreme By Carolina Herrera	365
+Bad Boy Le Parfum Carolina Herrera	366
+Bali by Kenzo / Kenzo travel edition	367
+Be Delicious by DKNY	368
+Black Bvlgari	369
+Black Coffee by Odetu	370
+Black Opium Illicit Green — Yves Saint Laurent	371
+Black Opium — Yves Saint Laurent	372
+Black Saffron Byredo	373
+Black Seduction by Antonio Banderas	374
+Black XS L’Exces for Him — Rabanne	375
+Black XS for Her — Rabanne	376
+Bleu de Chanel by Chanel	377
+Boss Bottled Night by Hugo Boss	378
+Boss Bottled United by Hugo Boss	379
+Boss Orange for Men by Hugo Boss	380
+Burberry Sport for Men — Burberry	381
+Burberry Summer — Burberry	382
+Burberry Women Burberry	383
+Bvlgari Extreme by Bvlgari	384
+Bvlgari Man Black Orient by Bvlgari	385
+Bvlgari Man — Bvlgari	386
+Bvlgari Pour Homme Soir — Bvlgari	387
+Bvlgari Pour Homme — Bvlgari	388
+CH Men Hot! Hot! Hot! — Carolina Herrera	389
+CH Privée by Carolina Herrera	390
+CK be — Calvin Klein	391
+CR7 by Cristiano Ronaldo	392
+Candy by Prada	393
+Cerruti 1881 Black — Cerruti	394
+Chance Eau Tendre Eau de Parfum by Chanel, 2019	395
+Chance Eau Tendre Eau de Toilette by Chanel, 2010	396
+Chic by Carolina Herrera	397
+Chloé Roses de Chloé	398
+Chocolate Greedy — Montale	399
+Coco Chanel by Chanel	400
+Cool Play by Lacoste Fragrances	401
+Crystal Love For Him by Attar Collection	402
+Cuba Brazil by Cuba Paris	403
+Cyprès Pantelleria by Giorgio Armani	404
+Cœur Battant by Louis Vuitton	405
+DKNY Be Delicious Donna Karan for women	406
+Dalal — Al Rehab / ALREHAB Perfumes	407
+Dans la Peau Louis Vuitton for women	408
+Deep Red by Hugo Boss	409
+Divine Oud by Roberto Cavalli	410
+Dolly Girl by Anna Sui	411
+Drakkar Noir by Guy Laroche	412
+Dreams by Anna Sui	413
+Dunhill Black — Alfred Dunhill	414
+Dunhill Desire Blue by Alfred Dunhill	415
+Dunhill London by Alfred Dunhill	416
+Eau Parfumee au The Noir Bvlgari	417
+Eau de Lacoste L.12.12. Green by Lacoste Fragrances	418
+Ege / Αιγαίο by Nishane	419
+Elie Saab Elixir for woman	420
+Elixir Pour Femme by Roja Dove	421
+Elle by Yves Saint Laurent	422
+Elysium Pour Homme Parfum Cologne — Roja Dove	423
+English Pear & Freesia Jo Malone London	424
+Envy Me — Gucci	425
+Escada Magnetism — Escada	426
+Escada Moon Sparkle — Escada	427
+Escape for Men — Calvin Klein	428
+Essential Sport by Lacoste Fragrances	429
+Eternity for Men Eau de Parfum — Calvin Klein	430
+Euphoria Blossom Calvin Klein	431
+Fantasia Mermaid — Anna Sui	432
+Fantasy: The Naughty Remix by Britney Spears	433
+Femme — Hugo Boss	434
+Ferrari Black Ferrari for men	435
+Ferrari Black — Ferrari	436
+Flight of Fancy by Anna Sui	437
+Flora Gorgeous Gardenia by Gucci / Zara Gardenia	438
+Flower by Kenzo	439
+Freedom by Tommy Hilfiger, 2012	440
+Gentleman Eau de Parfum Givenchy	441
+Ginza Murasaki / Ginza by Shiseido	442
+Glow — Jennifer Lopez	443
+Gold Incense by Carolina Herrera Confidential	444
+Gold immortals by ex nihilo	445
+Good Girl Blush by Carolina Herrera	446
+Green Irish Tweed by Creed	447
+Green Tea Elizabeth Arden	448
+Gucci Bloom / Flora by Gucci	449
+Gucci Bloom — Gucci	450
+Gucci Rush 2 by Gucci	451
+Guess Seductive Sunkissed / Summer edition	452
+Guess Seductive — Guess	453
+Guess for Women Guess	454
+Gypsy Water — Byredo	455
+Happy by Clinique	456
+Herod — Parfums de Marly	457
+Hipster Oud Zara	458
+Hugo Boss In Motion by Hugo Boss	459
+Hugo XX — Hugo Boss	460
+Hugo XY by Hugo Boss	461
+Idôle by Lancôme	462
+Incanto Shine by Salvatore Ferragamo	463
+Individuel Montblanc for men	464
+Insolence Eau de Parfum Guerlain	465
+Instant Crush — Mancera	466
+Intense Cafe by Montale	467
+Invictus by Rabanne	468
+Italian Love / Light Blue Italian Love by Dolce & Gabbana	469
+Jaguar Classic Blue / Blue Jack	470
+Jaguar Vision by Jaguar	471
+Jaguar for Men / Classic Green	472
+Jorge di Profondo by Maison Alhambra	473
+Joy of Pink by Lacoste Fragrances	474
+Kirke by Tiziana Terenzi	475
+L'Eau d'Issey by Issey Miyake	476
+L'Immensité by Louis Vuitton	477
+La Nuit Trésor — Lancôme	478
+La Vie Est Belle — Lancôme	479
+Lacoste Pour Femme Légère	480
+Lady Million Fabulous by Rabanne	481
+Lady Million by Rabanne	482
+Le Jour se Lève Louis Vuitton	483
+Le Parfum in White — Elie Saab	484
+Legend by Montblanc	485
+Libre Intense — Yves Saint Laurent	486
+Light Blue by Dolce&Gabbana for women	487
+London Playboy for men	488
+London for Men — Burberry	489
+L’Homme — Yves Saint Laurent	490
+Marfa — Memo Paris	491
+Marry Me! by Lanvin	492
+Middle Eastern style fragrance	493
+Miracle Lancôme for women	494
+Miss Dior Blooming Bouquet Dior	495
+Miss Dior Rose N’Roses Dior	496
+Miu Miu — Miu Miu	497
+Mr. Burberry Burberry for men	498
+Musk Oud	499
+My Way — Giorgio Armani	500
+Nautica Voyage Nautica for men	501
+Noir Anthracite — Tom Ford	502
+Noir by Tom Ford	503
+Nomade — Chloé	504
+Nude Bouquet 2016 by Zara	505
+N°1 de Chanel L'Eau Rouge / Chanel No.1	506
+Olympéa Flora / Olympéa Floral by Rabanne	507
+Olympéa — Rabanne	508
+Ombre Nomade by Louis Vuitton	509
+Ombré Leather (2018) Tom Ford	510
+Omnia Green Jade Bvlgari	511
+Oriental Fruity by Zara	512
+Oud & Bergamot / Velvet Rose & Oud by Jo Malone	513
+Oud Couture / Insignia by Carolina Herrera	514
+Oud Minérale by Tom Ford	515
+Oud Satin Mood / Baccarat Rouge?	516
+Oud Wood / Tobacco Oud by Tom Ford	517
+Oud Wood Tom Ford	518
+Oud Wood by Tom Ford	519
+Penhaligon's Terrible Teddy	520
+Phantom — Rabanne	521
+Philosykos Eau de Toilette Diptyque	522
+Pitbull Man — Pitbull	523
+Pleasures — Estée Lauder	524
+Polo Ralph Lauren / Polo Green	525
+Popcorn accord / Demeter Popcorn	526
+Romantic by Victoria's Secret	527
+Rose Goldea Blossom Delight by Bvlgari	528
+Rose Noir Byredo	529
+Rose Prick / Metallique by Tom Ford	530
+Rose des Sables by Louis Vuitton	531
+Rose des Vents Louis Vuitton	532
+Roses Musk Montale	533
+Roses Vanille by Mancera	534
+Rouge Hermès Hermès	535
+Sauvage Dior for men	536
+Sauvage Elixir by Dior	537
+Scandal Pour Homme by Jean Paul Gaultier	538
+Secret Wish Magic Romance — Anna Sui	539
+Sergio Tacchini Donna — Sergio Tacchini	540
+Shakira S by Shakira	541
+Si by Giorgio Armani	542
+Signorina — Salvatore Ferragamo	543
+Spell On You by Louis Vuitton	544
+Splendida Magnolia Sensuel — Bvlgari	545
+Sweet Vanilla by Victoria’s Secret	546
+Tease Candy Noir — Victoria’s Secret	547
+Terre d'Hermès / Hermès for Men	548
+Thank U, Next by Ariana Grande	549
+The Golden Secret by Antonio Banderas	550
+The Island by various brands	551
+The Matcha 26 Le Labo	552
+Tobacco Vanille — Tom Ford	553
+Tommy by Tommy Hilfiger	554
+Twilly d’Hermès — Hermès	555
+Un Jardin sur le Nil by Hermès	556
+VIP Black Red — Carolina Herrera	557
+Vanilla Ice by Victoria’s Secret	558
+Vanilla Lace — Victoria’s Secret	559
+Vanilla Latte fragrance	560
+Vanilla — The Body Shop	561
+Velvet Fantasy by Montale	562
+Versace Pour Femme Dylan Purple	563
+Vibrant Leather Eau de Parfum — Zara	564
+Vibrant Leather by Zara	565
+Vodka on the Rocks by Kilian	566
+Wanted Eau de Parfum Azzaro	567
+Weekend for Men by Burberry	568
+White Musk The Body Shop	569
+Wild Bluebell — Jo Malone London	570
+Wild Leather by Mancera	571
+Wild Rose — Avril Lavigne	572
+Y Eau de Parfum Yves Saint Laurent for men	573
+Z White	574
+Zara Black Amber Zara	575
+Zara Man / Magnificent Black	576
+accord::aldehydes	577
+accord::aldehydic	578
+accord::almond	579
+accord::amber	580
+accord::amber powdery	581
+accord::animalic	582
+accord::anis	583
+accord::aquatic	584
+accord::aromatic	585
+accord::aromatique	586
+accord::aroomatic	587
+accord::baae: warm spicy	588
+accord::bae: powdery musky	589
+accord::balsamic	590
+accord::bitter	591
+accord::cacao	592
+accord::cannabis	593
+accord::caramel	594
+accord::cherry	595
+accord::chocolate	596
+accord::cinnamon	597
+accord::citrus	598
+accord::citrus caramel	599
+accord::citrus floral	600
+accord::citrus white floral	601
+accord::citrus woody	602
+accord::coconut	603
+accord::coffe	604
+accord::coffee	605
+accord::conifer	606
+accord::earthy	607
+accord::floral	608
+accord::floral fruity	609
+accord::freahspicy	610
+accord::freesh	611
+accord::fresh	612
+accord::fresh spicy	613
+accord::fresh spicy. citrus	614
+accord::fruity	615
+accord::fruity  vanilla rose	616
+accord::fruity aromatic	617
+accord::fruity caramel	618
+accord::fruity fresh	619
+accord::fruity iris	620
+accord::fruity musky	621
+accord::fruity rose	622
+accord::fuity	623
+accord::greeen	624
+accord::green	625
+accord::haert: white floral warm spicy	626
+accord::herbal	627
+accord::honey	628
+accord::iris	629
+accord::iris woody	630
+accord::lactonic	631
+accord::lavender	632
+accord::leather	633
+accord::marine	634
+accord::metalic	635
+accord::metallic	636
+accord::mineral	637
+accord::mossy	638
+accord::musky	639
+accord::musky rose	640
+accord::nuity	641
+accord::nutty	642
+accord::oriental	643
+accord::oriental: vanilla	644
+accord::oud	645
+accord::ozonic	646
+accord::ozonoc	647
+accord::patchouli	648
+accord::powderry	649
+accord::powdery	650
+accord::powdery sweet	651
+accord::pzonic	652
+accord::rose	653
+accord::rose sweet	654
+accord::rum	655
+accord::salty	656
+accord::smoky	657
+accord::soft spicy	658
+accord::spicy	659
+accord::sweet	660
+accord::sweet floral	661
+accord::sweet fresh	662
+accord::sweet vanilla	663
+accord::sweet woody	664
+accord::tobacco	665
+accord::tropical	666
+accord::tuberose	667
+accord::vanilla	668
+accord::vanilla cacao	669
+accord::vanilla coffe	670
+accord::vanilla powdery	671
+accord::vanilla sweet	672
+accord::vanilla tropical	673
+accord::vanilla woody	674
+accord::violet	675
+accord::vodka	676
+accord::warm	677
+accord::warm spicy	678
+accord::warm spicy chocolate	679
+accord::warm spicy vanilla	680
+accord::whiskey	681
+accord::white floral	682
+accord::white floral and tuberose	683
+accord::woody	684
+accord::woody fresh	685
+accord::woody white floral	686
+accord::yellow floral	687
+family_local::AMBER	688
+family_local::AQUATIC	689
+family_local::AROMATIC	690
+family_local::CITRUS	691
+family_local::FLORAL	692
+family_local::FRESH SPICY	693
+family_local::FRUITY	694
+family_local::GREEN	695
+family_local::LEATHER	696
+family_local::MUSK POWDERY	697
+family_local::OUD	698
+family_local::RED FLORAL	699
+family_local::SWEET	700
+family_local::VANILLA	701
+family_local::WARM SPICY	702
+family_local::WHITE FLORAL	703
+family_local::WOODY	704
+family_global::Amber Floral / Oud	705
+family_global::Amber Vanilla / Gourmand Floral	706
+family_global::Aromatic	707
+family_global::Aromatic Aquatic	708
+family_global::Aromatic Fougere	709
+family_global::Aromatic Green	710
+family_global::Aromatic Green / fresh aromatic	711
+family_global::Aromatic Spicy	712
+family_global::Chypre	713
+family_global::Chypre / Woody Chypre	714
+family_global::Chypre Floral	715
+family_global::Chypre Floral / Rose	716
+family_global::Chypre Fruity	717
+family_global::Citrus	718
+family_global::Citrus Aromatic	719
+family_global::Floral	720
+family_global::Floral Aquatic	721
+family_global::Floral Fruity	722
+family_global::Floral Fruity Gourmand	723
+family_global::Floral Green	724
+family_global::Floral Woody Musk	725
+family_global::Fragrance for men	726
+family_global::Fragrance for women	727
+family_global::Fragrance for women and men	728
+family_global::Leather	729
+family_global::Not classified / fragrance for women and men	730
+family_global::Oriental	731
+family_global::Oriental Floral	732
+family_global::Oriental Floral / Amber Floral	733
+family_global::Oriental Fougere	734
+family_global::Oriental Spicy	735
+family_global::Oriental Vanilla	736
+family_global::Oriental Vanilla / Amber Vanilla	737
+family_global::Oriental Woody	738
+family_global::Oud / Woody Floral	739
+family_global::Woody	740
+family_global::Woody / Cologne Intense	741
+family_global::Woody / Green Tea	742
+family_global::Woody Aquatic	743
+family_global::Woody Aromatic	744
+family_global::Woody Floral Musk	745
+family_global::Woody Spicy	746
+family_global::—	747
+visnote::african orange flower	748
+visnote::agarwood	749
+visnote::agarwood (oud)	750
+visnote::aldehyde	751
+visnote::aldehydes	752
+visnote::allspice	753
+visnote::almond	754
+visnote::amalfi lemon	755
+visnote::amber	756
+visnote::ambergriss	757
+visnote::amberwood	758
+visnote::apple	759
+visnote::apricot	760
+visnote::aquatic	761
+visnote::aromatic	762
+visnote::bamboo	763
+visnote::basil	764
+visnote::bellflower	765
+visnote::benzoin	766
+visnote::bergamot	767
+visnote::bergamut	768
+visnote::beri juniper	769
+visnote::berries	770
+visnote::berry	771
+visnote::betel leaf	772
+visnote::bitter almond	773
+visnote::bitter orange	774
+visnote::black cardamom	775
+visnote::black currant	776
+visnote::black currants	777
+visnote::black pepper	778
+visnote::black tea	779
+visnote::blackcurrant	780
+visnote::blood mandarin	781
+visnote::blood orange	782
+visnote::bubblegum	783
+visnote::bulgarian rose	784
+visnote::cacao	785
+visnote::cannabis	786
+visnote::caramel	787
+visnote::cardamom	788
+visnote::carrot seeds	789
+visnote::casis	790
+visnote::cassis	791
+visnote::cedar	792
+visnote::chamomile	793
+visnote::cherry	794
+visnote::cherry blossom	795
+visnote::chocolate	796
+visnote::cinnamon	797
+visnote::citron	798
+visnote::citrus	799
+visnote::coconut	800
+visnote::coconut nectarine	801
+visnote::coffe	802
+visnote::coffe sugar	803
+visnote::coffee	804
+visnote::cognac	805
+visnote::coriander	806
+visnote::corriander	807
+visnote::cranberry	808
+visnote::cucumber	809
+visnote::damask rose	810
+visnote::darjeeling tea	811
+visnote::dark chocolate	812
+visnote::earl grey tea	813
+visnote::eucalyptus	814
+visnote::fig	815
+visnote::fig leaf	816
+visnote::floral	817
+visnote::freesia	818
+visnote::fresh	819
+visnote::fresh spicy	820
+visnote::fruity	821
+visnote::fruty	822
+visnote::galbanum	823
+visnote::gardenia	824
+visnote::geranium	825
+visnote::ginger	826
+visnote::grapefruit	827
+visnote::grass	828
+visnote::green	829
+visnote::green apple	830
+visnote::green grass	831
+visnote::green leaf	832
+visnote::green tea	833
+visnote::guava	834
+visnote::honey	835
+visnote::incense	836
+visnote::indian saffron	837
+visnote::iris	838
+visnote::italian lemon	839
+visnote::jasmine	840
+visnote::juniper berries	841
+visnote::kiwi	842
+visnote::kumquat	843
+visnote::labdanum	844
+visnote::lactonic	845
+visnote::lavender	846
+visnote::leather	847
+visnote::lemon	848
+visnote::lemon leaf	849
+visnote::licorice	850
+visnote::lily	851
+visnote::lily of the valley	852
+visnote::lime	853
+visnote::litchi	854
+visnote::lotus	855
+visnote::magnolia	856
+visnote::mandarin orange	857
+visnote::mango	858
+visnote::marigold	859
+visnote::matcha tea	860
+visnote::may rose	861
+visnote::melon	862
+visnote::mignonette	863
+visnote::milk	864
+visnote::mint	865
+visnote::mossy	866
+visnote::musk	867
+visnote::musk powdery	868
+visnote::musky	869
+visnote::myrrh	870
+visnote::myrtle	871
+visnote::nectarine	872
+visnote::neroli	873
+visnote::nerolli	874
+visnote::nutmeg	875
+visnote::nutty	876
+visnote::oakmoss	877
+visnote::olive tree	878
+visnote::orange	879
+visnote::orange bloosom	880
+visnote::orange blossom	881
+visnote::orchid	882
+visnote::oud	883
+visnote::ozonic	884
+visnote::passionfruit	885
+visnote::patchouli	886
+visnote::peach	887
+visnote::peanut	888
+visnote::pear	889
+visnote::pear leaf	890
+visnote::peony	891
+visnote::pepper	892
+visnote::pepperwood	893
+visnote::petitgrain	894
+visnote::pine needle	895
+visnote::pineapple	896
+visnote::pink grapefruit	897
+visnote::pink peony	898
+visnote::pink pepper	899
+visnote::pistachio	900
+visnote::plum	901
+visnote::pomarose	902
+visnote::pomegranate	903
+visnote::pomogranate	904
+visnote::popcorn	905
+visnote::powder	906
+visnote::powdery	907
+visnote::praline	908
+visnote::rasberry	909
+visnote::raspberry	910
+visnote::raspbery	911
+visnote::red apple	912
+visnote::red berries	913
+visnote::red berry	914
+visnote::red currant	915
+visnote::red floral	916
+visnote::red freesia	917
+visnote::red pepper	918
+visnote::rhubarb	919
+visnote::rose	920
+visnote::rosemary	921
+visnote::rosewood	922
+visnote::rum	923
+visnote::saffron	924
+visnote::safron	925
+visnote::sage	926
+visnote::salt	927
+visnote::sandalwood	928
+visnote::sea notes	929
+visnote::sea salt	930
+visnote::sicilian bergamot	931
+visnote::sicilian lemon	932
+visnote::sour cherry	933
+visnote::sour chery	934
+visnote::soybean	935
+visnote::spicy	936
+visnote::straw	937
+visnote::strawberry	938
+visnote::suede	939
+visnote::sugar	940
+visnote::sugar cane	941
+visnote::sweet	942
+visnote::tangerine	943
+visnote::teakwood	944
+visnote::tobacco	945
+visnote::tobaco	946
+visnote::tobbaco	947
+visnote::tonka bean	948
+visnote::tuberose	949
+visnote::turkish rose	950
+visnote::vanilla	951
+visnote::verbena	952
+visnote::violet	953
+visnote::violet leaf	954
+visnote::warm spicy	955
+visnote::water	956
+visnote::water jasmine	957
+visnote::water lily	958
+visnote::watermelon	959
+visnote::whipped cream	960
+visnote::whiskey	961
+visnote::white chocolate	962
+visnote::white floral	963
+visnote::white musk	964
+visnote::wild rose	965
+visnote::wood	966
+visnote::woody	967
+visnote::ylang ylang	968
+visnote::ylang-ylang	969
+visnote::yuzu	970

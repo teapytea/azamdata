@@ -1,0 +1,238 @@
+ref_name	user_id	entity_id
+1 Million Lucky — Rabanne	0	340
+1 Million — Rabanne	1	341
+212 VIP Men Carolina Herrera	2	342
+5th Avenue by Elizabeth Arden	3	343
+5th Avenue — Elizabeth Arden	4	344
+724 — Maison Francis Kurkdjian	5	345
+Acqua di Gio by Giorgio Armani for Women	6	346
+Aigner Black for Men — Etienne Aigner	7	347
+Alexandria II by xerjoff	8	348
+Allure Homme Sport by Chanel	9	349
+Amber Fever by Mancera	10	350
+Amor Amor by Cacharel	11	351
+Angels' Share by Kilian	12	352
+Aoud Lemon Mint by Mancera	13	353
+Aoud Vanille by Mancera	14	354
+Aqua Lily 2008 — The Body Shop	15	355
+Aqua Universalis by Maison Francis Kurkdjian	16	356
+Aqva Pour Homme by Bvlgari	17	357
+Aura Loewe Floral — Loewe	18	358
+Aura by Swarovski	19	359
+Axe Dark Temptation	20	360
+B. United Woman Benetton	21	361
+Baccarat Rouge 540 Extrait de Parfum by Maison Francis Kurkdjian	22	362
+Baccarat Rouge 540 — Maison Francis Kurkdjian	23	363
+Back to Pink by Victoria’s Secret / Pink line	24	364
+Bad Boy Extreme By Carolina Herrera	25	365
+Bad Boy Le Parfum Carolina Herrera	26	366
+Bali by Kenzo / Kenzo travel edition	27	367
+Be Delicious by DKNY	28	368
+Black Bvlgari	29	369
+Black Coffee by Odetu	30	370
+Black Opium Illicit Green — Yves Saint Laurent	31	371
+Black Opium — Yves Saint Laurent	32	372
+Black Saffron Byredo	33	373
+Black Seduction by Antonio Banderas	34	374
+Black XS L’Exces for Him — Rabanne	35	375
+Black XS for Her — Rabanne	36	376
+Bleu de Chanel by Chanel	37	377
+Boss Bottled Night by Hugo Boss	38	378
+Boss Bottled United by Hugo Boss	39	379
+Boss Orange for Men by Hugo Boss	40	380
+Burberry Sport for Men — Burberry	41	381
+Burberry Summer — Burberry	42	382
+Burberry Women Burberry	43	383
+Bvlgari Extreme by Bvlgari	44	384
+Bvlgari Man Black Orient by Bvlgari	45	385
+Bvlgari Man — Bvlgari	46	386
+Bvlgari Pour Homme Soir — Bvlgari	47	387
+Bvlgari Pour Homme — Bvlgari	48	388
+CH Men Hot! Hot! Hot! — Carolina Herrera	49	389
+CH Privée by Carolina Herrera	50	390
+CK be — Calvin Klein	51	391
+CR7 by Cristiano Ronaldo	52	392
+Candy by Prada	53	393
+Cerruti 1881 Black — Cerruti	54	394
+Chance Eau Tendre Eau de Parfum by Chanel, 2019	55	395
+Chance Eau Tendre Eau de Toilette by Chanel, 2010	56	396
+Chic by Carolina Herrera	57	397
+Chloé Roses de Chloé	58	398
+Chocolate Greedy — Montale	59	399
+Coco Chanel by Chanel	60	400
+Cool Play by Lacoste Fragrances	61	401
+Crystal Love For Him by Attar Collection	62	402
+Cuba Brazil by Cuba Paris	63	403
+Cyprès Pantelleria by Giorgio Armani	64	404
+Cœur Battant by Louis Vuitton	65	405
+DKNY Be Delicious Donna Karan for women	66	406
+Dalal — Al Rehab / ALREHAB Perfumes	67	407
+Dans la Peau Louis Vuitton for women	68	408
+Deep Red by Hugo Boss	69	409
+Divine Oud by Roberto Cavalli	70	410
+Dolly Girl by Anna Sui	71	411
+Drakkar Noir by Guy Laroche	72	412
+Dreams by Anna Sui	73	413
+Dunhill Black — Alfred Dunhill	74	414
+Dunhill Desire Blue by Alfred Dunhill	75	415
+Dunhill London by Alfred Dunhill	76	416
+Eau Parfumee au The Noir Bvlgari	77	417
+Eau de Lacoste L.12.12. Green by Lacoste Fragrances	78	418
+Ege / Αιγαίο by Nishane	79	419
+Elie Saab Elixir for woman	80	420
+Elixir Pour Femme by Roja Dove	81	421
+Elle by Yves Saint Laurent	82	422
+Elysium Pour Homme Parfum Cologne — Roja Dove	83	423
+English Pear & Freesia Jo Malone London	84	424
+Envy Me — Gucci	85	425
+Escada Magnetism — Escada	86	426
+Escada Moon Sparkle — Escada	87	427
+Escape for Men — Calvin Klein	88	428
+Essential Sport by Lacoste Fragrances	89	429
+Eternity for Men Eau de Parfum — Calvin Klein	90	430
+Euphoria Blossom Calvin Klein	91	431
+Fantasia Mermaid — Anna Sui	92	432
+Fantasy: The Naughty Remix by Britney Spears	93	433
+Femme — Hugo Boss	94	434
+Ferrari Black Ferrari for men	95	435
+Ferrari Black — Ferrari	96	436
+Flight of Fancy by Anna Sui	97	437
+Flora Gorgeous Gardenia by Gucci / Zara Gardenia	98	438
+Flower by Kenzo	99	439
+Freedom by Tommy Hilfiger, 2012	100	440
+Gentleman Eau de Parfum Givenchy	101	441
+Ginza Murasaki / Ginza by Shiseido	102	442
+Glow — Jennifer Lopez	103	443
+Gold Incense by Carolina Herrera Confidential	104	444
+Gold immortals by ex nihilo	105	445
+Good Girl Blush by Carolina Herrera	106	446
+Green Irish Tweed by Creed	107	447
+Green Tea Elizabeth Arden	108	448
+Gucci Bloom / Flora by Gucci	109	449
+Gucci Bloom — Gucci	110	450
+Gucci Rush 2 by Gucci	111	451
+Guess Seductive Sunkissed / Summer edition	112	452
+Guess Seductive — Guess	113	453
+Guess for Women Guess	114	454
+Gypsy Water — Byredo	115	455
+Happy by Clinique	116	456
+Herod — Parfums de Marly	117	457
+Hipster Oud Zara	118	458
+Hugo Boss In Motion by Hugo Boss	119	459
+Hugo XX — Hugo Boss	120	460
+Hugo XY by Hugo Boss	121	461
+Idôle by Lancôme	122	462
+Incanto Shine by Salvatore Ferragamo	123	463
+Individuel Montblanc for men	124	464
+Insolence Eau de Parfum Guerlain	125	465
+Instant Crush — Mancera	126	466
+Intense Cafe by Montale	127	467
+Invictus by Rabanne	128	468
+Italian Love / Light Blue Italian Love by Dolce & Gabbana	129	469
+Jaguar Classic Blue / Blue Jack	130	470
+Jaguar Vision by Jaguar	131	471
+Jaguar for Men / Classic Green	132	472
+Jorge di Profondo by Maison Alhambra	133	473
+Joy of Pink by Lacoste Fragrances	134	474
+Kirke by Tiziana Terenzi	135	475
+L'Eau d'Issey by Issey Miyake	136	476
+L'Immensité by Louis Vuitton	137	477
+La Nuit Trésor — Lancôme	138	478
+La Vie Est Belle — Lancôme	139	479
+Lacoste Pour Femme Légère	140	480
+Lady Million Fabulous by Rabanne	141	481
+Lady Million by Rabanne	142	482
+Le Jour se Lève Louis Vuitton	143	483
+Le Parfum in White — Elie Saab	144	484
+Legend by Montblanc	145	485
+Libre Intense — Yves Saint Laurent	146	486
+Light Blue by Dolce&Gabbana for women	147	487
+London Playboy for men	148	488
+London for Men — Burberry	149	489
+L’Homme — Yves Saint Laurent	150	490
+Marfa — Memo Paris	151	491
+Marry Me! by Lanvin	152	492
+Middle Eastern style fragrance	153	493
+Miracle Lancôme for women	154	494
+Miss Dior Blooming Bouquet Dior	155	495
+Miss Dior Rose N’Roses Dior	156	496
+Miu Miu — Miu Miu	157	497
+Mr. Burberry Burberry for men	158	498
+Musk Oud	159	499
+My Way — Giorgio Armani	160	500
+Nautica Voyage Nautica for men	161	501
+Noir Anthracite — Tom Ford	162	502
+Noir by Tom Ford	163	503
+Nomade — Chloé	164	504
+Nude Bouquet 2016 by Zara	165	505
+N°1 de Chanel L'Eau Rouge / Chanel No.1	166	506
+Olympéa Flora / Olympéa Floral by Rabanne	167	507
+Olympéa — Rabanne	168	508
+Ombre Nomade by Louis Vuitton	169	509
+Ombré Leather (2018) Tom Ford	170	510
+Omnia Green Jade Bvlgari	171	511
+Oriental Fruity by Zara	172	512
+Oud & Bergamot / Velvet Rose & Oud by Jo Malone	173	513
+Oud Couture / Insignia by Carolina Herrera	174	514
+Oud Minérale by Tom Ford	175	515
+Oud Satin Mood / Baccarat Rouge?	176	516
+Oud Wood / Tobacco Oud by Tom Ford	177	517
+Oud Wood Tom Ford	178	518
+Oud Wood by Tom Ford	179	519
+Penhaligon's Terrible Teddy	180	520
+Phantom — Rabanne	181	521
+Philosykos Eau de Toilette Diptyque	182	522
+Pitbull Man — Pitbull	183	523
+Pleasures — Estée Lauder	184	524
+Polo Ralph Lauren / Polo Green	185	525
+Popcorn accord / Demeter Popcorn	186	526
+Romantic by Victoria's Secret	187	527
+Rose Goldea Blossom Delight by Bvlgari	188	528
+Rose Noir Byredo	189	529
+Rose Prick / Metallique by Tom Ford	190	530
+Rose des Sables by Louis Vuitton	191	531
+Rose des Vents Louis Vuitton	192	532
+Roses Musk Montale	193	533
+Roses Vanille by Mancera	194	534
+Rouge Hermès Hermès	195	535
+Sauvage Dior for men	196	536
+Sauvage Elixir by Dior	197	537
+Scandal Pour Homme by Jean Paul Gaultier	198	538
+Secret Wish Magic Romance — Anna Sui	199	539
+Sergio Tacchini Donna — Sergio Tacchini	200	540
+Shakira S by Shakira	201	541
+Si by Giorgio Armani	202	542
+Signorina — Salvatore Ferragamo	203	543
+Spell On You by Louis Vuitton	204	544
+Splendida Magnolia Sensuel — Bvlgari	205	545
+Sweet Vanilla by Victoria’s Secret	206	546
+Tease Candy Noir — Victoria’s Secret	207	547
+Terre d'Hermès / Hermès for Men	208	548
+Thank U, Next by Ariana Grande	209	549
+The Golden Secret by Antonio Banderas	210	550
+The Island by various brands	211	551
+The Matcha 26 Le Labo	212	552
+Tobacco Vanille — Tom Ford	213	553
+Tommy by Tommy Hilfiger	214	554
+Twilly d’Hermès — Hermès	215	555
+Un Jardin sur le Nil by Hermès	216	556
+VIP Black Red — Carolina Herrera	217	557
+Vanilla Ice by Victoria’s Secret	218	558
+Vanilla Lace — Victoria’s Secret	219	559
+Vanilla Latte fragrance	220	560
+Vanilla — The Body Shop	221	561
+Velvet Fantasy by Montale	222	562
+Versace Pour Femme Dylan Purple	223	563
+Vibrant Leather Eau de Parfum — Zara	224	564
+Vibrant Leather by Zara	225	565
+Vodka on the Rocks by Kilian	226	566
+Wanted Eau de Parfum Azzaro	227	567
+Weekend for Men by Burberry	228	568
+White Musk The Body Shop	229	569
+Wild Bluebell — Jo Malone London	230	570
+Wild Leather by Mancera	231	571
+Wild Rose — Avril Lavigne	232	572
+Y Eau de Parfum Yves Saint Laurent for men	233	573
+Z White	234	574
+Zara Black Amber Zara	235	575
+Zara Man / Magnificent Black	236	576

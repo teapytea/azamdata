@@ -1,0 +1,79 @@
+======================================================================
+BUILD DATASET AROMATIQUE -> KGAT  (GUIDE_01)
+toggles: merge_accord=on include_ref=on sem_similar=off seed=2019 n_folds=5
+======================================================================
+[input] accord_synonyms=3 (§2.5 AKTIF) -> Data/accord_synonyms.tsv
+[input] products=340  global_rows=266  override_entries=106
+[input] ref_aliases=18 (manual verified)
+
+######################################################################
+# LAPORAN VALIDASI (§10)
+######################################################################
+
+[1] Entity per tipe:
+    produk            = 340 (entity id 0..339, == item id)
+    referensi         = 237 (entity+user)
+    accord lokal      = 111
+    family lokal      = 17
+    family global     = 43
+    visual note       = 223
+    TOTAL entity      = 971
+
+    Triple per relasi (KG penuh, sebelum hold-out):
+      0 inspired_by               = 243
+      1 has_accord                = 1630
+      2 has_visual_note           = 1089
+      3 belongs_to_family         = 340
+      4 has_global_accord         = 2040
+      5 belongs_to_global_family  = 233
+      TOTAL triple = 5575
+
+[2] Cek merge accord (D1):
+    accord id dipakai has_accord(lokal) = 108 node
+    accord id dipakai has_global_accord  = 59 node
+    id accord BERSAMA (lokal & global)   = 56 node  -> bukti merge OK
+    contoh node bersama: aldehydic(id=578), almond(id=579), amber(id=580), animalic(id=582), aquatic(id=584)
+
+[3] Cek anti-bocor per fold:
+    fold_0: edge inspired_by test bocor di kg_final = 0
+    fold_1: edge inspired_by test bocor di kg_final = 0
+    fold_2: edge inspired_by test bocor di kg_final = 0
+    fold_3: edge inspired_by test bocor di kg_final = 0
+    fold_4: edge inspired_by test bocor di kg_final = 0
+    TOTAL kebocoran = 0 (OK)
+
+[4] Cek konektivitas (ref test -> accord -> produk):
+    sampel 20 referensi test: punya jalur ke produk via accord = 19
+    PERINGATAN: ada referensi terisolasi -> cek §2/§5.
+
+[5] Sanity konstruksi (§1, §6):
+    produk enriched (punya revolutionize)        = 243
+    produk NO_REVOLUTIONIZE (D4, tanpa label)    = 97
+    produk enriched UNMATCHED (rev tak ketemu)   = 0
+    produk accord lokal KOSONG (MISSING_ACCORDS) = 0
+    referensi unik (berlabel)                    = 237
+    edge inspired_by (label) total               = 243
+    resolusi per tier: {'T2_raw': 126, 'T1_override': 91, 'T0_alias': 18, 'T4_prefix': 7, 'T3_interp': 1}
+    referensi TANPA global accord (terisolasi, §6 ditandai) = 5
+        ISOLATED-REF: Jaguar Classic Blue / Blue Jack
+        ISOLATED-REF: Oud Minérale by Tom Ford
+        ISOLATED-REF: Rose Prick / Metallique by Tom Ford
+        ISOLATED-REF: Vanilla Ice by Victoria’s Secret
+        ISOLATED-REF: Z White
+    -- T4_prefix (resolusi prefix, perlu audit manual): --
+        Cloud Grande                   rev=Tomford Oud Wood                    -> Oud Wood Tom Ford
+        SCENT SQUAD                    rev=Bvlgari Man Black Orient Bvlgari    -> Bvlgari Man Black Orient by Bvlgari
+        CHARMING DECIVER               rev=Eau de Lacoste L.12.12. Green Lacoste Fragrances -> Eau de Lacoste L.12.12. Green by Lacoste Fragrances
+        Dreamland                      rev=YSL Libre                           -> Libre Intense — Yves Saint Laurent
+        Stardust                       rev=Cuba Brazil Cuba Paris              -> Cuba Brazil by Cuba Paris
+        Bad Boy                        rev=Bvlgari Extreme Bvlgari             -> Bvlgari Extreme by Bvlgari
+        Lovin Him                      rev=estee lauder pleasures              -> Pleasures — Estée Lauder
+
+[6] Konsistensi id:
+    triple dgn id entity di luar [0,971) = 0 (OK)
+    max item id = 339 (< n_products=340 : True)
+    max user id = 236 (< n_users=237 : True)
+
+[done] output -> Data/aromatique/
+       file: item_list.txt user_list.txt entity_list.txt relation_list.txt
+             ref_user_entity_map.txt fold_assignment.json fold_0../fold_4/

@@ -1,0 +1,19 @@
+product_name	global_revolutionize	note
+SAFETY FIRST	Tommy Hilfiger Freedom	urutan kata: brand dipindah ke depan
+Oran Cle	Boss Orange for Men	Hugo Boss Orange -> Boss Orange for Men
+Spring Breeze	Attar Collection Crystal Love For Him	urutan kata
+Bright Cloud	Dolce&Gabbana Light Blue	D&G -> Dolce&Gabbana
+Will Deep	Hugo Boss Deep Red	urutan kata
+deep water	Giorgio Armani Cyprès Pantelleria	urutan kata
+Rainforest	Rabanne Invictus	urutan kata
+Spell Out	Tommy Hilfiger Tommy	Tommy Man -> Tommy by Tommy Hilfiger
+The Scent Diva	Lacoste Joy of Pink	urutan kata
+Lavish Lily	Zara Nude Bouquet	urutan kata
+Shout Man	Chanel Chance Eau Tendre EDT	Chance Eau Tendre versi EDT (baris 83)
+Blatherskite	Chanel Chance Eau Tendre EDP	Chance Eau Tendre versi EDP (baris 84)
+Colate Sport	Chanel Allure Homme Sport	FLAG2 rescue: typo Channel->Chanel; nama baku dari override
+Dusk musk	Roja Dove Elixir Pour Femme Parfum	FLAG2 rescue: typo Exilir->Elixir
+Will You	Lanvin Marry Me	FLAG2 rescue: typo Lavin->Lanvin
+Kenzoba	Kenzo 7:15 AM in Bali	FLAG2 rescue: Kenzo Bali = 7:15 AM in Bali (override verified) [AUDIT]
+Glamorious	Lancôme Idôle Now	FLAG2 rescue: Idhole N -> Idôle Now [AUDIT]
+Treasure to Love	Dolce&Gabbana Light Blue Italian Zest	FLAG2 rescue: D&G Italian -> Light Blue Italian Zest [AUDIT]
