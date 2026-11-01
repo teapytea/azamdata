@@ -1,0 +1,73 @@
+<InsightMakerModel>
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <Setting Note="" Version="37" TimeLength="1000" TimeStart="0" TimeStep="0.1" TimeUnits="Days" Units="" SolutionAlgorithm="RK1" BackgroundColor="white" Throttle="-1" Macros="" SensitivityPrimitives="" SensitivityRuns="50" SensitivityBounds="50, 80, 95, 100" SensitivityShowRuns="false" StyleSheet="{}" id="2">
+      <mxCell parent="1" vertex="1" visible="0">
+        <mxGeometry x="20" y="20" width="80" height="40" as="geometry" />
+      </mxCell>
+    </Setting>
+    <Display name="Default Display" Note="" Type="Time Series" xAxis="Time (%u)" yAxis="Amount of Substance" Primitives="92,93,94" AutoAddPrimitives="true" ScatterplotOrder="X Primitive, Y Primitive" Image="Display" yAxis2="" Primitives2="" showMarkers="false" showLines="true" showArea="false" legendPosition="Automatic" id="3">
+      <mxCell style="roundImage;image=/editor/images/DisplayFull.png;" parent="1" vertex="1" visible="0">
+        <mxGeometry x="50" y="20" width="64" height="64" as="geometry" />
+      </mxCell>
+    </Display>
+    <Stock name="A" Note="" InitialValue="100" StockMode="Store" Delay="10" Volume="100" NonNegative="false" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" Image="None" FlipHorizontal="false" FlipVertical="false" LabelPosition="Middle" oldId="92" id="92">
+      <mxCell style="stock" parent="1" vertex="1">
+        <mxGeometry x="320" y="460" width="100" height="40" as="geometry" />
+      </mxCell>
+    </Stock>
+    <Stock name="B" Note="" InitialValue="0" StockMode="Store" Delay="10" Volume="100" NonNegative="false" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" Image="None" FlipHorizontal="false" FlipVertical="false" LabelPosition="Middle" oldId="93" id="93">
+      <mxCell style="stock" parent="1" vertex="1">
+        <mxGeometry x="620" y="460" width="100" height="40" as="geometry" />
+      </mxCell>
+    </Stock>
+    <Stock name="C" Note="" InitialValue="0" StockMode="Store" Delay="10" Volume="100" NonNegative="false" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" Image="None" FlipHorizontal="false" FlipVertical="false" LabelPosition="Middle" oldId="94" id="94">
+      <mxCell style="stock" parent="1" vertex="1">
+        <mxGeometry x="950" y="460" width="100" height="40" as="geometry" />
+      </mxCell>
+    </Stock>
+    <Flow name="decay_A_to_B" Note="" FlowRate="[decayRateA]*[A]" OnlyPositive="true" TimeIndependent="false" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" oldId="96" id="96">
+      <mxCell style="flow" parent="1" source="92" target="93" edge="1">
+        <mxGeometry x="40" y="200" width="100" height="100" as="geometry">
+          <mxPoint x="40" y="300" as="sourcePoint" />
+          <mxPoint x="140" y="200" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    </Flow>
+    <Flow name="decay_B_to_C" Note="" FlowRate="[decayRateB]*[B]" OnlyPositive="true" TimeIndependent="false" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" oldId="97" id="97">
+      <mxCell style="flow" parent="1" source="93" target="94" edge="1">
+        <mxGeometry x="40" y="200" width="100" height="100" as="geometry">
+          <mxPoint x="40" y="300" as="sourcePoint" />
+          <mxPoint x="140" y="200" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    </Flow>
+    <Variable name="decayRateA" Note="" Equation="0.035" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" Image="None" FlipHorizontal="false" FlipVertical="false" LabelPosition="Middle" oldId="102" id="102">
+      <mxCell style="variable" vertex="1" parent="1">
+        <mxGeometry x="470" y="280" width="120" height="50" as="geometry" />
+      </mxCell>
+    </Variable>
+    <Variable name="decayRateB" Note="" Equation="0.1" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" Image="None" FlipHorizontal="false" FlipVertical="false" LabelPosition="Middle" oldId="103" id="103">
+      <mxCell style="variable" vertex="1" parent="1">
+        <mxGeometry x="790" y="280" width="120" height="50" as="geometry" />
+      </mxCell>
+    </Variable>
+    <Link name="Link" Note="" BiDirectional="false" oldId="104" id="104">
+      <mxCell style="link" edge="1" parent="1" source="102" target="96">
+        <mxGeometry x="40" y="200" width="100" height="100" as="geometry">
+          <mxPoint x="40" y="300" as="sourcePoint" />
+          <mxPoint x="140" y="200" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    </Link>
+    <Link name="Link" Note="" BiDirectional="false" oldId="105" id="105">
+      <mxCell style="link" edge="1" parent="1" source="103" target="97">
+        <mxGeometry x="40" y="200" width="100" height="100" as="geometry">
+          <mxPoint x="40" y="300" as="sourcePoint" />
+          <mxPoint x="140" y="200" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    </Link>
+  </root>
+</InsightMakerModel>

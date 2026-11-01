@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "ebb8d899647842db",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2917bb42b5cf621",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44e4bb14e127d5fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Welcome.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Welcome"
+            }
+          },
+          {
+            "id": "3494fc58c4c96516",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Teapy Medsos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Teapy Medsos"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2495dff04987fce7",
+    "type": "split",
+    "children": [
+      {
+        "id": "15c7dcba621fa1e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "387e78d116cd0fb8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "028544af7f3eea55",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "61d3c9eb0ef5d4c1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4d70254c98671acd",
+    "type": "split",
+    "children": [
+      {
+        "id": "9d14ec2004f36839",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37ffd668f28daa5d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "41cc9cf26eb58e2f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "cd52d17b0eb19a83",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e1aae4e38476338e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "6d972ce946b6597e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "3494fc58c4c96516",
+  "lastOpenFiles": [
+    "Welcome.md",
+    "Teapy Medsos.md",
+    "zz-cf-lib/templates/toolkit-profile.md",
+    "zz-cf-lib/preambles/research-framing.md",
+    "zz-cf-lib/preambles/image-placement.md",
+    "zz-cf-lib/preambles/inline-citation.md",
+    "zz-cf-lib/preambles/README.md",
+    "zz-cf-lib/preambles",
+    "zz-cf-lib/partials/latex-discipline.md",
+    "zz-cf-lib/partials/mermaid-discipline.md",
+    "zz-cf-lib/partials/README.md",
+    "zz-cf-lib/partials",
+    "zz-cf-lib/templates/market-category-profile.md",
+    "zz-cf-lib/templates/standards-and-specs-profile.md",
+    "zz-cf-lib/templates/market-map-profile.md",
+    "zz-cf-lib/templates/source-profile.md",
+    "zz-cf-lib/templates/vocabulary-profile.md",
+    "zz-cf-lib/templates/concept-profile.md",
+    "zz-cf-lib/templates/README.md",
+    "zz-cf-lib/templates",
+    "zz-cf-lib"
+  ]
+}
