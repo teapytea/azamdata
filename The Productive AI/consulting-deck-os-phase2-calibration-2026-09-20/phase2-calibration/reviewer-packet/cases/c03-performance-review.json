@@ -1,0 +1,51 @@
+{
+  "case_id": "SYN-C03",
+  "title": "Monthly management dan board review Perusahaan Simulasi B",
+  "data_status": "SYNTHETIC_ORIGINAL",
+  "notice": "Semua angka, jabatan, tanggal, dan keputusan merupakan simulasi orisinal; bukan laporan perusahaan nyata.",
+  "reference_patterns": ["D031:39", "D032:146", "D032:164", "D032:165", "D034:58", "D035:13"],
+  "unit": "IDR billion",
+  "as_of": "2026-06-30",
+  "meeting_date": "2026-07-08",
+  "monthly": {
+    "period": "2026-06",
+    "budget": {"units": 10000, "unit_price_idr": 1000000, "direct_cost": 6.0, "opex": 2.5},
+    "actual": {"units": 9500, "unit_price_idr": 950000, "direct_cost": 5.975, "opex": 2.65}
+  },
+  "ytd": {
+    "period": "2026-01/2026-06",
+    "budget": {"revenue": 60, "direct_cost": 36, "opex": 15},
+    "actual": {"revenue": 57.025, "direct_cost": 34.675, "opex": 15.25},
+    "includes_monthly_period": true
+  },
+  "forecast": {
+    "period": "FY2026", "previous_version": "2026-05-31", "current_version": "2026-06-30",
+    "annual_budget_ebit": 18, "previous_ebit": 17.6,
+    "changes_before_actions": {"demand": -0.8, "pricing": -0.5, "operating_cost": -0.2},
+    "impact_note": "Action impact is incremental FY2026 EBIT relative to the revised unmitigated forecast. Do not add these actions again to the final forecast."
+  },
+  "cash": {
+    "period": "2026-06", "opening": 3.2, "customer_receipts": 8.5,
+    "supplier_payments": 5.9, "staff_and_overhead_payments": 2.4,
+    "capex_paid": 0.7, "loan_principal_repaid": 0.2, "minimum_cash": 3.0,
+    "july_base_forecast_closing_cash": 2.2,
+    "july_assumption": "Other July cash movements are an explicit scenario input. Proposed collection action is excluded from the base forecast."
+  },
+  "issues": [
+    {"issue_id":"ISS-VOLUME","metric":"monthly_volume_ebit_bridge","description":"Volume below plan"},
+    {"issue_id":"ISS-PRICE","metric":"monthly_price_ebit_bridge","description":"Realized price below plan"},
+    {"issue_id":"ISS-OPEX","metric":"monthly_opex_ebit_bridge","description":"Opex above plan"},
+    {"issue_id":"ISS-CASH","metric":"cash_vs_minimum","description":"Cash below operating floor"}
+  ],
+  "actions": [
+    {"action_id":"ACT-01","issue_id":"ISS-VOLUME","owner":"Head of Sales","due":"2026-07-15","status":"IN_PROGRESS","impact_type":"FY_EBIT","impact":0.3,"confidence":"COMMITTED","decision_id":"DEC-C03-00","action":"Execute the pre-authorized conversion plan"},
+    {"action_id":"ACT-02","issue_id":"ISS-PRICE","owner":"Commercial Director","due":"2026-07-10","status":"PLANNED","impact_type":"FY_EBIT","impact":0.2,"confidence":"COMMITTED","decision_id":"DEC-C03-00","action":"Apply pre-authorized discount controls"},
+    {"action_id":"ACT-03","issue_id":"ISS-CASH","owner":"Accounts Receivable Lead","due":"2026-07-12","status":"PROPOSED","impact_type":"JULY_CASH_ONLY","impact":0.8,"confidence":"CONDITIONAL","decision_id":"DEC-C03-01","action":"Accelerate overdue collection under the proposed credit-control change"},
+    {"action_id":"ACT-04","issue_id":"ISS-OPEX","owner":"Chief Operating Officer","due":"2026-07-20","status":"DRAFT","impact_type":"FY_EBIT","impact":0.6,"confidence":"POTENTIAL","decision_id":"DEC-C03-02","action":"Validate additional overhead savings before including them in forecast"}
+  ],
+  "decisions": [
+    {"decision_id":"DEC-C03-00","owner":"Simulated CFO","purpose":"decide","date":"2026-06-25","status":"APPROVED_IN_SYNTHETIC_CASE","ask":"Authorize ACT-01 and ACT-02 within delegated authority"},
+    {"decision_id":"DEC-C03-01","owner":"Simulated Board","purpose":"decide","due":"2026-07-08","status":"REQUESTED_NOT_APPROVED","ask":"Approve credit-control change and weekly cash escalation; conditional collection impact 0.8, no EBIT uplift assumed"},
+    {"decision_id":"DEC-C03-02","owner":"Simulated Executive Committee","purpose":"discuss","due":"2026-07-20","status":"NOT_DECIDED","ask":"Review the additional savings proposal after validation"}
+  ]
+}

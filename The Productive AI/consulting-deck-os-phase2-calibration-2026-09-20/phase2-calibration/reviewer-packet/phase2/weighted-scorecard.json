@@ -1,0 +1,199 @@
+{
+  "version": "0.1",
+  "status": "DRAFT_CALIBRATION_REQUIRED",
+  "pass_threshold": 85,
+  "rating_scale": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "anchors": {
+    "0": "Tidak tersedia atau tidak dapat digunakan",
+    "1": "Kelemahan besar; perlu pengerjaan ulang",
+    "2": "Sebagian terpenuhi; perbaikan material diperlukan",
+    "3": "Memenuhi kebutuhan dengan kekurangan kecil",
+    "4": "Kuat, jelas dan konsisten; bukti rating tersedia"
+  },
+  "dimensions": [
+    {
+      "id": "STR",
+      "name": "Strategic reasoning and storyline",
+      "weight": 25,
+      "criteria": [
+        {
+          "id": "STR1",
+          "name": "Decision framing",
+          "description": "Tujuan, audience, decision question dan batas utama jelas.",
+          "weight": 5.0
+        },
+        {
+          "id": "STR2",
+          "name": "Governing thought",
+          "description": "Ringkasan menjawab masalah dan menyatakan kondisi material.",
+          "weight": 5.0
+        },
+        {
+          "id": "STR3",
+          "name": "Horizontal logic",
+          "description": "Urutan judul membentuk argumen tanpa lompatan logika.",
+          "weight": 5.0
+        },
+        {
+          "id": "STR4",
+          "name": "Vertical logic",
+          "description": "Setiap pesan didukung bukti dan reasoning yang sesuai.",
+          "weight": 5.0
+        },
+        {
+          "id": "STR5",
+          "name": "Options and action",
+          "description": "Trade-off, constraints, risiko dan tindakan mengikuti diagnosis.",
+          "weight": 5.0
+        }
+      ]
+    },
+    {
+      "id": "EVI",
+      "name": "Evidence and numeric integrity",
+      "weight": 20,
+      "criteria": [
+        {
+          "id": "EVI1",
+          "name": "Evidence traceability",
+          "description": "Fakta material terhubung ke sumber yang dapat diperiksa.",
+          "weight": 5.0
+        },
+        {
+          "id": "EVI2",
+          "name": "Calculation lineage",
+          "description": "Perhitungan dapat diulang dari input, rumus dan timing.",
+          "weight": 5.0
+        },
+        {
+          "id": "EVI3",
+          "name": "Definitions and reconciliation",
+          "description": "Unit, periode, scope, denominator dan totals konsisten.",
+          "weight": 5.0
+        },
+        {
+          "id": "EVI4",
+          "name": "Uncertainty and status",
+          "description": "Assumption, scenario, unknown, synthetic dan approval status jelas.",
+          "weight": 5.0
+        }
+      ]
+    },
+    {
+      "id": "MSG",
+      "name": "Slide message and copy",
+      "weight": 15,
+      "criteria": [
+        {
+          "id": "MSG1",
+          "name": "Action title",
+          "description": "Content slide menyampaikan insight yang didukung exhibit.",
+          "weight": 5.0
+        },
+        {
+          "id": "MSG2",
+          "name": "Concise interpretation",
+          "description": "Copy memberi implikasi yang relevan tanpa menenggelamkan bukti.",
+          "weight": 5.0
+        },
+        {
+          "id": "MSG3",
+          "name": "Language and consistency",
+          "description": "Istilah, singkatan, format angka dan bahasa konsisten.",
+          "weight": 5.0
+        }
+      ]
+    },
+    {
+      "id": "CHR",
+      "name": "Chart selection and annotation",
+      "weight": 15,
+      "criteria": [
+        {
+          "id": "CHR1",
+          "name": "Analytical intent",
+          "description": "Exhibit dipilih sesuai tugas; structured text boleh menjadi pilihan terbaik.",
+          "weight": 5.0
+        },
+        {
+          "id": "CHR2",
+          "name": "Truthful encoding",
+          "description": "Sumbu, baseline, skala, unit dan visual encoding tidak menyesatkan.",
+          "weight": 5.0
+        },
+        {
+          "id": "CHR3",
+          "name": "Labels and annotations",
+          "description": "Pembaca dapat memahami seri, delta dan konteks penting tanpa menebak.",
+          "weight": 5.0
+        }
+      ]
+    },
+    {
+      "id": "VIS",
+      "name": "Visual craft and consistency",
+      "weight": 15,
+      "criteria": [
+        {
+          "id": "VIS1",
+          "name": "Hierarchy and layout",
+          "description": "Hierarchy, alignment, grid dan scan order membantu membaca.",
+          "weight": 5.0
+        },
+        {
+          "id": "VIS2",
+          "name": "Readability and density",
+          "description": "Ukuran teks, spacing dan density sesuai mode penggunaan.",
+          "weight": 5.0
+        },
+        {
+          "id": "VIS3",
+          "name": "System consistency",
+          "description": "Palet, tipografi, icon treatment dan komponen konsisten serta sah digunakan.",
+          "weight": 5.0
+        }
+      ]
+    },
+    {
+      "id": "TEC",
+      "name": "Technical PPTX integrity",
+      "weight": 10,
+      "criteria": [
+        {
+          "id": "TEC1",
+          "name": "File and render integrity",
+          "description": "File membuka tanpa repair dan tampilan diperiksa pada aplikasi sasaran.",
+          "weight": 5.0
+        },
+        {
+          "id": "TEC2",
+          "name": "Practical editability",
+          "description": "Konten bisnis inti bisa diedit sesuai kontrak; bukan full-slide screenshot.",
+          "weight": 5.0
+        }
+      ]
+    }
+  ],
+  "hard_fail_ids": [
+    "HF01",
+    "HF02",
+    "HF03",
+    "HF04",
+    "HF05",
+    "HF06",
+    "HF07",
+    "HF08",
+    "HF09",
+    "HF10",
+    "HF11",
+    "HF12"
+  ],
+  "missing_policy": "INCOMPLETE; no normalization of partial score to /100",
+  "final_pass_rule": "All ratings supplied; every hard-fail check clear or justified not_applicable; score >=85; no failed or unknown required checks"
+}

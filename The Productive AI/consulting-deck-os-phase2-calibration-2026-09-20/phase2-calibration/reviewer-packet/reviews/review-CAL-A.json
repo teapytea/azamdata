@@ -1,0 +1,126 @@
+{
+  "artifact_id": "CAL-A",
+  "artifact_version": "2026-09-20.v2",
+  "reviewer_id": null,
+  "review_date": null,
+  "ratings": {
+    "STR1": null,
+    "STR2": null,
+    "STR3": null,
+    "STR4": null,
+    "STR5": null,
+    "EVI1": null,
+    "EVI2": null,
+    "EVI3": null,
+    "EVI4": null,
+    "MSG1": null,
+    "MSG2": null,
+    "MSG3": null,
+    "CHR1": null,
+    "CHR2": null,
+    "CHR3": null,
+    "VIS1": null,
+    "VIS2": null,
+    "VIS3": null,
+    "TEC1": null,
+    "TEC2": null
+  },
+  "rating_evidence": {
+    "STR1": [],
+    "STR2": [],
+    "STR3": [],
+    "STR4": [],
+    "STR5": [],
+    "EVI1": [],
+    "EVI2": [],
+    "EVI3": [],
+    "EVI4": [],
+    "MSG1": [],
+    "MSG2": [],
+    "MSG3": [],
+    "CHR1": [],
+    "CHR2": [],
+    "CHR3": [],
+    "VIS1": [],
+    "VIS2": [],
+    "VIS3": [],
+    "TEC1": [],
+    "TEC2": []
+  },
+  "hard_fail_checks": {
+    "HF01": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF02": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF03": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF04": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF05": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF06": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF07": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF08": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF09": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF10": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF11": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    },
+    "HF12": {
+      "status": "unverified",
+      "evidence": [],
+      "reason": ""
+    }
+  },
+  "note": "A template only. Null ratings are unreviewed, not zero. Use exact artifact page/slide/element as evidence.",
+  "artifact_sha256": "d761d182ee4803e8a6e350fb3e1aef49f9cab3d1bb379e55c8d62e4667c85bd1",
+  "standard_version": "0.1",
+  "standard_sha256": "68e8f8a67ad514b008bc3f6223efded19be6896fa61ead718a5926ab7a37e39e",
+  "rubric_bundle_sha256": "af6077153139ec344b721ed679e013b342d6dbcf9b1dac9c9f109ac25ea815c4",
+  "reviewer_type": null,
+  "reviewer_model_or_role": null,
+  "review_environment": null,
+  "independence_attestation": {
+    "is_artifact_author": null,
+    "has_seen_other_review": null
+  },
+  "findings": [],
+  "review_note": "Blank form. No actual review or rating has been recorded."
+}

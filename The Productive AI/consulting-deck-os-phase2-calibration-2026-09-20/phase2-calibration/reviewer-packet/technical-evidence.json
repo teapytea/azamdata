@@ -1,0 +1,71 @@
+{
+  "scope": "Bounded structural/renderer checks; no content quality rating",
+  "artifacts": [
+    {
+      "artifact_id": "CAL-A",
+      "sha256": "d761d182ee4803e8a6e350fb3e1aef49f9cab3d1bb379e55c8d62e4667c85bd1",
+      "object_inventory": {
+        "slides": 4,
+        "native_tables": 3,
+        "native_chart_parts": 1,
+        "embedded_workbooks": 1,
+        "raster_pictures": 0
+      },
+      "structural_integrity": "pass",
+      "layout_findings": 0,
+      "layout_warnings": 0,
+      "artifact_tool_import": true,
+      "native_chart_workbook_validation": true,
+      "chart_data_basis": "Literal data snapshots; no spreadsheet calculation formulas claimed",
+      "preview_renderer": "Artifact Tool import of final PPTX",
+      "powerpoint_open_edit_save_reopen": "NOT_TESTED",
+      "google_slides_import": "NOT_TESTED",
+      "ai_adapter_compatibility": "NOT_TESTED",
+      "note": "Structure/render evidence only. Does not adjudicate content correctness or assign a rubric score."
+    },
+    {
+      "artifact_id": "CAL-B",
+      "sha256": "03bb1a53548d7cae6b30855b52b9e0bd0474302bdffd7653911d49c8d3eefeae",
+      "object_inventory": {
+        "slides": 4,
+        "native_tables": 3,
+        "native_chart_parts": 1,
+        "embedded_workbooks": 1,
+        "raster_pictures": 0
+      },
+      "structural_integrity": "pass",
+      "layout_findings": 0,
+      "layout_warnings": 0,
+      "artifact_tool_import": true,
+      "native_chart_workbook_validation": true,
+      "chart_data_basis": "Literal data snapshots; no spreadsheet calculation formulas claimed",
+      "preview_renderer": "Artifact Tool import of final PPTX",
+      "powerpoint_open_edit_save_reopen": "NOT_TESTED",
+      "google_slides_import": "NOT_TESTED",
+      "ai_adapter_compatibility": "NOT_TESTED",
+      "note": "Structure/render evidence only. Does not adjudicate content correctness or assign a rubric score."
+    },
+    {
+      "artifact_id": "CAL-C",
+      "sha256": "f507ab3b08cd022e95a4a98c7b49ef451ce5d97a90c22bf563ee3185778f13ac",
+      "object_inventory": {
+        "slides": 4,
+        "native_tables": 4,
+        "native_chart_parts": 1,
+        "embedded_workbooks": 1,
+        "raster_pictures": 0
+      },
+      "structural_integrity": "pass",
+      "layout_findings": 0,
+      "layout_warnings": 0,
+      "artifact_tool_import": true,
+      "native_chart_workbook_validation": true,
+      "chart_data_basis": "Literal data snapshots; no spreadsheet calculation formulas claimed",
+      "preview_renderer": "Artifact Tool import of final PPTX",
+      "powerpoint_open_edit_save_reopen": "NOT_TESTED",
+      "google_slides_import": "NOT_TESTED",
+      "ai_adapter_compatibility": "NOT_TESTED",
+      "note": "Structure/render evidence only. Does not adjudicate content correctness or assign a rubric score."
+    }
+  ]
+}

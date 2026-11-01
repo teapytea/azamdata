@@ -1,0 +1,36 @@
+{
+  "case_id": "SYN-C04",
+  "title": "Business case automasi Perusahaan Simulasi C",
+  "data_status": "SYNTHETIC_ORIGINAL",
+  "notice": "Seluruh angka dan keputusan adalah simulasi orisinal. Tidak menyatakan return yang akan dicapai perusahaan nyata.",
+  "reference_patterns": ["D003:21", "D003:47", "D033:124", "D033:125", "D033:129", "D033:143"],
+  "unit": "IDR billion",
+  "perspective": "Incremental project cash flow before tax and financing",
+  "discount_basis": "Synthetic annual nominal pre-tax hurdle 10%; not an asserted market WACC or universal rate",
+  "discount_rate": 0.1,
+  "baseline": "Do nothing incremental cashflows are zero; no existing-business cashflows or sunk cost included.",
+  "cashflow_dates": ["2026-12-31","2027-12-31","2028-12-31","2029-12-31","2030-12-31","2031-12-31"],
+  "initial": {"capex": 4.0, "implementation_cash": 0.4, "working_capital": 0.6},
+  "operating_years": [
+    {"year":1,"cash_benefit":1.6,"incremental_cash_opex":0.4,"maintenance_capex":0,"working_capital_release":0,"disposal_proceeds":0},
+    {"year":2,"cash_benefit":2.2,"incremental_cash_opex":0.5,"maintenance_capex":0,"working_capital_release":0,"disposal_proceeds":0},
+    {"year":3,"cash_benefit":2.8,"incremental_cash_opex":0.6,"maintenance_capex":0.3,"working_capital_release":0,"disposal_proceeds":0},
+    {"year":4,"cash_benefit":3.0,"incremental_cash_opex":0.6,"maintenance_capex":0,"working_capital_release":0,"disposal_proceeds":0},
+    {"year":5,"cash_benefit":3.0,"incremental_cash_opex":0.6,"maintenance_capex":0,"working_capital_release":0.6,"disposal_proceeds":0.4}
+  ],
+  "timing": "Cashflow is recognized exactly at the listed dates. XNPV/XIRR use actual days divided by 365. Annual NPV/IRR is displayed separately for comparison. No intrayear interpolation is claimed as observed cash.",
+  "scenarios": [
+    {"scenario_id":"BASE","benefit_multiplier":1,"opex_multiplier":1,"capex_multiplier":1},
+    {"scenario_id":"BENEFIT_DOWN_20","benefit_multiplier":0.8,"opex_multiplier":1,"capex_multiplier":1},
+    {"scenario_id":"CAPEX_UP_20","benefit_multiplier":1,"opex_multiplier":1,"capex_multiplier":1.2},
+    {"scenario_id":"COMBINED_DOWNSIDE","benefit_multiplier":0.8,"opex_multiplier":1.15,"capex_multiplier":1.2}
+  ],
+  "scope_notes": ["No tax, depreciation tax shield, financing flow or going-concern terminal value is modeled", "Disposal and working-capital recovery are explicit uncertain assumptions", "Initial and maintenance capex share capex multiplier; implementation cost, working capital and disposal proceeds remain unchanged in these sensitivities"],
+  "decision": {
+    "decision_id":"DEC-C04-01","owner":"Simulated Investment Committee","due":"2026-10-15","purpose":"decide","status":"REQUESTED_NOT_APPROVED",
+    "base_funding_ceiling":5.5,"min_base_xnpv":0,"min_base_xirr":0.1,
+    "ask":"Approve the base investment subject to contract validation, cash-benefit verification, and reapproval if the cost ceiling or downside limits are breached",
+    "release_conditions":["Signed supplier quote within the approved cost envelope", "Operations validates benefit ramp without double counting", "CFO validates liquidity and confirms the pre-tax model is appropriate", "Reapproval required for a negative combined-downside NPV or initial funding above the ceiling"],
+    "fallback":"Do not commit full funding while a release condition remains unresolved"
+  }
+}

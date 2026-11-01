@@ -1,0 +1,435 @@
+{
+  "version": "0.1",
+  "rules": [
+    {
+      "rule_id": "R01",
+      "name": "Title-to-evidence alignment",
+      "prior_candidate": "Judul harus cocok dengan entitas, arah, nilai, periode, dan cakupan bukti.",
+      "standard_sections": [
+        "TX02",
+        "ST03"
+      ],
+      "scorecard_criteria": [
+        "STR4",
+        "MSG1"
+      ],
+      "retained_pattern_references": [
+        "D009:5",
+        "D006:8",
+        "D014:28"
+      ],
+      "validation_or_remaining_work": "Semantic review: cocokkan judul dengan entitas, nilai, arah, periode dan scope exhibit; belum divalidasi pada generated deck.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R02",
+      "name": "Horizontal story logic",
+      "prior_candidate": "Setiap blok menjawab pertanyaan sebelumnya dan membangun kebutuhan keputusan berikutnya.",
+      "standard_sections": [
+        "ST02"
+      ],
+      "scorecard_criteria": [
+        "STR3"
+      ],
+      "retained_pattern_references": [
+        "D023:19",
+        "D023:23",
+        "D023:29",
+        "D023:39"
+      ],
+      "validation_or_remaining_work": "Title-only review menggunakan storyboards; penilaian independen belum dijalankan.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R03",
+      "name": "Typed metrics",
+      "prior_candidate": "Simpan unit, skala, denominator, periode, geography, dan aggregation untuk setiap metrik.",
+      "standard_sections": [
+        "NU01"
+      ],
+      "scorecard_criteria": [
+        "EVI3"
+      ],
+      "retained_pattern_references": [
+        "D009:2",
+        "D009:7",
+        "D020:2"
+      ],
+      "validation_or_remaining_work": "Unit/periode/basis eksplisit pada SYN-*; schema umum dan lint baru Phase 3/9.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R04",
+      "name": "Signed bridge arithmetic",
+      "prior_candidate": "Opening + signed drivers + adjustments harus merekonsiliasi closing.",
+      "standard_sections": [
+        "NU03"
+      ],
+      "scorecard_criteria": [
+        "EVI2",
+        "EVI3"
+      ],
+      "retained_pattern_references": [
+        "D023:4",
+        "D023:13",
+        "D003:15"
+      ],
+      "validation_or_remaining_work": "SYN-C03: bridge EBIT, forecast, dan kas direkonsiliasi lewat kode.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R05",
+      "name": "Benefits overlap",
+      "prior_candidate": "Manfaat lintas intervensi perlu overlap adjustment sebelum agregasi.",
+      "standard_sections": [
+        "ST04",
+        "NU08"
+      ],
+      "scorecard_criteria": [
+        "STR4",
+        "EVI3"
+      ],
+      "retained_pattern_references": [
+        "D024:10",
+        "D028:63"
+      ],
+      "validation_or_remaining_work": "SYN-C03 memisahkan action committed/potential/cash; deteksi overlap bebas antarintervensi belum dibuat.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R06",
+      "name": "Rounding policy",
+      "prior_candidate": "Hitung dari input penuh, tampilkan precision terkontrol, dan beri toleransi yang sesuai.",
+      "standard_sections": [
+        "NU03"
+      ],
+      "scorecard_criteria": [
+        "EVI3",
+        "CHR3"
+      ],
+      "retained_pattern_references": [
+        "D014:27",
+        "D024:18",
+        "D028:64",
+        "D006:5"
+      ],
+      "validation_or_remaining_work": "Hitung input penuh dan batasi display precision; generalized rounding-interval validator/render belum dibuat.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R07",
+      "name": "Percent semantics",
+      "prior_candidate": "Bedakan share, relative change, percentage points, basis points, dan growth contribution.",
+      "standard_sections": [
+        "NU02"
+      ],
+      "scorecard_criteria": [
+        "EVI3",
+        "MSG3"
+      ],
+      "retained_pattern_references": [
+        "D008:27",
+        "D009:7",
+        "D007:19"
+      ],
+      "validation_or_remaining_work": "Share, relative change, pp, bp dan contribution didefinisikan; belum general-purpose semantic validator.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R08",
+      "name": "Scenario integrity",
+      "prior_candidate": "Scenario mempertahankan baseline bersama dan mencatat asumsi, status actual/forecast, serta rentang.",
+      "standard_sections": [
+        "NU06",
+        "NU08"
+      ],
+      "scorecard_criteria": [
+        "EVI2",
+        "EVI4"
+      ],
+      "retained_pattern_references": [
+        "D014:13",
+        "D020:24"
+      ],
+      "validation_or_remaining_work": "Empat skenario SYN-C04 berbagi baseline dan parameter eksplisit; kalkulasi diperiksa dengan metode lain.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R09",
+      "name": "Scope and restatement",
+      "prior_candidate": "Perubahan universe perlu restatement eksplisit sebelum perbandingan.",
+      "standard_sections": [
+        "NU01",
+        "EV04"
+      ],
+      "scorecard_criteria": [
+        "EVI3",
+        "EVI4"
+      ],
+      "retained_pattern_references": [
+        "D008:2",
+        "D028:59"
+      ],
+      "validation_or_remaining_work": "Review kesetaraan universe/restatement; belum diuji pada model restatement baru.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R10",
+      "name": "Currency and price basis",
+      "prior_candidate": "Jangan menyamakan nominal/current FX, constant FX, retail equivalent, dan GDP impact.",
+      "standard_sections": [
+        "NU01",
+        "NU05"
+      ],
+      "scorecard_criteria": [
+        "EVI3"
+      ],
+      "retained_pattern_references": [
+        "D008:6",
+        "D008:50",
+        "D014:38"
+      ],
+      "validation_or_remaining_work": "Basis nominal/currency/perspective dinyatakan; kasus FX/retail/GDP perlu pengujian lanjutan.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R11",
+      "name": "Calendar and chronology",
+      "prior_candidate": "Tanggal harus valid; start tidak melebihi end; as-of dan deadline harus jelas.",
+      "standard_sections": [
+        "DC03",
+        "NU04"
+      ],
+      "scorecard_criteria": [
+        "EVI2",
+        "EVI3"
+      ],
+      "retained_pattern_references": [
+        "D005:1124",
+        "D005:1274"
+      ],
+      "validation_or_remaining_work": "Tanggal dan day-count SYN-C04 serta due SYN-C03 diperiksa; general calendar/roadmap lint belum dibuat.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R12",
+      "name": "Ownership and status",
+      "prior_candidate": "Bedakan proposed owner, responsible role, accountable, approved plan, dan actual implementation.",
+      "standard_sections": [
+        "DC03",
+        "DC04"
+      ],
+      "scorecard_criteria": [
+        "STR5",
+        "EVI4"
+      ],
+      "retained_pattern_references": [
+        "D005:100",
+        "D005:1129",
+        "D020:15"
+      ],
+      "validation_or_remaining_work": "SYN-C03 memisahkan owner/authority/status; mutation missing owner/invented approval ditolak.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R13",
+      "name": "Uncertainty and applicability",
+      "prior_candidate": "Label hypothesis, preliminary, illustrative dan confidence tetap ikut ketika fakta dipindah.",
+      "standard_sections": [
+        "EV04",
+        "EV05",
+        "TX02"
+      ],
+      "scorecard_criteria": [
+        "EVI4",
+        "MSG1"
+      ],
+      "retained_pattern_references": [
+        "D024:21",
+        "D005:1135",
+        "D007:30"
+      ],
+      "validation_or_remaining_work": "Semua SYN-* berlabel; scope dan uncertainty wajib ikut klaim. General semantic review belum diuji.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R14",
+      "name": "Comparability and survey base",
+      "prior_candidate": "Peer metrics dan survey perlu kesetaraan definisi, waktu, populasi dan sampling.",
+      "standard_sections": [
+        "NU01",
+        "CH02"
+      ],
+      "scorecard_criteria": [
+        "EVI3",
+        "CHR2"
+      ],
+      "retained_pattern_references": [
+        "D010:9",
+        "D020:6",
+        "D009:4"
+      ],
+      "validation_or_remaining_work": "Definisi survey/comparability tertulis; belum ada benchmark representativitas/sampling.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R15",
+      "name": "Evidence is not causality",
+      "prior_candidate": "Diagram/panah dan korelasi tidak boleh menaikkan klaim menjadi kausal tanpa dasar tambahan.",
+      "standard_sections": [
+        "TX02",
+        "CH02"
+      ],
+      "scorecard_criteria": [
+        "STR4",
+        "MSG1"
+      ],
+      "retained_pattern_references": [
+        "D020:9",
+        "D008:23"
+      ],
+      "validation_or_remaining_work": "Review kausalitas termasuk panah/diagram; kode aritmetika tidak membuktikan sebab-akibat.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R16",
+      "name": "Render quality",
+      "prior_candidate": "Periksa overflow, collision, wrap, label precision, contrast, dan kepadatan pada render aktual.",
+      "standard_sections": [
+        "VI01",
+        "VI04",
+        "VI05",
+        "PT03"
+      ],
+      "scorecard_criteria": [
+        "VIS1",
+        "VIS2",
+        "TEC1"
+      ],
+      "retained_pattern_references": [
+        "D006:3",
+        "D006:5",
+        "D009:8"
+      ],
+      "validation_or_remaining_work": "Pemeriksaan render/app diperlukan; belum dijalankan pada PPTX.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R17",
+      "name": "Source-to-slide traceability",
+      "prior_candidate": "Setiap evidence dan asumsi terhubung ke sumber serta halaman asalnya.",
+      "standard_sections": [
+        "EV01",
+        "EV02",
+        "EV03"
+      ],
+      "scorecard_criteria": [
+        "EVI1",
+        "EVI2"
+      ],
+      "retained_pattern_references": [
+        "D003:85",
+        "D024:15",
+        "D010:19"
+      ],
+      "validation_or_remaining_work": "Crosswalk source/page dan storyboard JSON pointers diverifikasi; original source assets tidak dibundel.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R18",
+      "name": "Capability boundary",
+      "prior_candidate": "Pola gambar/PDF tidak membuktikan chart native, rumus, editabilitas, atau kompatibilitas aplikasi.",
+      "standard_sections": [
+        "PT01",
+        "PT02",
+        "PT03"
+      ],
+      "scorecard_criteria": [
+        "TEC1",
+        "TEC2"
+      ],
+      "retained_pattern_references": [
+        "D014:16",
+        "D005:1131"
+      ],
+      "validation_or_remaining_work": "Status PDF/pattern dipisahkan dari klaim editability; uji aplikasi dan artifact baru di fase build.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R19",
+      "name": "Family-level evaluation separation",
+      "prior_candidate": "Bagian satu studi, text versions, dan slide berulang dipertahankan sebagai satu evaluation group.",
+      "standard_sections": [
+        "Section 12"
+      ],
+      "scorecard_criteria": [
+        "EVI4"
+      ],
+      "retained_pattern_references": [
+        "D007:17",
+        "D028:63",
+        "D005:1274"
+      ],
+      "validation_or_remaining_work": "Family-level split diwajibkan; semua contoh saat ini development, blind holdout belum ditetapkan.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R20",
+      "name": "Original product assets",
+      "prior_candidate": "Gunakan prinsip umum untuk desain baru; source decks, logo, ilustrasi, dan template komersial tidak masuk bundle produk.",
+      "standard_sections": [
+        "Section 8 asset policy"
+      ],
+      "scorecard_criteria": [
+        "VIS3"
+      ],
+      "retained_pattern_references": [
+        "D006:13",
+        "D008:46"
+      ],
+      "validation_or_remaining_work": "Sumber/aset asli tidak masuk paket; D012 dikecualikan sebagai positive learning reference.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED",
+      "legacy_pointer_disposition": "Legacy D012:21 retained only in immutable history. Excluded from current positive learning evidence; no source content or commercial assets used."
+    },
+    {
+      "rule_id": "R21",
+      "name": "Display mode and hierarchy",
+      "prior_candidate": "Sesuaikan kepadatan untuk slide rapat atau read-ahead; tabel rinci dapat pindah ke lampiran.",
+      "standard_sections": [
+        "VI01",
+        "VI04"
+      ],
+      "scorecard_criteria": [
+        "VIS1",
+        "VIS2"
+      ],
+      "retained_pattern_references": [
+        "D014:14",
+        "D024:10",
+        "D020:23"
+      ],
+      "validation_or_remaining_work": "Live/pre-read dipisahkan; typography/density masih token awal, perlu render validation.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    },
+    {
+      "rule_id": "R22",
+      "name": "No inferred commitments",
+      "prior_candidate": "Jika owner, tanggal, evidence, atau angka investasi hilang, tandai missing; jangan mengarang untuk melengkapi layout.",
+      "standard_sections": [
+        "DC03",
+        "EV04"
+      ],
+      "scorecard_criteria": [
+        "STR1",
+        "EVI4"
+      ],
+      "retained_pattern_references": [
+        "D023:39",
+        "D005:100",
+        "D010:5"
+      ],
+      "validation_or_remaining_work": "Unknown tidak diisi sebagai fakta. Mutation missing owner/due dan invented approval diperiksa untuk SYN-C03.",
+      "status": "MAPPED_TO_DRAFT_STANDARD_NOT_PRODUCTION_CERTIFIED"
+    }
+  ]
+}

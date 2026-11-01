@@ -1,0 +1,39 @@
+<svg fill="none" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .surface { stop-color: oklch(0.205 0 0); }
+    .surface-top { stop-color: oklch(0.22 0 0); }
+    .border { stop-color: oklch(0.145 0 0); }
+    .stroke { stroke-opacity: 0.25; }
+    .mark-primary { fill: oklch(0.985 0 0); }
+    .mark-secondary { fill: oklch(0.82 0 0); }
+    .mark-tertiary { fill: oklch(0.72 0 0); }
+    @media (prefers-color-scheme: dark) {
+      .surface { stop-color: oklch(0.205 0 0); }
+      .surface-top { stop-color: oklch(0.16 0 0); }
+      .border { stop-color: oklch(0.985 0 0); }
+      .stroke { stroke-opacity: 0.2; }
+      .mark-primary { fill: oklch(0.985 0 0); }
+      .mark-secondary { fill: oklch(0.75 0 0); }
+      .mark-tertiary { fill: oklch(0.55 0 0); }
+    }
+  </style>
+  <rect fill="oklch(0.205 0 0)" height="512" rx="100" width="512" />
+  <rect fill="url(#fav-paint0)" height="512" rx="100" width="512" />
+  <rect class="stroke" height="508.5" rx="98.25" stroke="url(#fav-paint1)" stroke-width="3.5" width="508.5" x="1.75" y="1.75" />
+  <path class="mark-primary" d="M301.972 119H118V301.11H301.972V119Z" />
+  <path class="mark-secondary" d="M393.585 119.186H301.972V209.31H393.585V119.186Z" />
+  <path class="mark-tertiary" d="M301.972 209.869H210.358V301.296H301.972V209.869Z" />
+  <path class="mark-tertiary" d="M210.359 301.669H118V393.841H210.359V301.669Z" opacity="0.85" />
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" id="fav-paint0" x1="256" x2="256" y1="0" y2="512">
+      <stop class="surface-top" />
+      <stop class="surface" offset="1" />
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" id="fav-paint1" x1="0" x2="512" y1="0" y2="512">
+      <stop class="border" />
+      <stop class="border" offset="0.302885" stop-opacity="0.2" />
+      <stop class="border" offset="0.697115" stop-opacity="0.2" />
+      <stop class="border" offset="1" />
+    </linearGradient>
+  </defs>
+</svg>

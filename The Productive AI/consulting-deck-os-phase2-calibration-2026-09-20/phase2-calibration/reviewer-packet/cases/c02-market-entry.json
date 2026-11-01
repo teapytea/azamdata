@@ -1,0 +1,31 @@
+{
+  "case_id": "SYN-C02",
+  "title": "Memilih pasar dan cara masuk untuk Perusahaan Simulasi A",
+  "data_status": "SYNTHETIC_ORIGINAL",
+  "notice": "Semua perusahaan, pasar, skor, angka, batas keputusan, dan persetujuan dalam kasus ini adalah simulasi orisinal; bukan data McKinsey atau perusahaan nyata.",
+  "reference_patterns": ["D005:721", "D033:14", "D033:125", "D035:4"],
+  "unit": "IDR billion",
+  "model_basis": "Pre-tax nominal incremental project cash flows versus do nothing; no financing cashflows; t0 followed by five equal annual periods; no terminal business value. Working capital is recovered at t5. Timing/ramp is already reflected in annual contributions.",
+  "discount_rate": 0.12,
+  "market_weights": {"demand": 0.3, "economics": 0.3, "reach": 0.2, "risk_resilience": 0.2},
+  "market_scores": {
+    "Market A": {"demand": 5, "economics": 4, "reach": 4, "risk_resilience": 3},
+    "Market B": {"demand": 4, "economics": 4, "reach": 5, "risk_resilience": 4},
+    "Market C": {"demand": 5, "economics": 5, "reach": 2, "risk_resilience": 2}
+  },
+  "score_basis": "Synthetic ordinal scores 1-5; higher is better. Weighted scores are prioritization inputs, not market statistics or proof of economic value.",
+  "decision_constraints": {"max_initial_funding": 3.0, "max_launch_months": 6, "min_base_npv": 0, "min_downside_npv": 0},
+  "modes_for_market_b": [
+    {"mode": "do_nothing", "launch_months": null, "initial_setup": 0, "initial_capex_or_purchase": 0, "initial_working_capital": 0, "annual_contribution": [0,0,0,0,0], "annual_opex": [0,0,0,0,0], "working_capital_recovery": 0},
+    {"mode": "partner", "launch_months": 4, "initial_setup": 0.6, "initial_capex_or_purchase": 0.4, "initial_working_capital": 0.5, "annual_contribution": [1.2,1.8,2.4,2.7,2.9], "annual_opex": [0.6,0.8,1.0,1.1,1.2], "working_capital_recovery": 0.5},
+    {"mode": "build_direct", "launch_months": 9, "initial_setup": 0.8, "initial_capex_or_purchase": 3.0, "initial_working_capital": 1.0, "annual_contribution": [1.0,5.8,7.4,8.6,9.5], "annual_opex": [1.0,2.3,2.8,3.0,3.2], "working_capital_recovery": 1.0},
+    {"mode": "acquire", "launch_months": 4, "initial_setup": 0, "initial_capex_or_purchase": 5.5, "initial_working_capital": 1.0, "annual_contribution": [3.8,4.4,5.2,5.6,6.1], "annual_opex": [1.8,2.0,2.2,2.4,2.6], "working_capital_recovery": 1.0}
+  ],
+  "downside": {"annual_contribution_multiplier": 0.8, "annual_opex_multiplier": 1.0, "initial_cost_multiplier": 1.0},
+  "decision": {
+    "decision_id": "DEC-C02-01", "purpose": "decide", "owner": "Simulated Investment Committee", "due": "2026-10-01", "status": "REQUESTED_NOT_APPROVED",
+    "ask": "Authorize partner entry up to IDR 1.5 billion initial funding, conditional on a signed contract and confirmation of the modeled contribution economics.",
+    "release_conditions": ["Signed partner agreement", "CFO validates contribution assumptions and downside case", "Launch plan remains within six months"],
+    "fallback": "Do nothing if conditions fail; do not silently substitute an excluded mode."
+  }
+}

@@ -1,0 +1,91 @@
+Title, Abstract, Index Terms
+Title — mencerminkan variabel inti tanpa merek (mis. "The Effect of XAI Explanation Types on User Trust and Purchase Intention in a Conversational Recommender System for the Perfume Domain")
+Abstract (150–250 kata), urutan: konteks XAI-CRS → celah domain hedonis → sistem yang dibangun (GPT-4o-mini + CR-HKGE) → desain between-subjects 3 kondisi, n=90 → ⟶ [temuan utama: H1 & H2 signifikan; B trust terendah; C PI tertinggi] → implikasi
+Index Terms — explainable AI; conversational recommender systems; perceived trust; purchase intention; hedonic/sensory domain; user experience
+I. Introduction
+A. Background
+Peran penjelasan (XAI) dalam recommender systems dan CRS [ref: XAI survey]
+Trust sebagai penentu adopsi & niat beli pada sistem AI [ref: trust-AI]
+B. Problem & Gap
+Jenis penjelasan jarang diuji komparatif dalam CRS [ref]
+Domain sensorik-hedonis (parfum) kurang tereksplorasi vs domain rasional [ref: hedonic]
+C. Research Questions & Objectives
+RQ1: apakah jenis penjelasan memengaruhi trust & purchase intention?
+RQ2: apakah trust berhubungan dengan purchase intention?
+RQ3: apakah familiaritas memoderasi?
+D. Contributions (butir-poin)
+Artefak CRS berbasis CR-HKGE dengan tiga mode penjelasan
+Bukti empiris efek jenis penjelasan pada domain hedonis ⟶ [temuan ringkas]
+Temuan kontra-intuitif: narasi emosional → trust terendah ⟶ [temuan]
+E. Paper Organization
+II. Related Work
+A. Explanation Types in XAI / Recommender Systems
+Taksonomi penjelasan & tujuannya (transparency, trust) [ref: Tintarev & Masthoff]
+B. Explanations in Conversational Recommender Systems
+Gaya percakapan & dampak UX [ref: CRS conversational styles — verifikasi]
+C. Trust and Purchase Intention in RS
+Konstruk trust [ref: McKnight]; PI & ResQue [ref: Pu et al.]; hubungan trust→intention [ref: XAI-trust]
+D. Sensory / Hedonic Product Domains
+Karakteristik keputusan hedonis, ketidakpastian pembelian online [ref: hedonic — verifikasi]
+E. Research Positioning — sintesis celah yang ditutup studi ini
+III. System Design
+A. Architecture Overview
+GPT-4o-mini + backend CR-HKGE (tegaskan: bukan RAG) [ref: 5 CR-HKGE — KGAT/HKGAT/HN-DKG/HGKR/CKE]
+Gambar 1: diagram arsitektur
+B. Explanation Conditions (the manipulation)
+A — feature-based (olfactory family + accords)
+B — narrative-based (emosi, momen, identitas)
+C — comparative-based (perbedaan antar 3 produk)
+Mekanisme: system-prompt conditioning per sesi; tanpa fine-tuning
+C. Conversational Interface — alur dialog Lily, ekstraksi preferensi (ringkas)
+IV. Method
+A. Experimental Design
+Between-subjects, 3 kondisi, randomisasi berbasis counter sesi [ref: Shadish et al.]
+B. Participants
+n=90 (30/kondisi) ⟶ [profil: familiaritas 60 enthusiast : 30 novice]
+Dikotomisasi familiaritas (pemula=novice; penggemar+kolektor=enthusiast) + justifikasi konstruk
+C. Measures
+8 item Likert 1–5: Trust [ref: McKnight], PI & Satisfaction [ref: Pu et al./ResQue], Usefulness [ref: Davis/TAM]
+Item perilaku: scent_trial
+D. Procedure — alur sesi dari mulai hingga kuesioner
+E. Manipulation Check
+Blind coding transkrip, Cohen's kappa [ref: Hallgren; Landis & Koch]
+Peran-ganda transparan; bobot bukti pada rater independen ⟶ [temuan: κ]
+F. Analysis Plan
+Reliabilitas skala 2-item: split-half/Spearman-Brown, bukan Cronbach [ref: Eisinga et al.]
+Justifikasi non-parametrik (normalitas dilanggar) → Kruskal-Wallis, Spearman
+Effect size: ε² (H/(n−1)); moderasi via two-way ANOVA (dengan keterbatasan)
+V. Results
+A. Manipulation Check ⟶ [3 κ: Actual–Rater 0,90; Rater–Self 0,90; Actual–Self 1,000]
+B. Instrument Reliability
+Split-half per konstruk ⟶ [Trust 0,624; PI 0,801; Usefulness 0,731; Satisfaction 0,689]
+Catatan jujur: reliabilitas Trust di bawah ambang → dibahas di Limitations
+C. Descriptive Statistics & Assumption Checks
+Tabel deskriptif (mean/median/SD per kondisi) ⟶ [angka]
+Normalitas Shapiro-Wilk (sebagian sel melanggar) → non-parametrik; Levene ⟶ [ringkas]
+Balance check familiaritas (χ² tak signifikan → seimbang) ⟶ [χ²=1,20; p=0,549]
+D. Hypothesis Testing
+1) H1 — Trust across conditions ⟶ [KW H=16,57; p<0,001; ε²=0,186; Dunn: B<A,C]
+2) H2 — Purchase Intention across conditions ⟶ [KW H=11,88; p=0,003; ε²=0,133; Dunn: C>A,B]
+3) H3 — Trust ↔ PI ⟶ [Spearman ρ=0,229; p=0,030; CI 0,025–0,437 → lemah]
+4) H4 — Familiarity moderation ⟶ [interaksi F=0,45; p=0,638 → tidak ditemukan bukti moderasi]
+Tabel ringkasan hipotesis (uji, statistik, p, effect size, keputusan)
+E. Supplementary Analyses
+Usefulness & Satisfaction vs netral (Wilcoxon) ⟶ [keduanya p<0,001, jauh di atas 3,5]
+scent_trial × PI per kondisi (eksploratif) ⟶ [A 0,328; B 0,715; C 0,324 n.s.]
+VI. Discussion
+A. Interpreting the Effect of Explanation Type (RQ1)
+Mengapa narrative-based (B) → trust terendah: narasi emosional melemahkan sinyal kompetensi ⟶ [kaitkan temuan]
+Mengapa comparative-based (C) → PI tertinggi: penjelasan kontrastif mengurangi ketidakpastian keputusan
+B. Trust–Purchase Intention Relationship (RQ2)
+Hubungan positif tetapi lemah → jangan klaim kausalitas; mekanisme individual berkontribusi tipis
+C. Role of Familiarity (RQ3)
+Tidak ditemukan bukti moderasi (bahasa hati-hati; kaitkan power rendah)
+D. Behavioral Link (scent_trial) — kaitan perilaku–niat bervariasi antar kondisi (eksploratif)
+E. Theoretical Implications — kontribusi ke XAI × CRS × domain hedonis
+F. Practical Implications — panduan perancang: prioritaskan penjelasan berbasis-objektif untuk trust
+G. Limitations
+Reliabilitas Trust rendah (0,624); power H4 (sel novice ~8–12); sebagian ceiling effect; dominasi enthusiast; n=90 (subset); korelasi supplementary sampel kecil
+VII. Conclusion & Future Work
+A. Conclusion — ringkas jawaban RQ1–RQ3 & kontribusi ⟶ [1–2 kalimat temuan inti]
+B. Future Work — kondisi penjelasan hibrida; sampel lebih besar & seimbang; instrumen Trust multi-item; replikasi domain hedonis lain

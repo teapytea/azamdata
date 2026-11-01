@@ -1,0 +1,30 @@
+{
+  "case_id": "SYN-C03",
+  "data_status": "SYNTHETIC_ORIGINAL",
+  "monthly_budget": {
+    "revenue": 10.0,
+    "ebit": 1.5
+  },
+  "monthly_actual": {
+    "revenue": 9.025,
+    "ebit": 0.4
+  },
+  "monthly_ebit_variance": -1.1,
+  "ebit_bridge": {
+    "volume": -0.5,
+    "price": -0.475,
+    "direct_cost": 0.025,
+    "opex": -0.15
+  },
+  "ytd_ebit": {
+    "budget": 9.0,
+    "actual": 7.1
+  },
+  "forecast_before_actions": 16.1,
+  "committed_ebit_actions": 0.5,
+  "final_forecast_ebit": 16.6,
+  "implied_h2_ebit": 9.5,
+  "closing_cash": 2.5,
+  "cash_gap_to_floor": -0.5,
+  "conditional_july_cash": 3.0
+}

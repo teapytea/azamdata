@@ -1,0 +1,93 @@
+{
+  "case_id": "SYN-C02",
+  "data_status": "SYNTHETIC_ORIGINAL",
+  "selected_market": "Market B",
+  "market_scores": {
+    "Market A": 4.1,
+    "Market B": 4.2,
+    "Market C": 3.8
+  },
+  "modes": [
+    {
+      "mode": "do_nothing",
+      "cashflows": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_funding": 0.0,
+      "launch_months": null,
+      "npv": 0.0,
+      "downside_npv": 0.0,
+      "eligible": true,
+      "failed_constraints": [],
+      "irr": null
+    },
+    {
+      "mode": "partner",
+      "cashflows": [
+        -1.5,
+        0.6,
+        1.0,
+        1.4,
+        1.6,
+        2.2
+      ],
+      "initial_funding": 1.5,
+      "launch_months": 4,
+      "npv": 3.0945685182327303,
+      "downside_npv": 1.5793511504228148,
+      "eligible": true,
+      "failed_constraints": [],
+      "irr": 0.624110080111097
+    },
+    {
+      "mode": "build_direct",
+      "cashflows": [
+        -4.8,
+        0.0,
+        3.5,
+        4.6,
+        5.6,
+        7.3
+      ],
+      "initial_funding": 4.8,
+      "launch_months": 9,
+      "npv": 8.965484997183093,
+      "downside_npv": 4.637531783166984,
+      "eligible": false,
+      "failed_constraints": [
+        "INITIAL_FUNDING",
+        "LAUNCH_TIME"
+      ],
+      "irr": 0.5174430533294399
+    },
+    {
+      "mode": "acquire",
+      "cashflows": [
+        -6.5,
+        2.0,
+        2.4,
+        3.0,
+        3.2,
+        4.5
+      ],
+      "initial_funding": 6.5,
+      "launch_months": 4,
+      "npv": 3.9213990369061253,
+      "downside_npv": 0.397004526573749,
+      "eligible": false,
+      "failed_constraints": [
+        "INITIAL_FUNDING"
+      ],
+      "irr": 0.31090139811972806
+    }
+  ],
+  "selected_mode": "partner",
+  "decision_status": "REQUESTED_NOT_APPROVED",
+  "decision_id": "DEC-C02-01",
+  "caveat": "Selection remains conditional; no real approval or actual company result is asserted."
+}

@@ -1,0 +1,62 @@
+{
+  "freeze_date": "2026-09-20",
+  "standard_version": "0.1",
+  "standard_sha256": "68e8f8a67ad514b008bc3f6223efded19be6896fa61ead718a5926ab7a37e39e",
+  "rubric_bundle_sha256": "af6077153139ec344b721ed679e013b342d6dbcf9b1dac9c9f109ac25ea815c4",
+  "rubric_file_hashes": {
+    "consulting-grade-standard.md": "68e8f8a67ad514b008bc3f6223efded19be6896fa61ead718a5926ab7a37e39e",
+    "deck-rubric.md": "0fa1920fad2aa9a75997384b7cf1ae53ff94543f0e239d0c9aec8bb62119bbd8",
+    "hard-fails.md": "4f40943d8b13085bf9a3964ce5a767fad80fc195efaa8870fdaecd2c38fe04b7",
+    "review-template.json": "23d49e0b890ceb854365c854a8894f0452633cd5c063894f207b691a7c241b57",
+    "reviewer-calibration.md": "5c90d7445b7b8eaac00a995cfffaa6e8ca885ab77c5f90f41b7bfb66b27e613d",
+    "rule-crosswalk.json": "00391fc28e5fc79250e773d90a0e8926151df2b60385ab367c6cc36b4ccdb246",
+    "rule-crosswalk.md": "9114ba82ad25b815298414a7ccec47bf9aa473bb6e1f581d2cd302c18081b15b",
+    "slide-rubric.md": "67c3448eae96d1ebeb0abd02c6288d5bd41750516364afbe2b5429cb4fe2afb7",
+    "story-rubric.md": "d36bfe782afcbe0aff0ddf9afe5b9d758d183cab37d8e533ae2453177b38f672",
+    "weighted-scorecard.json": "d85c7c4dd5d40440ccc1586834ef396ef15b381bae3848b5205ce659991e646f"
+  },
+  "artifacts": [
+    {
+      "artifact_id": "CAL-A",
+      "artifact_version": "2026-09-20.v2",
+      "artifact_sha256": "d761d182ee4803e8a6e350fb3e1aef49f9cab3d1bb379e55c8d62e4667c85bd1",
+      "file": "decks/calibration-A-v2.pptx",
+      "standard_version": "0.1",
+      "standard_sha256": "68e8f8a67ad514b008bc3f6223efded19be6896fa61ead718a5926ab7a37e39e",
+      "rubric_bundle_sha256": "af6077153139ec344b721ed679e013b342d6dbcf9b1dac9c9f109ac25ea815c4",
+      "slide_count": 4,
+      "source_case": "SYN-C02"
+    },
+    {
+      "artifact_id": "CAL-B",
+      "artifact_version": "2026-09-20.v2",
+      "artifact_sha256": "03bb1a53548d7cae6b30855b52b9e0bd0474302bdffd7653911d49c8d3eefeae",
+      "file": "decks/calibration-B-v2.pptx",
+      "standard_version": "0.1",
+      "standard_sha256": "68e8f8a67ad514b008bc3f6223efded19be6896fa61ead718a5926ab7a37e39e",
+      "rubric_bundle_sha256": "af6077153139ec344b721ed679e013b342d6dbcf9b1dac9c9f109ac25ea815c4",
+      "slide_count": 4,
+      "source_case": "SYN-C03"
+    },
+    {
+      "artifact_id": "CAL-C",
+      "artifact_version": "2026-09-20.v2",
+      "artifact_sha256": "f507ab3b08cd022e95a4a98c7b49ef451ce5d97a90c22bf563ee3185778f13ac",
+      "file": "decks/calibration-C-v2.pptx",
+      "standard_version": "0.1",
+      "standard_sha256": "68e8f8a67ad514b008bc3f6223efded19be6896fa61ead718a5926ab7a37e39e",
+      "rubric_bundle_sha256": "af6077153139ec344b721ed679e013b342d6dbcf9b1dac9c9f109ac25ea815c4",
+      "slide_count": 4,
+      "source_case": "SYN-C04"
+    }
+  ],
+  "dataset_use": "Development pilot; neither blind holdout nor production gold",
+  "case_hashes": {
+    "c02-expected.json": "91c4ac5a0ad0e6d0fa18f9edb3f50a452d2044dd1be373eaca76f7cb8879d4f9",
+    "c02-market-entry.json": "e5174e4cd85d2b42e6569e179b48de9b23b5c2a547addd208371ca6d8aeb34b2",
+    "c03-expected.json": "5987c98725aa84e7436e32b3905f46d195ae51560a6a7f50c5a0276e699c8f61",
+    "c03-performance-review.json": "8bc6051609b6f65ebdba847b01395042c3de181372790464a26347312131fabb",
+    "c04-expected.json": "bd55ac13060de3f5cf7572efab0ffbfd3c181722bfb1a9fc5233316e52226de7",
+    "c04-investment-case.json": "7e8ecaac5eeae2f01ce9b5fe3b1403b66aca0790df6072df8d71973cd083dc64"
+  }
+}

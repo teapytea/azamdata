@@ -1,0 +1,52 @@
+{
+  "scope": "Software unit fixtures, not human/AI reviews",
+  "checks": [
+    {
+      "id": "consistent_partial_scope_not_product_pass",
+      "passed": true
+    },
+    {
+      "id": "same_reviewer_rejected",
+      "passed": true
+    },
+    {
+      "id": "artifact_hash_mismatch_rejected",
+      "passed": true
+    },
+    {
+      "id": "standard_hash_mismatch_rejected",
+      "passed": true
+    },
+    {
+      "id": "sparse_coverage_not_promoted_to_agreement",
+      "passed": true
+    },
+    {
+      "id": "blank_evidence_rejected",
+      "passed": true
+    },
+    {
+      "id": "hard_fail_disagreement_requires_adjudication",
+      "passed": true
+    },
+    {
+      "id": "not_applicable_requires_reason",
+      "passed": true
+    },
+    {
+      "id": "contaminated_review_not_independent",
+      "passed": true
+    },
+    {
+      "id": "offsetting_disagreements_not_hidden_by_equal_totals",
+      "passed": true
+    },
+    {
+      "id": "in_scope_unknown_blocks_conclusion",
+      "passed": true
+    }
+  ],
+  "total": 11,
+  "passed": 11,
+  "all_passed": true
+}

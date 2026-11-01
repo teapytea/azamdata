@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-20",
+  "reviewer": "authoring assistant",
+  "independent": false,
+  "scope": "Visual inspection of final PPTX imported and rendered by Artifact Tool, 1280x720",
+  "artifacts": [
+    {
+      "id": "CAL-A",
+      "slides_individually_inspected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unintended_clipping_or_material_overlap_observed": false,
+      "intended_content_defects_repaired": false,
+      "decimal_format": "dot decimal across slide text, table and chart",
+      "purpose": "Calibration fixture, not a production gold reference"
+    },
+    {
+      "id": "CAL-B",
+      "slides_individually_inspected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unintended_clipping_or_material_overlap_observed": false,
+      "intended_content_defects_repaired": false,
+      "decimal_format": "dot decimal across slide text, table and chart",
+      "purpose": "Calibration fixture, not a production gold reference"
+    },
+    {
+      "id": "CAL-C",
+      "slides_individually_inspected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unintended_clipping_or_material_overlap_observed": false,
+      "intended_content_defects_repaired": false,
+      "decimal_format": "dot decimal across slide text, table and chart",
+      "purpose": "Calibration fixture, not a production gold reference"
+    }
+  ],
+  "application_validation": "Microsoft PowerPoint and Google Slides NOT RUN",
+  "quality_scores_assigned": false
+}

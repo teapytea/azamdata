@@ -1,0 +1,68 @@
+{
+  "scope": "Packet checks only; not independent reviewer results",
+  "checks": [
+    {
+      "check": "frozen_rules_identical_to_foundation",
+      "passed": true
+    },
+    {
+      "check": "source_cases_identical_to_foundation",
+      "passed": true
+    },
+    {
+      "check": "baseline_archive_preserved",
+      "passed": true
+    },
+    {
+      "check": "three_only_final_pptx",
+      "passed": true
+    },
+    {
+      "check": "pptx_hashes_match_manifest",
+      "passed": true
+    },
+    {
+      "check": "twelve_final_previews",
+      "passed": true
+    },
+    {
+      "check": "author_answer_key_not_in_reviewer_packet",
+      "passed": true
+    },
+    {
+      "check": "review_forms_are_blank",
+      "passed": true
+    },
+    {
+      "check": "native_tables_10_charts_3_workbooks_3",
+      "passed": true
+    },
+    {
+      "check": "no_full_slide_raster",
+      "passed": true
+    },
+    {
+      "check": "technical_application_scope_remains_unknown",
+      "passed": true
+    },
+    {
+      "check": "intended_bad_title_preserved",
+      "passed": true
+    },
+    {
+      "check": "intended_bad_forecast_preserved",
+      "passed": true
+    },
+    {
+      "check": "intended_bad_approval_preserved",
+      "passed": true
+    },
+    {
+      "check": "json_and_python_parse",
+      "passed": true
+    }
+  ],
+  "total": 15,
+  "passed": 15,
+  "all_passed": true
+}

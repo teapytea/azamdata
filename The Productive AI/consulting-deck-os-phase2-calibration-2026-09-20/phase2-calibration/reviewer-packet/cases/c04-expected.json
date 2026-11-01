@@ -1,0 +1,152 @@
+{
+  "case_id": "SYN-C04",
+  "data_status": "SYNTHETIC_ORIGINAL",
+  "scenarios": [
+    {
+      "scenario_id": "BASE",
+      "cashflow_dates": [
+        "2026-12-31",
+        "2027-12-31",
+        "2028-12-31",
+        "2029-12-31",
+        "2030-12-31",
+        "2031-12-31"
+      ],
+      "cashflows": [
+        -5.0,
+        1.2,
+        1.7,
+        1.9,
+        2.4,
+        3.4
+      ],
+      "cumulative_cash": [
+        -5.0,
+        -3.8,
+        -2.1,
+        -0.2,
+        2.2,
+        5.6
+      ],
+      "initial_funding": 5.0,
+      "annual_npv": 2.673730681585336,
+      "annual_irr": 0.2596499223172388,
+      "xnpv": 2.6720119747340108,
+      "xirr": 0.25943687128993387,
+      "observed_period_end_payback": 4,
+      "peak_funding_required": 5.0
+    },
+    {
+      "scenario_id": "BENEFIT_DOWN_20",
+      "cashflow_dates": [
+        "2026-12-31",
+        "2027-12-31",
+        "2028-12-31",
+        "2029-12-31",
+        "2030-12-31",
+        "2031-12-31"
+      ],
+      "cashflows": [
+        -5.0,
+        0.88,
+        1.26,
+        1.34,
+        1.8,
+        2.8
+      ],
+      "cumulative_cash": [
+        -5.0,
+        -4.12,
+        -2.86,
+        -1.52,
+        0.28,
+        3.08
+      ],
+      "initial_funding": 5.0,
+      "annual_npv": 0.8160880714804627,
+      "annual_irr": 0.1514272340895796,
+      "xnpv": 0.8147784225986648,
+      "xirr": 0.15131182279548006,
+      "observed_period_end_payback": 4,
+      "peak_funding_required": 5.0
+    },
+    {
+      "scenario_id": "CAPEX_UP_20",
+      "cashflow_dates": [
+        "2026-12-31",
+        "2027-12-31",
+        "2028-12-31",
+        "2029-12-31",
+        "2030-12-31",
+        "2031-12-31"
+      ],
+      "cashflows": [
+        -5.8,
+        1.2,
+        1.7,
+        1.84,
+        2.4,
+        3.4
+      ],
+      "cumulative_cash": [
+        -5.8,
+        -4.6,
+        -2.9,
+        -1.06,
+        1.34,
+        4.74
+      ],
+      "initial_funding": 5.8,
+      "annual_npv": 1.8286517935312416,
+      "annual_irr": 0.19795440445420742,
+      "xnpv": 1.8269448563128439,
+      "xirr": 0.1977976743897808,
+      "observed_period_end_payback": 4,
+      "peak_funding_required": 5.8
+    },
+    {
+      "scenario_id": "COMBINED_DOWNSIDE",
+      "cashflow_dates": [
+        "2026-12-31",
+        "2027-12-31",
+        "2028-12-31",
+        "2029-12-31",
+        "2030-12-31",
+        "2031-12-31"
+      ],
+      "cashflows": [
+        -5.8,
+        0.82,
+        1.185,
+        1.19,
+        1.71,
+        2.71
+      ],
+      "cumulative_cash": [
+        -5.8,
+        -4.98,
+        -3.795,
+        -2.605,
+        -0.895,
+        1.815
+      ],
+      "initial_funding": 5.8,
+      "annual_npv": -0.330492204332789,
+      "annual_irr": 0.0811522435056633,
+      "xnpv": -0.33172560593350475,
+      "xirr": 0.08109340798550801,
+      "observed_period_end_payback": 5,
+      "peak_funding_required": 5.8
+    }
+  ],
+  "gates": {
+    "base_npv": true,
+    "base_return": true,
+    "base_funding": true,
+    "combined_downside_npv": false,
+    "combined_downside_funding": false
+  },
+  "recommendation": "CONDITIONAL_BASE_CASE_ONLY; FULL_COMMITMENT_HELD_PENDING_DOWNSIDE_AND_COST_REAPPROVAL",
+  "decision_status": "REQUESTED_NOT_APPROVED",
+  "decision_id": "DEC-C04-01"
+}
