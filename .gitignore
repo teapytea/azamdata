@@ -18,3 +18,15 @@
 /The Productive AI/McKinsey-PPT.zip
 /ui8/UI8 68945219fa5f3200390b37ca.zip
 /ui8/UI8 68945219fa5f3200390b37ca/Travellioo - Travel Companions Apps UI KIT.fig
+
+# Tidak di-upload: bisa di-install ulang / folder git sementara
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.venv/
+venv/
+vendor/
+.turbo/
+.cache/
+.git.bak-azam
